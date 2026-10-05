@@ -285,6 +285,27 @@ main{padding-top:42px}
   .course-facts{width:100%;justify-content:space-between}.course-facts div{min-width:0;flex:1;padding:0 10px}
   .course-journal{padding:20px 14px;border-radius:19px}.journal-grid{gap:13px}.journal-card{padding:18px 15px 18px 19px;border-radius:16px}
 }
+
+/* Floating TOP button */
+.top-fab{
+  position:fixed;right:26px;bottom:26px;z-index:90;
+  width:62px;height:62px;border:1px solid rgba(255,255,255,.20);border-radius:50%;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;
+  background:linear-gradient(145deg,#0f3f68,#17669b 60%,#2aa982);
+  color:#fff;font-weight:900;font-size:.78rem;letter-spacing:.03em;
+  box-shadow:0 16px 34px rgba(8,40,68,.30),inset 0 1px 0 rgba(255,255,255,.22);
+  opacity:0;visibility:hidden;transform:translateY(12px) scale(.96);
+  transition:opacity .22s ease,transform .22s ease,visibility .22s ease,filter .18s ease;
+  cursor:pointer;
+}
+.top-fab.show{opacity:1;visibility:visible;transform:translateY(0) scale(1)}
+.top-fab:hover{transform:translateY(-3px) scale(1.03);filter:brightness(1.08);box-shadow:0 20px 40px rgba(8,40,68,.36),0 0 0 5px rgba(105,219,239,.12)}
+.top-fab:active{transform:translateY(-1px) scale(.98)}
+.top-fab svg{width:20px;height:20px;stroke-width:2.2}
+.top-fab span{line-height:1}
+@media(max-width:680px){.top-fab{right:16px;bottom:18px;width:56px;height:56px;font-size:.72rem}.top-fab svg{width:18px;height:18px}}
+@media print{.top-fab{display:none!important}}
+
 </style>
 </head>
 <body>
@@ -2285,4 +2306,23 @@ setTimeout(filterPrompts,0);
 
 })();
 </script>
+
+<button class="top-fab" id="topFab" type="button" aria-label="맨 위로 이동" title="맨 위로 이동">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 15 6-6 6 6"/><path d="M12 20V9"/></svg>
+  <span>TOP</span>
+</button>
+
+<script>
+(function(){
+  const topFab=document.getElementById('topFab');
+  if(!topFab) return;
+  const toggleTopFab=()=>{
+    if(window.scrollY>420){topFab.classList.add('show')}else{topFab.classList.remove('show')}
+  };
+  window.addEventListener('scroll',toggleTopFab,{passive:true});
+  toggleTopFab();
+  topFab.addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});
+})();
+</script>
+
 </body></html>
