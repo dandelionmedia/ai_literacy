@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>AI리터러시지도사 실습 가이드 | 유쌤클래스 김유성 강사</title>
-<meta name="description" content="유쌤클래스 김유성 강사의 AI리터러시지도사 강사양성 8차시 실습 가이드. 핵심 개념, 실습 순서, 복사 가능한 프롬프트를 함께 제공합니다.">
+<meta name="description" content="유쌤클래스 김유성 강사의 AI리터러시지도사 강사양성 8차시 실습 가이드. 핵심 개념, 실습 순서, 107개의 복사 가능한 실전 프롬프트를 함께 제공합니다.">
 <meta name="theme-color" content="#102c4b">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23102c4b'/%3E%3Cpath d='M6 9h8l2 2 2-2h8v15h-8l-2 2-2-2H6z' fill='none' stroke='%236bdef1' stroke-width='2'/%3E%3Cpath d='M16 11v15' stroke='%236bdef1' stroke-width='2'/%3E%3C/svg%3E">
 <style>
@@ -23,21 +23,308 @@ main{min-width:0;padding:36px 46px 64px}.page-intro{padding-bottom:26px;margin-b
 .nav-no,.nav-count{flex-shrink:0;white-space:nowrap}.lesson-link>span:nth-child(2){min-width:0;flex:1}.lesson-link small{word-break:keep-all}
 .supp-guide,.supp-block{margin:30px 0;min-width:0;scroll-margin-top:110px}.supp-guide{border:1px solid var(--line);border-top:4px solid var(--blue);border-radius:var(--radius);padding:26px;background:#fff}.supp-guide h3,.supp-block>h3{font-size:1.28rem;line-height:1.5;margin:8px 0 12px;color:var(--navy)}.supp-guide>p,.supp-lead{font-size:1rem;line-height:1.8;color:var(--muted);margin:12px 0 20px}.supp-jumps,.supp-actions{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0}.supp-jumps a,.supp-actions a,.supp-action{font-size:.9rem;display:inline-flex;align-items:center;min-height:44px;border:1px solid #cbd9ec;padding:8px 13px;border-radius:9px;color:var(--blue);background:#f1f6fc;font-weight:700}.supp-topic-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:20px 0}.supp-topic{min-width:0;border:1px solid var(--line);padding:21px;border-radius:12px;background:white}.supp-topic h4{font-size:1rem;line-height:1.6;margin:0 0 9px}.supp-topic p{font-size:.94rem;line-height:1.8;color:var(--muted)}.supp-tools{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:22px 0}.supp-tools a{padding:16px;border:1px solid var(--line);border-radius:10px;display:flex;flex-direction:column;min-width:0;gap:4px;background:var(--wash)}.supp-tools b{font-size:1rem;color:var(--navy)}.supp-tools span{font-size:.91rem;color:var(--muted)}.supp-detail{margin:12px 0;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:white}.supp-detail>summary{font-size:1rem;font-weight:700;cursor:pointer;padding:18px 20px;line-height:1.6;min-height:52px;color:var(--navy)}.supp-detail[open]>summary{border-bottom:1px solid var(--line);background:var(--wash)}.supp-detail-body{padding:20px;font-size:1rem;line-height:1.8}.supp-detail-body h4{font-size:1.05rem;margin:14px 0 9px}.supp-detail-body p{margin:9px 0;color:var(--muted)}.supp-detail-body ul{padding-left:24px;margin:12px 0}.supp-detail-body .concept{background:var(--wash);padding:16px;margin:18px 0;border-radius:9px}.supp-detail .practice-steps a{color:var(--blue);display:inline-block;padding:6px 0;font-size:.91rem;text-decoration:underline;text-underline-offset:4px}.supp-detail .practice-steps li{gap:14px}.supp-detail .practice-steps li>span{flex-shrink:0}.supp-note{background:#eaf1fb;padding:18px 20px;border-left:3px solid var(--blue);font-size:.95rem;line-height:1.9;margin:18px 0;border-radius:0 9px 9px 0;color:#314e70}.supp-example{margin:0;padding:20px;background:#eff5fd;border-top:1px solid var(--line);font-size:.95rem;line-height:1.85;overflow-wrap:anywhere}.supp-example-title{font-size:.96rem;font-weight:700;color:var(--navy);margin-bottom:10px}.supp-example p,.supp-example li,.supp-example-answer{font-size:.95rem;color:#354f6d;line-height:1.85}.supp-example ul{padding-left:22px}.supp-example-answer{margin-top:10px}.supp-quote{padding:24px;border-radius:var(--radius);background:var(--navy);color:white;font-size:1rem;line-height:1.8}.supp-quote strong{color:white}.supp-quote p{color:#e0ecf8;margin-top:10px;font-size:.95rem}.prompt-card[id],.supp-block[id]{scroll-margin-top:110px}.supp-guide a:hover,.supp-tools a:hover{border-color:var(--blue)}.supp-guide a:focus-visible,.supp-detail summary:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
 @media(max-width:1100px){.supp-topic-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:600px){.supp-guide{padding:20px 16px}.supp-topic-grid,.supp-tools{grid-template-columns:1fr}.supp-topic{padding:19px}.supp-detail-body{padding:18px 15px}.supp-detail>summary{padding:16px 15px}.supp-guide h3,.supp-block>h3{font-size:1.15rem}.supp-jumps a{flex:1 1 auto;justify-content:center}.supp-example{padding:18px 15px}}
+
+/* ===== 2026 Premium Instructor Edition ===== */
+:root{
+  --navy:#0b2540;--navy2:#102f50;--ink:#102a43;--muted:#5d7083;--blue:#2563eb;
+  --cyan:#44c7e8;--gold:#d9ad54;--paper:#ffffff;--line:#d9e3ec;--wash:#f5f8fc;
+  --soft:#edf4fb;--shadow:0 16px 44px rgba(15,42,67,.08);--shadow2:0 8px 24px rgba(15,42,67,.07);
+  --radius:20px;
+}
+body{background:
+  radial-gradient(circle at 92% 3%,rgba(68,199,232,.10),transparent 24rem),
+  radial-gradient(circle at 8% 24%,rgba(217,173,84,.07),transparent 22rem),
+  #f5f8fc;
+}
+.topbar{background:rgba(9,33,56,.96);backdrop-filter:blur(18px);box-shadow:0 8px 28px rgba(4,27,48,.12)}
+.topbar-inner{max-width:1640px}.brand-mark{background:rgba(255,255,255,.04);border-color:#40627f}
+.shell{max-width:1640px}
+.sidebar{background:rgba(247,250,253,.72);backdrop-filter:blur(14px)}
+.lesson-link{border-radius:14px}.lesson-link:hover{background:#e9f1f8;transform:translateX(2px)}
+.lesson-link[aria-current="page"]{background:linear-gradient(135deg,#0b2540,#123b61);box-shadow:0 12px 26px rgba(11,37,64,.18)}
+main{padding-top:40px}
+.page-intro{
+  position:relative;overflow:hidden;padding:34px 36px;margin-bottom:34px;border:1px solid #dce6ef;border-radius:24px;
+  background:linear-gradient(135deg,#fff 0%,#f7fbff 58%,#eef8fb 100%);box-shadow:var(--shadow);
+}
+.page-intro:after{content:"";position:absolute;width:240px;height:240px;border-radius:50%;right:-90px;top:-110px;background:rgba(68,199,232,.09)}
+.page-intro h1{font-size:clamp(1.85rem,2.8vw,2.7rem)}
+.course-facts{position:relative;z-index:1}.course-facts strong{color:#0d3b62}
+.intro-note{font-size:.92rem;color:#4f667b}
+.lesson-heading{padding:8px 4px 22px;border-bottom:1px solid var(--line);margin-bottom:22px}
+.lesson-heading h2{font-size:clamp(1.65rem,2.6vw,2.25rem)}
+.lesson-index{color:#d7e3ee}
+.tool-row{padding:14px 16px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.72)}
+.tool-row a{box-shadow:0 3px 10px rgba(15,42,67,.04)}
+.knowledge-card{border:1px solid #dce6ef;border-radius:18px;box-shadow:0 8px 22px rgba(15,42,67,.045);transition:.18s ease}
+.knowledge-card:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(15,42,67,.075)}
+.knowledge-card h3{color:#173d5e}
+.practice-layout{padding:4px 0}
+.deliverable{background:linear-gradient(145deg,#0b2540,#123f66);box-shadow:0 16px 34px rgba(11,37,64,.18)}
+.prompt-heading{padding-top:10px}.prompt-heading h3{font-size:1.55rem}
+.prompt-help{padding:14px 16px;border-radius:12px;background:#eef5fb;border:1px solid #d7e5f1}
+.prompt-list{gap:18px}
+.prompt-card{border-radius:18px;border-color:#d8e4ee;box-shadow:var(--shadow2);transition:transform .16s ease,box-shadow .16s ease}
+.prompt-card:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(15,42,67,.10)}
+.prompt-added{border-left:4px solid #44c7e8}
+.prompt-added .source.extra:before{content:"NEW · ";font-weight:800;color:#0e8aa5}
+.prompt-top{padding:22px 24px}.prompt-num{background:#eaf2ff;color:#1d5cc8}
+.copy-btn{background:linear-gradient(135deg,#1f5fd0,#164bac);box-shadow:0 6px 14px rgba(37,99,235,.18)}
+.prompt-body{background:linear-gradient(180deg,#f8fbfe,#f2f7fc)}
+pre{font-size:1rem;line-height:1.9}
+.teacher-tip{background:#fffdfa}
+.review{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;margin-top:38px;box-shadow:0 8px 22px rgba(15,42,67,.045)}
+.submit-strip{background:linear-gradient(135deg,#eaf2fb,#f3f8fc);border:1px solid #d7e4ef}
+.lesson-bottom{padding-top:10px}
+.prompt-tools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:20px;position:relative;z-index:2}
+.prompt-search-wrap{flex:1;min-width:260px;position:relative}
+.prompt-search{width:100%;min-height:50px;border:1px solid #cfddea;border-radius:13px;background:#fff;padding:0 16px 0 44px;color:var(--ink);font:inherit;box-shadow:0 4px 14px rgba(15,42,67,.04)}
+.prompt-search:focus{outline:3px solid rgba(37,99,235,.20);border-color:#5d8ee7}
+.prompt-search-icon{position:absolute;left:15px;top:50%;transform:translateY(-50%);color:#7890a4;font-size:1.05rem}
+.prompt-search-status{font-size:.83rem;color:var(--muted);min-width:116px;text-align:right}
+.prompt-empty{display:none;padding:26px;text-align:center;border:1px dashed #b9cada;border-radius:16px;background:#fff;color:var(--muted);margin-top:15px}
+.prompt-empty.show{display:block}
+@media(max-width:900px){
+  .page-intro{padding:26px}.sidebar{background:rgba(245,248,252,.94)}
+}
+@media(max-width:680px){
+  body{background:#f6f9fc}
+  main{padding-left:14px;padding-right:14px}
+  .page-intro{padding:22px 18px;border-radius:18px}
+  .course-facts{width:100%;justify-content:space-between}
+  .course-facts div{padding:0 13px}
+  .prompt-top{padding:18px 15px}
+  .prompt-card{border-radius:15px}
+  .prompt-search-wrap{min-width:100%}.prompt-search-status{text-align:left}
+  .review{padding:20px 16px}
+}
+
+
+/* 2026 안성시평생학습관 차시별 교육일지 · 3채널 아카이브 */
+.course-journal{margin:0 0 38px;padding:28px;border:1px solid #d5e0eb;border-radius:22px;background:linear-gradient(145deg,#fff 0%,#f7faff 55%,#f0f6fb 100%);box-shadow:0 16px 44px rgba(16,44,75,.08);scroll-margin-top:112px}
+.journal-head{display:flex;align-items:flex-end;justify-content:space-between;gap:22px;margin-bottom:22px}.journal-head h2{font-size:clamp(1.35rem,2.2vw,1.85rem);line-height:1.4;letter-spacing:-.035em;margin:6px 0}.journal-head p{max-width:760px;color:var(--muted);font-size:.94rem;line-height:1.8}.journal-badge{flex-shrink:0;padding:10px 14px;border:1px solid #bed0e4;border-radius:999px;background:#fff;color:var(--navy);font-size:.78rem;font-weight:800;white-space:nowrap}
+.journal-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.journal-card{position:relative;overflow:hidden;padding:20px;border:1px solid var(--line);border-radius:16px;background:#fff;box-shadow:0 7px 20px rgba(16,44,75,.045)}.journal-card::before{content:"";position:absolute;left:0;top:0;width:5px;height:100%;background:linear-gradient(180deg,var(--blue),var(--cyan))}.journal-meta{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:8px}.journal-no{font-size:.74rem;font-weight:900;color:#fff;background:var(--navy);border-radius:7px;padding:5px 8px;letter-spacing:.03em}.journal-date{font-size:.77rem;color:var(--muted);font-weight:700}.journal-card h3{font-size:1rem;line-height:1.55;letter-spacing:-.018em;margin:0 0 14px;padding-right:4px}.journal-links{display:flex;flex-wrap:wrap;gap:8px}.journal-links a{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:40px;padding:8px 11px;border-radius:9px;border:1px solid #d0ddea;background:#f8fbff;color:#254d78;font-size:.79rem;font-weight:800}.journal-links a:hover{border-color:var(--blue);background:#edf4ff;color:var(--blue)}.journal-links a::after{content:"↗";font-size:.76rem}.journal-course-link{display:inline-flex;align-items:center;margin-top:12px;color:var(--blue);font-size:.79rem;font-weight:800;text-decoration:underline;text-underline-offset:4px}
+.journal-foot{margin-top:18px;padding:15px 17px;border-radius:12px;background:#102c4b;color:#e6f0fa;display:flex;align-items:center;justify-content:space-between;gap:18px;font-size:.86rem;line-height:1.7}.journal-foot strong{color:#fff}.journal-foot span:last-child{color:var(--cyan);font-weight:800;white-space:nowrap}
+.lesson-journal{display:flex;align-items:center;justify-content:space-between;gap:18px;margin:-6px 0 27px;padding:17px 18px;border:1px solid #d5e0eb;border-radius:13px;background:linear-gradient(110deg,#f7faff,#fff)}.lesson-journal-info{min-width:0}.lesson-journal-kicker{display:block;color:var(--blue);font-size:.7rem;font-weight:900;letter-spacing:.08em;margin-bottom:3px}.lesson-journal-info b{display:block;color:var(--navy);font-size:.92rem;line-height:1.5}.lesson-journal-info small{display:block;color:var(--muted);font-size:.76rem;margin-top:3px}.lesson-journal-links{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end}.lesson-journal-links a{display:inline-flex;align-items:center;justify-content:center;min-height:39px;padding:8px 10px;border:1px solid #cad8e8;border-radius:8px;background:#fff;color:#315b85;font-size:.76rem;font-weight:800}.lesson-journal-links a:hover{border-color:var(--blue);color:var(--blue);background:#eef5ff}
+.sidebar-journal{display:flex;align-items:center;justify-content:center;margin:20px 12px 0;padding:11px 10px;border:1px solid #c8d6e5;border-radius:10px;background:#fff;color:var(--blue);font-size:.79rem;font-weight:800}.sidebar-journal:hover{border-color:var(--blue);background:#edf4ff}
+@media(max-width:900px){.course-journal{scroll-margin-top:185px}.journal-grid{grid-template-columns:1fr}.journal-head{align-items:flex-start}.lesson-journal{flex-direction:column;align-items:flex-start}.lesson-journal-links{justify-content:flex-start}.sidebar-journal{display:none}}
+@media(max-width:680px){.course-journal{padding:20px 15px;margin-bottom:30px;border-radius:17px}.journal-head{flex-direction:column;gap:10px;margin-bottom:17px}.journal-head p{font-size:.9rem}.journal-badge{font-size:.72rem}.journal-card{padding:17px 15px 17px 18px}.journal-card h3{font-size:.96rem}.journal-links a{flex:1 1 30%;font-size:.74rem;padding:8px 7px}.journal-foot{flex-direction:column;align-items:flex-start;padding:14px 15px}.journal-foot span:last-child{white-space:normal}.lesson-journal{padding:15px;margin-top:-8px}.lesson-journal-links{width:100%}.lesson-journal-links a{flex:1 1 30%;padding:8px 6px;font-size:.72rem}}
+@media print{.course-journal{box-shadow:none}.journal-links,.lesson-journal-links,.journal-course-link,.sidebar-journal{display:none!important}.journal-grid{grid-template-columns:repeat(2,1fr)}.lesson-journal{break-inside:avoid}}
+
+
+
+/* ===== 2026 PREMIUM POLISH : YUSSAM CLASS ===== */
+:root{
+  --navy:#0b2540;
+  --navy-2:#123b61;
+  --ink:#102a43;
+  --muted:#61758a;
+  --blue:#1664d8;
+  --cyan:#59d5eb;
+  --gold:#d9b35c;
+  --paper:#ffffff;
+  --line:#d9e4ef;
+  --wash:#f4f8fc;
+  --radius:20px;
+  --shadow-sm:0 8px 24px rgba(10,37,64,.07);
+  --shadow-md:0 18px 48px rgba(10,37,64,.10);
+  --shadow-lg:0 30px 80px rgba(10,37,64,.14);
+}
+body{
+  background:
+    radial-gradient(circle at 8% 0%,rgba(89,213,235,.10),transparent 28rem),
+    radial-gradient(circle at 96% 12%,rgba(217,179,92,.09),transparent 24rem),
+    linear-gradient(180deg,#f8fbfe 0%,#f4f8fc 42%,#f8fafc 100%);
+}
+.topbar{
+  background:linear-gradient(100deg,rgba(8,30,52,.98),rgba(14,54,88,.97));
+  border-bottom:1px solid rgba(255,255,255,.10);
+  box-shadow:0 8px 28px rgba(3,20,36,.16);
+  backdrop-filter:blur(16px);
+}
+.topbar-inner{min-height:88px;max-width:1640px}
+.brand-mark{
+  width:48px;height:48px;border-radius:15px;
+  border-color:rgba(105,219,239,.34);
+  background:linear-gradient(145deg,rgba(255,255,255,.10),rgba(255,255,255,.025));
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.14),0 8px 24px rgba(0,0,0,.12);
+}
+.brand strong{font-size:1.2rem;letter-spacing:.065em}.brand small{color:#c8d8e6}
+.header-links a{border-radius:999px;padding:8px 13px;transition:all .2s ease}
+.header-links a:hover{background:rgba(255,255,255,.08);color:#fff;transform:translateY(-1px)}
+.header-links a:last-child{
+  border:1px solid rgba(105,219,239,.50);
+  background:linear-gradient(135deg,rgba(89,213,235,.15),rgba(255,255,255,.05));
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.09);
+}
+.shell{max-width:1640px}
+.sidebar{
+  background:rgba(247,250,253,.84);
+  backdrop-filter:blur(14px);
+  border-right:1px solid rgba(183,201,218,.65);
+}
+.lesson-link{transition:transform .18s ease,box-shadow .18s ease,background .18s ease,border-color .18s ease}
+.lesson-link:hover{background:#fff;border-color:#d3dfeb;box-shadow:var(--shadow-sm);transform:translateX(3px)}
+.lesson-link[aria-current="page"]{
+  background:linear-gradient(135deg,#0b2948,#154d79);
+  box-shadow:0 13px 28px rgba(11,41,72,.20);
+}
+.sidebar-journal{
+  display:flex;align-items:center;justify-content:center;margin:18px 8px 0;padding:12px 14px;
+  border-radius:12px;background:#fff;border:1px solid #d4e0eb;color:var(--navy);font-size:.78rem;font-weight:850;
+  box-shadow:var(--shadow-sm);transition:.2s ease;
+}
+.sidebar-journal:hover{transform:translateY(-2px);border-color:#9bb9d7;color:var(--blue)}
+main{padding-top:42px}
+.page-intro{
+  position:relative;overflow:hidden;
+  padding:34px 36px;margin-bottom:34px;border:1px solid #dbe6f0;border-radius:28px;
+  background:
+    radial-gradient(circle at 88% 12%,rgba(89,213,235,.19),transparent 14rem),
+    radial-gradient(circle at 75% 100%,rgba(217,179,92,.12),transparent 13rem),
+    linear-gradient(135deg,#fff 0%,#f8fbff 62%,#f0f7fb 100%);
+  box-shadow:var(--shadow-md);
+}
+.page-intro::after{
+  content:"";position:absolute;right:-80px;top:-90px;width:240px;height:240px;border-radius:50%;
+  border:1px solid rgba(20,86,204,.09);box-shadow:0 0 0 30px rgba(20,86,204,.025),0 0 0 65px rgba(89,213,235,.018);pointer-events:none;
+}
+.page-intro h1{color:#0d2a46;font-size:clamp(1.8rem,2.7vw,2.65rem)}
+.eyebrow{color:#0d63c9}.course-facts{position:relative;z-index:1}.course-facts div{min-width:92px;text-align:center}
+.course-facts strong{font-size:1.7rem}.intro-note{font-size:.9rem;color:#536b82}
+.course-journal{
+  border:1px solid rgba(190,207,222,.85);border-radius:28px;padding:32px;
+  background:
+    radial-gradient(circle at 92% 0%,rgba(89,213,235,.13),transparent 19rem),
+    linear-gradient(145deg,rgba(255,255,255,.98),rgba(245,250,255,.98));
+  box-shadow:var(--shadow-lg);
+}
+.journal-head{padding-bottom:20px;border-bottom:1px solid #e1e9f1}
+.journal-head h2{color:#0c2b47;font-size:clamp(1.45rem,2.35vw,2rem)}
+.journal-badge{
+  border-color:#cad9e8;background:linear-gradient(135deg,#fff,#f1f7fd);box-shadow:var(--shadow-sm);padding:11px 16px;
+}
+.journal-grid{gap:18px;margin-top:20px}
+.journal-card{
+  border-radius:20px;padding:23px 22px 22px 24px;
+  border:1px solid rgba(206,220,233,.92);
+  background:linear-gradient(180deg,#fff 0%,#fbfdff 100%);
+  box-shadow:0 10px 28px rgba(16,44,75,.065);
+  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;
+}
+.journal-card:hover{transform:translateY(-4px);box-shadow:0 20px 42px rgba(16,44,75,.11);border-color:#b5cbe0}
+.journal-card::before{width:6px;background:linear-gradient(180deg,#1b67d8 0%,#59d5eb 60%,#d9b35c 100%)}
+.journal-no{padding:6px 9px;border-radius:999px;background:linear-gradient(135deg,#0b2948,#15517f)}
+.journal-date{padding:5px 9px;border-radius:999px;background:#f2f6fa;border:1px solid #e0e8ef}
+.journal-card h3{font-size:1.06rem;color:#173751;margin-top:4px}
+.journal-links a{
+  border-radius:10px;background:#fff;box-shadow:0 4px 12px rgba(16,44,75,.04);transition:.18s ease;
+}
+.journal-links a:hover{transform:translateY(-2px);box-shadow:0 9px 18px rgba(16,44,75,.08)}
+.journal-foot{
+  border-radius:16px;padding:18px 20px;
+  background:linear-gradient(110deg,#0b2948,#123f67 72%,#15547e);
+  box-shadow:0 14px 30px rgba(11,41,72,.18);
+}
+.lesson-heading{padding-top:8px}.lesson-heading h2{color:#0c2b47}
+.lesson-index{color:#d7e4ee}
+.knowledge-card,.prompt-card,.lesson-journal{
+  box-shadow:var(--shadow-sm);border-color:#dbe5ee;
+}
+.knowledge-card{border-radius:18px;transition:.18s ease}.knowledge-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+.practice-layout{gap:24px}
+.deliverable{
+  background:linear-gradient(145deg,#0b2948,#123f67 65%,#16537b);
+  box-shadow:0 18px 42px rgba(11,41,72,.18);border:1px solid rgba(255,255,255,.08);
+}
+.prompt-heading{margin-top:6px}.prompt-card{border-radius:18px;transition:box-shadow .18s ease,border-color .18s ease}
+.prompt-card:hover{border-color:#c4d7e8;box-shadow:0 14px 34px rgba(16,44,75,.09)}
+.copy-btn{background:linear-gradient(135deg,#1456cc,#1a6bde);box-shadow:0 8px 18px rgba(20,86,204,.18)}
+.copy-btn:hover{background:linear-gradient(135deg,#0f49b4,#155fc8);transform:translateY(-1px)}
+.batch-copy{border-radius:11px;box-shadow:0 6px 16px rgba(20,86,204,.06)}
+.lesson-journal{border-radius:17px;background:linear-gradient(110deg,#f7fbff,#fff 55%,#f6fafc)}
+.lesson-journal-links a{border-radius:9px;transition:.18s ease}.lesson-journal-links a:hover{transform:translateY(-2px)}
+.submit-strip{
+  border:1px solid #d4e1ed;border-radius:16px;background:linear-gradient(135deg,#eef5fb,#f9fcff);
+  box-shadow:var(--shadow-sm);
+}
+.padlet-btn{
+  border-radius:10px;background:linear-gradient(135deg,#0b2948,#15517f);box-shadow:0 10px 22px rgba(11,41,72,.18);transition:.18s ease;
+}
+.padlet-btn:hover{transform:translateY(-2px);filter:brightness(1.05)}
+.footer{margin-top:34px;padding-top:32px;border-top:1px solid #dbe4ec}
+@media(max-width:900px){
+  .page-intro{padding:28px 26px;border-radius:23px}.course-journal{padding:26px;border-radius:23px}
+}
+@media(max-width:680px){
+  .topbar-inner{min-height:76px}.page-intro{padding:23px 18px;border-radius:19px;margin-bottom:28px}
+  .course-facts{width:100%;justify-content:space-between}.course-facts div{min-width:0;flex:1;padding:0 10px}
+  .course-journal{padding:20px 14px;border-radius:19px}.journal-grid{gap:13px}.journal-card{padding:18px 15px 18px 19px;border-radius:16px}
+}
 </style>
 </head>
 <body>
 <a class="skip" href="#main">실습 가이드 본문으로 이동</a>
-<header class="topbar"><div class="topbar-inner"><a class="brand" href="#lesson-1" data-lesson="1"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5c-3-2-7-2-10-1v15c3-1 7-1 10 1 3-2 7-2 10-1V4c-3-1-7-1-10 1Z"/><path d="M12 5v15"/></svg></span><span><strong>YUSSAM CLASS</strong><small>AI콘텐츠마케팅연구소 유쌤클래스</small></span></a><nav class="header-links" aria-label="외부 자료"><a href="https://www.yussamclass.com/" target="_blank" rel="noopener noreferrer">유쌤클래스 홈페이지</a><a href="https://padlet.com/yu_ssam/2026-ai-9-inm9shio5akl9hjf" target="_blank" rel="noopener noreferrer">스터디 게시판 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7M21 3l-9 9"/><path d="M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg></a></nav></div></header>
-<div class="shell"><aside class="sidebar"><div class="nav-heading">COURSE WORKBOOK<span>8차시 실습 가이드</span></div><nav class="lesson-nav" aria-label="차시별 실습"><a href="#lesson-1" class="lesson-link" data-lesson="1"><span class="nav-no">01</span><span><b>1차시</b><small>윤리·프롬프트</small></span><span class="nav-count">21</span></a><a href="#lesson-2" class="lesson-link" data-lesson="2"><span class="nav-no">02</span><span><b>2차시</b><small>챗봇·콘텐츠 제작</small></span><span class="nav-count">20</span></a><a href="#lesson-3" class="lesson-link" data-lesson="3"><span class="nav-no">03</span><span><b>3차시</b><small>기획·AI 영상</small></span><span class="nav-count">10</span></a><a href="#lesson-4" class="lesson-link" data-lesson="4"><span class="nav-no">04</span><span><b>4차시</b><small>음악·영상 편집</small></span><span class="nav-count">6</span></a><a href="#lesson-5" class="lesson-link" data-lesson="5"><span class="nav-no">05</span><span><b>5차시</b><small>GEO·웹페이지</small></span><span class="nav-count">5</span></a><a href="#lesson-6" class="lesson-link" data-lesson="6"><span class="nav-no">06</span><span><b>6차시</b><small>강의기획·자료</small></span><span class="nav-count">5</span></a><a href="#lesson-7" class="lesson-link" data-lesson="7"><span class="nav-no">07</span><span><b>7차시</b><small>수업시연·피드백</small></span><span class="nav-count">4</span></a><a href="#lesson-8" class="lesson-link" data-lesson="8"><span class="nav-no">08</span><span><b>8차시</b><small>최종시연·정리</small></span><span class="nav-count">4</span></a></nav><div class="sidebar-foot"><b>친절한유성쌤 김유성 강사</b>실행하고, 확인하고,<br>내 수업으로 연결합니다.</div></aside>
-<main id="main"><div class="page-intro"><div class="intro-top"><div><div class="eyebrow">AI LITERACY · INSTRUCTOR TRAINING</div><h1>AI리터러시지도사<span>강사양성과정 실습 가이드 · 김유성 강사</span></h1></div><div class="course-facts" aria-label="과정 구성"><div><strong>8</strong><small>차시</small></div><div><strong>16h</strong><small>총 교육시간</small></div><div><strong>75</strong><small>실습 프롬프트</small></div></div></div><p class="intro-note">실습 80% · 이론 20%. 차시를 선택하고, 내 상황을 넣어 실행한 뒤, 결과를 검증하세요.</p></div>
+<header class="topbar"><div class="topbar-inner"><a class="brand" href="#lesson-1" data-lesson="1"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5c-3-2-7-2-10-1v15c3-1 7-1 10 1 3-2 7-2 10-1V4c-3-1-7-1-10 1Z"/><path d="M12 5v15"/></svg></span><span><strong>YUSSAM CLASS</strong><small>AI콘텐츠마케팅연구소 유쌤클래스</small></span></a><nav class="header-links" aria-label="교육자료 및 외부 자료"><a href="#course-journal">차시별 교육일지</a><a href="https://www.yussamclass.com/" target="_blank" rel="noopener noreferrer">유쌤클래스 홈페이지</a><a href="https://padlet.com/yu_ssam/99" target="_blank" rel="noopener noreferrer">스터디 게시판 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7M21 3l-9 9"/><path d="M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg></a></nav></div></header>
+<div class="shell"><aside class="sidebar"><div class="nav-heading">COURSE WORKBOOK<span>8차시 실습 가이드</span></div><nav class="lesson-nav" aria-label="차시별 실습"><a href="#lesson-1" class="lesson-link" data-lesson="1"><span class="nav-no">01</span><span><b>1차시</b><small>윤리·프롬프트</small></span><span class="nav-count">25</span></a><a href="#lesson-2" class="lesson-link" data-lesson="2"><span class="nav-no">02</span><span><b>2차시</b><small>챗봇·콘텐츠 제작</small></span><span class="nav-count">24</span></a><a href="#lesson-3" class="lesson-link" data-lesson="3"><span class="nav-no">03</span><span><b>3차시</b><small>기획·AI 영상</small></span><span class="nav-count">14</span></a><a href="#lesson-4" class="lesson-link" data-lesson="4"><span class="nav-no">04</span><span><b>4차시</b><small>음악·영상 편집</small></span><span class="nav-count">10</span></a><a href="#lesson-5" class="lesson-link" data-lesson="5"><span class="nav-no">05</span><span><b>5차시</b><small>GEO·웹페이지</small></span><span class="nav-count">9</span></a><a href="#lesson-6" class="lesson-link" data-lesson="6"><span class="nav-no">06</span><span><b>6차시</b><small>강의기획·자료</small></span><span class="nav-count">9</span></a><a href="#lesson-7" class="lesson-link" data-lesson="7"><span class="nav-no">07</span><span><b>7차시</b><small>수업시연·피드백</small></span><span class="nav-count">8</span></a><a href="#lesson-8" class="lesson-link" data-lesson="8"><span class="nav-no">08</span><span><b>8차시</b><small>최종시연·정리</small></span><span class="nav-count">8</span></a></nav><a class="sidebar-journal" href="#course-journal">교육일지 · 3채널 보기</a><div class="sidebar-foot"><b>친절한유성쌤 김유성 강사</b>실행하고, 확인하고,<br>내 수업으로 연결합니다.</div></aside>
+<main id="main"><div class="page-intro"><div class="intro-top"><div><div class="eyebrow">AI LITERACY · INSTRUCTOR TRAINING</div><h1>AI리터러시지도사<span>강사양성과정 실습 가이드 · 김유성 강사</span></h1></div><div class="course-facts" aria-label="과정 구성"><div><strong>8</strong><small>차시</small></div><div><strong>16h</strong><small>총 교육시간</small></div><div><strong>107</strong><small>실습 프롬프트</small></div></div></div><p class="intro-note">실습 80% · 이론 20%. 차시별 실습 프롬프트와 2026년 9월 실제 교육일지를 함께 확인하며 복습할 수 있습니다.</p><div class="prompt-tools" aria-label="프롬프트 빠른 검색">
+<div class="prompt-search-wrap"><span class="prompt-search-icon" aria-hidden="true">⌕</span><input id="prompt-search" class="prompt-search" type="search" placeholder="현재 차시의 프롬프트 제목·내용 검색" autocomplete="off" aria-label="현재 차시 프롬프트 검색"></div>
+<div id="prompt-search-status" class="prompt-search-status" aria-live="polite">현재 차시 전체 보기</div>
+</div></div>
+<section class="course-journal" id="course-journal" aria-labelledby="journal-title">
+<div class="journal-head"><div><span class="mini-label">COURSE JOURNAL · SEPTEMBER 2026</span><h2 id="journal-title">2026년 9월 안성시평생학습관 차시별 교육일지</h2><p>AI리터러시지도사 강사양성과정 1차시부터 8차시까지의 교육 내용을 티스토리, 네이버 블로그, 유쌤클래스 홈페이지에서 다시 확인할 수 있도록 한곳에 정리했습니다.</p></div><span class="journal-badge">8차시 · 3개 채널 · 24개 바로가기</span></div>
+<div class="journal-grid"><article class="journal-card">
+<div class="journal-meta"><span class="journal-no">01차시</span><span class="journal-date">2026년 9월 2일</span></div>
+<h3>AI 윤리 &amp; 프롬프트 설계, AI강사 소개</h3>
+<div class="journal-links" aria-label="1차시 교육일지 채널"><a href="https://yussamclass.tistory.com/76" target="_blank" rel="noopener noreferrer">티스토리</a><a href="https://blog.naver.com/mindlemedia/224402962651" target="_blank" rel="noopener noreferrer">네이버 블로그</a><a href="https://www.yussamclass.com/130/?q=YToxOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjt9&amp;bmode=view&amp;idx=173807476&amp;t=board" target="_blank" rel="noopener noreferrer">유쌤클래스</a></div>
+<a class="journal-course-link" href="#lesson-1" data-lesson="1">이 차시 실습 가이드 바로가기 →</a>
+</article><article class="journal-card">
+<div class="journal-meta"><span class="journal-no">02차시</span><span class="journal-date">2026년 9월 7일</span></div>
+<h3>AI 챗봇부터 슬라이드·카드뉴스 제작</h3>
+<div class="journal-links" aria-label="2차시 교육일지 채널"><a href="https://yussamclass.tistory.com/80" target="_blank" rel="noopener noreferrer">티스토리</a><a href="https://blog.naver.com/mindlemedia/224417844901" target="_blank" rel="noopener noreferrer">네이버 블로그</a><a href="https://www.yussamclass.com/130/?q=YToxOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjt9&amp;bmode=view&amp;idx=174530489&amp;t=board" target="_blank" rel="noopener noreferrer">유쌤클래스</a></div>
+<a class="journal-course-link" href="#lesson-2" data-lesson="2">이 차시 실습 가이드 바로가기 →</a>
+</article><article class="journal-card">
+<div class="journal-meta"><span class="journal-no">03차시</span><span class="journal-date">2026년 9월 9일</span></div>
+<h3>제미나이·vStory로 숏폼 AI 영상 만들기</h3>
+<div class="journal-links" aria-label="3차시 교육일지 채널"><a href="https://yussamclass.tistory.com/88" target="_blank" rel="noopener noreferrer">티스토리</a><a href="https://blog.naver.com/mindlemedia/224419954533" target="_blank" rel="noopener noreferrer">네이버 블로그</a><a href="https://www.yussamclass.com/130/?q=YToxOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjt9&amp;bmode=view&amp;idx=174632301&amp;t=board" target="_blank" rel="noopener noreferrer">유쌤클래스</a></div>
+<a class="journal-course-link" href="#lesson-3" data-lesson="3">이 차시 실습 가이드 바로가기 →</a>
+</article><article class="journal-card">
+<div class="journal-meta"><span class="journal-no">04차시</span><span class="journal-date">2026년 9월 14일</span></div>
+<h3>AI 음악 제작 &amp; CapCut 영상 편집</h3>
+<div class="journal-links" aria-label="4차시 교육일지 채널"><a href="https://yussamclass.tistory.com/96" target="_blank" rel="noopener noreferrer">티스토리</a><a href="https://blog.naver.com/mindlemedia/224423289394" target="_blank" rel="noopener noreferrer">네이버 블로그</a><a href="https://www.yussamclass.com/130/?q=YToxOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjt9&amp;bmode=view&amp;idx=174789992&amp;t=board" target="_blank" rel="noopener noreferrer">유쌤클래스</a></div>
+<a class="journal-course-link" href="#lesson-4" data-lesson="4">이 차시 실습 가이드 바로가기 →</a>
+</article><article class="journal-card">
+<div class="journal-meta"><span class="journal-no">05차시</span><span class="journal-date">2026년 9월 16일</span></div>
+<h3>GEO 홍보전략과 웹페이지 제작</h3>
+<div class="journal-links" aria-label="5차시 교육일지 채널"><a href="https://yussamclass.tistory.com/99" target="_blank" rel="noopener noreferrer">티스토리</a><a href="https://blog.naver.com/mindlemedia/224423801171" target="_blank" rel="noopener noreferrer">네이버 블로그</a><a href="https://www.yussamclass.com/130/?q=YToxOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjt9&amp;bmode=view&amp;idx=174813291&amp;t=board" target="_blank" rel="noopener noreferrer">유쌤클래스</a></div>
+<a class="journal-course-link" href="#lesson-5" data-lesson="5">이 차시 실습 가이드 바로가기 →</a>
+</article><article class="journal-card">
+<div class="journal-meta"><span class="journal-no">06차시</span><span class="journal-date">2026년 9월 21일</span></div>
+<h3>AI 강의계획서 작성과 교육콘텐츠 제작</h3>
+<div class="journal-links" aria-label="6차시 교육일지 채널"><a href="https://yussamclass.tistory.com/103" target="_blank" rel="noopener noreferrer">티스토리</a><a href="https://blog.naver.com/mindlemedia/224424449430" target="_blank" rel="noopener noreferrer">네이버 블로그</a><a href="https://www.yussamclass.com/130/?q=YToxOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjt9&amp;bmode=view&amp;idx=174842562&amp;t=board" target="_blank" rel="noopener noreferrer">유쌤클래스</a></div>
+<a class="journal-course-link" href="#lesson-6" data-lesson="6">이 차시 실습 가이드 바로가기 →</a>
+</article><article class="journal-card">
+<div class="journal-meta"><span class="journal-no">07차시</span><span class="journal-date">2026년 9월 28일</span></div>
+<h3>6명의 AI 강의시연</h3>
+<div class="journal-links" aria-label="7차시 교육일지 채널"><a href="https://yussamclass.tistory.com/105" target="_blank" rel="noopener noreferrer">티스토리</a><a href="https://blog.naver.com/mindlemedia/224427921699" target="_blank" rel="noopener noreferrer">네이버 블로그</a><a href="https://www.yussamclass.com/130/?q=YToxOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjt9&amp;bmode=view&amp;idx=174919360&amp;t=board" target="_blank" rel="noopener noreferrer">유쌤클래스</a></div>
+<a class="journal-course-link" href="#lesson-7" data-lesson="7">이 차시 실습 가이드 바로가기 →</a>
+</article><article class="journal-card">
+<div class="journal-meta"><span class="journal-no">08차시</span><span class="journal-date">2026년 9월 30일</span></div>
+<h3>최종 강의시연 &amp; 자격증 수여</h3>
+<div class="journal-links" aria-label="8차시 교육일지 채널"><a href="https://yussamclass.tistory.com/107" target="_blank" rel="noopener noreferrer">티스토리</a><a href="https://blog.naver.com/mindlemedia/224428021202" target="_blank" rel="noopener noreferrer">네이버 블로그</a><a href="https://www.yussamclass.com/130/?q=YToxOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjt9&amp;bmode=view&amp;idx=174920846&amp;t=board" target="_blank" rel="noopener noreferrer">유쌤클래스</a></div>
+<a class="journal-course-link" href="#lesson-8" data-lesson="8">이 차시 실습 가이드 바로가기 →</a>
+</article></div>
+<div class="journal-foot"><span><strong>과정 흐름</strong> · AI 기초·프롬프트 → 챗봇·교육자료 → AI 영상 → AI 음악·영상편집 → GEO·웹페이지 → 강의설계·교육콘텐츠 → 강의시연 → 최종 시연·자격증 수여</span><span>AI콘텐츠마케팅연구소 유쌤클래스 · 김유성 강사</span></div>
+</section>
 <section class="lesson" id="lesson-1" aria-labelledby="heading-1">
     <div class="lesson-heading"><div><div class="eyebrow">LESSON 01 <span>2시간 · 계획서 9월 2일</span></div><h2 id="heading-1">AI 윤리 &amp; 프롬프트 설계</h2><p>AI 답변을 안전하게 검증하고, 나의 업무에 맞는 프롬프트와 문서 초안을 완성합니다.</p></div><div class="lesson-index">01<span>/ 08</span></div></div>
     <div class="tool-row"><b>실습 도구</b><a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">ChatGPT <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7M21 3l-9 9"/><path d="M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg></a><a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer">Gemini <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7M21 3l-9 9"/><path d="M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg></a></div>
+<div class="lesson-journal" aria-label="1차시 교육일지 링크"><div class="lesson-journal-info"><span class="lesson-journal-kicker">LESSON JOURNAL</span><b>AI 윤리 &amp; 프롬프트 설계, AI강사 소개</b><small>2026년 9월 2일 교육 · 차시별 복습 포스팅</small></div><div class="lesson-journal-links"><a href="https://yussamclass.tistory.com/76" target="_blank" rel="noopener noreferrer">티스토리 ↗</a><a href="https://blog.naver.com/mindlemedia/224402962651" target="_blank" rel="noopener noreferrer">네이버 ↗</a><a href="https://www.yussamclass.com/130/?q=YToxOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjt9&amp;bmode=view&amp;idx=173807476&amp;t=board" target="_blank" rel="noopener noreferrer">홈페이지 ↗</a></div></div>
     
     
     <h3 class="section-title">꼭 알아야 할 내용</h3><div class="knowledge-grid"><div class="knowledge-card"><span class="mini-label">핵심 01</span><h3>안전하게 입력</h3><p>개인정보·민감정보·기관 내부자료는 그대로 입력하지 않습니다. 실습에는 가상정보를 사용합니다.</p></div><div class="knowledge-card"><span class="mini-label">핵심 02</span><h3>근거를 확인</h3><p>AI는 틀릴 수 있습니다. 출처와 기준 날짜를 확인하고 중요한 정보는 공식 자료와 대조합니다.</p></div><div class="knowledge-card"><span class="mini-label">핵심 03</span><h3>5요소로 질문</h3><p>역할 + 목적 + 맥락 + 조건 + 출력형식. 부족한 정보를 채우고 결과를 다시 수정합니다.</p></div></div>
     <div class="practice-layout"><div class="flow-block"><h3 class="section-title">실습 진행 순서</h3><ol class="practice-steps"><li><span>01</span><div><b>개념·윤리 확인</b><p>가상 O/X 사례를 판단하고 AI 설명과 비교합니다.</p></div></li><li><span>02</span><div><b>질문 설계·비교</b><p>모호한 질문과 구체적인 질문을 각각 실행합니다.</p></div></li><li><span>03</span><div><b>문서 초안·수정</b><p>민원답변·제안서·보고서 중 하나를 선택합니다.</p></div></li><li><span>04</span><div><b>검증·공유</b><p>수치와 사실을 확인한 뒤 프롬프트와 결과물을 공유합니다.</p></div></li></ol></div><aside class="deliverable"><span class="mini-label">TODAY’S OUTPUT</span><h3>오늘 완성할 결과물</h3><div><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>나만의 프롬프트 3개</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>업무·행정 문서 1개</span></div><p>반복업무 한 가지에 적용하고, AI가 도운 부분과 사람이 판단한 부분을 기록하세요.</p></aside></div>
-    <div class="prompt-heading"><div><span class="mini-label">PROMPT WORKBOOK</span><h3>실습 프롬프트 <span>21개</span></h3></div><button class="batch-copy" type="button" data-batch="1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>차시 전체 복사</button></div>
+    <div class="prompt-heading"><div><span class="mini-label">PROMPT WORKBOOK</span><h3>실습 프롬프트 <span>25개</span></h3></div><button class="batch-copy" type="button" data-batch="1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>차시 전체 복사</button></div>
     <p class="prompt-help">[ ]와 ○○를 내 상황으로 바꾸세요. 필요한 카드를 펼쳐 내용을 확인하고, 복사한 뒤 AI 도구에 붙여넣어 실행합니다.</p>
     <div class="prompt-list"><article class="prompt-card" id="p001">
     <div class="prompt-top"><div class="prompt-label"><span class="prompt-num">01</span><div><div class="source ">프롬프트 모음 원문 · P.13</div><h4>개인정보 O/X 퀴즈</h4></div></div><button type="button" class="copy-btn" data-copy="p001" aria-label="개인정보 O/X 퀴즈 프롬프트 복사"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><span>복사</span></button></div>
@@ -269,13 +556,81 @@ AI로 만든 이미지, 인터넷 사진, 음악, 다른 사람의 얼굴·목�
 실제 개인정보나 특정인의 얼굴·목소리를 요구하지 마세요.
 마지막에 학습자가 자신의 사용 목적과 배포 범위를 점검하는 질문 3개를 제시해주세요.</pre></div></details>
     <p class="teacher-tip"><b>실습 팁</b> AI가 생성했다고 해서 모든 활용이 자동으로 허용되는 것은 아닙니다. 실제 배포 전에는 출처·이용조건·동의를 직접 확인합니다.</p>
-    </article></div>
+    </article><article class="prompt-card prompt-added" id="p101">
+<div class="prompt-top"><div class="prompt-label"><span class="prompt-num">22</span><div><div class="source extra">강사양성과정 확장 실습</div><h4>민감정보 비식별화 연습</h4></div></div><button type="button" class="copy-btn" data-copy="p101" aria-label="민감정보 비식별화 연습 프롬프트 복사"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg><span>복사</span></button></div>
+<details><summary>프롬프트 보기<span class="chevron">⌄</span></summary><div class="prompt-body"><pre id="text-p101">당신은 AI리터러시 교육을 위한 개인정보 보호 코치입니다.
+아래 원문을 생성형 AI에 입력하기 전에 안전한 실습용 정보로 바꾸고 싶습니다.
+
+원문:
+[여기에 문장을 붙여넣기]
+
+다음 순서로 답해주세요.
+1. 개인정보·민감정보·기관 내부정보로 볼 수 있는 부분 표시
+2. 삭제 / 가명처리 / 범주화 중 적절한 방법 제안
+3. 의미는 유지하면서 비식별화한 실습용 문장 작성
+4. 여전히 주의가 필요한 부분 표시
+
+실제 개인정보를 새로 추측하거나 복원하지 마세요.</pre></div></details>
+<p class="teacher-tip"><b>실습 팁</b> 실제 교육생 자료 대신 가상 사례로 먼저 연습한 뒤, 기관 지침과 함께 확인하세요.</p>
+</article><article class="prompt-card prompt-added" id="p102">
+<div class="prompt-top"><div class="prompt-label"><span class="prompt-num">23</span><div><div class="source extra">강사양성과정 확장 실습</div><h4>프롬프트 품질 진단표</h4></div></div><button type="button" class="copy-btn" data-copy="p102" aria-label="프롬프트 품질 진단표 프롬프트 복사"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg><span>복사</span></button></div>
+<details><summary>프롬프트 보기<span class="chevron">⌄</span></summary><div class="prompt-body"><pre id="text-p102">당신은 생성형 AI 프롬프트 코치입니다.
+아래 프롬프트를 분석해주세요.
+
+프롬프트:
+[붙여넣기]
+
+역할·목적·맥락·조건·출력형식의 5요소를 기준으로 각 항목을 5점 만점으로 평가하고,
+부족한 요소를 설명한 뒤 개선 버전을 작성해주세요.
+
+출력:
+| 요소 | 점수 | 현재 상태 | 개선 방법 |
+마지막에 &#x27;원문 대비 무엇이 좋아졌는지&#x27;를 3줄로 요약해주세요.</pre></div></details>
+<p class="teacher-tip"><b>실습 팁</b> 점수 자체보다 어떤 정보가 추가되면서 결과가 좋아지는지 비교하게 하세요.</p>
+</article><article class="prompt-card prompt-added" id="p103">
+<div class="prompt-top"><div class="prompt-label"><span class="prompt-num">24</span><div><div class="source extra">강사양성과정 확장 실습</div><h4>AI 답변 사실검증 체크리스트</h4></div></div><button type="button" class="copy-btn" data-copy="p103" aria-label="AI 답변 사실검증 체크리스트 프롬프트 복사"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg><span>복사</span></button></div>
+<details><summary>프롬프트 보기<span class="chevron">⌄</span></summary><div class="prompt-body"><pre id="text-p103">당신은 정보 검증 코치입니다.
+아래 AI 답변을 검토해주세요.
+
+AI 답변:
+[붙여넣기]
+
+다음 기준으로 검증 계획을 만들어주세요.
+- 사실 주장
+- 숫자·통계
+- 날짜·정책·제도
+- 인용·출처
+- 추정 또는 의견
+
+각 항목을 &#x27;검증 필요 / 비교적 안전 / 판단 불가&#x27;로 분류하고,
+검증이 필요한 항목은 어떤 공식 자료를 확인해야 하는지 제안해주세요.
+직접 확인하지 못한 사실을 사실인 것처럼 확정하지 마세요.</pre></div></details>
+<p class="teacher-tip"><b>실습 팁</b> 공식 홈페이지·법령·기관 공지처럼 1차 자료를 우선 확인하는 습관을 강조하세요.</p>
+</article><article class="prompt-card prompt-added" id="p104">
+<div class="prompt-top"><div class="prompt-label"><span class="prompt-num">25</span><div><div class="source extra">강사양성과정 확장 실습</div><h4>내 업무용 재사용 프롬프트 템플릿</h4></div></div><button type="button" class="copy-btn" data-copy="p104" aria-label="내 업무용 재사용 프롬프트 템플릿 프롬프트 복사"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg><span>복사</span></button></div>
+<details><summary>프롬프트 보기<span class="chevron">⌄</span></summary><div class="prompt-body"><pre id="text-p104">당신은 업무 자동화를 돕는 프롬프트 설계자입니다.
+제가 반복하는 업무 한 가지를 재사용 가능한 템플릿으로 만들어주세요.
+
+업무명: [입력]
+입력자료: [입력]
+원하는 결과: [입력]
+반드시 지킬 조건: [입력]
+
+다음 형식으로 작성해주세요.
+1. 사용 전 준비사항
+2. 복사해서 매번 쓸 수 있는 완성형 프롬프트
+3. 매번 바꿔야 하는 부분을 [대괄호]로 표시
+4. 결과 검토 체크리스트 5개
+5. 잘못된 결과가 나왔을 때 수정 프롬프트 2개</pre></div></details>
+<p class="teacher-tip"><b>실습 팁</b> 완성한 템플릿은 실제 업무 2~3회에 적용해 보고 수정해 보세요.</p>
+</article></div>
     <div class="review"><div><span class="mini-label">SELF CHECK</span><h3>제출 전 3가지 확인</h3></div><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>개인정보를 가상정보로 바꾸었는가</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>답변의 근거를 원문과 대조했는가</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>내가 직접 수정한 부분을 설명할 수 있는가</li></ul></div>
-    <div class="submit-strip"><div><b>실행한 결과를 함께 나누세요</b><p>사용한 프롬프트, 결과물, 내가 수정한 점을 스터디 게시판에 남깁니다.</p></div><a class="padlet-btn" href="https://padlet.com/yu_ssam/2026-ai-9-inm9shio5akl9hjf" target="_blank" rel="noopener noreferrer">스터디 게시판 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7M21 3l-9 9"/><path d="M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg></a></div>
+    <div class="submit-strip"><div><b>실행한 결과를 함께 나누세요</b><p>사용한 프롬프트, 결과물, 내가 수정한 점을 스터디 게시판에 남깁니다.</p></div><a class="padlet-btn" href="https://padlet.com/yu_ssam/99" target="_blank" rel="noopener noreferrer">스터디 게시판 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7M21 3l-9 9"/><path d="M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg></a></div>
     <nav class="lesson-bottom" aria-label="차시 이동"><span>기초부터 차근차근</span><a href="#lesson-2" data-lesson="2">다음 · 2차시</a></nav>
     </section><section class="lesson" id="lesson-2" aria-labelledby="heading-2">
     <div class="lesson-heading"><div><div class="eyebrow">LESSON 02 <span>2시간 · 계획서 9월 7일</span></div><h2 id="heading-2">챗봇 제작 &amp; 슬라이드·카드뉴스·포스터</h2><p>목적과 규칙이 있는 챗봇을 만들고, 강의 슬라이드·카드뉴스·홍보 포스터를 기획해 제작합니다.</p></div><div class="lesson-index">02<span>/ 08</span></div></div>
     <div class="tool-row"><b>실습 도구</b><a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer">Gemini <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7M21 3l-9 9"/><path d="M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg></a><a href="https://notebooklm.google.com/" target="_blank" rel="noopener noreferrer">NotebookLM <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7M21 3l-9 9"/><path d="M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg></a><a href="https://gamma.app/" target="_blank" rel="noopener noreferrer">Gamma <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7M21 3l-9 9"/><path d="M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg></a><a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">ChatGPT</a><a href="https://claude.ai/" target="_blank" rel="noopener noreferrer">Claude</a><a href="https://labs.google/fx/tools/flow/" target="_blank" rel="noopener noreferrer">Google Flow</a></div>
+<div class="lesson-journal" aria-label="2차시 교육일지 링크"><div class="lesson-journal-info"><span class="lesson-journal-kicker">LESSON JOURNAL</span><b>AI 챗봇부터 슬라이드·카드뉴스 제작</b><small>2026년 9월 7일 교육 · 차시별 복습 포스팅</small></div><div class="lesson-journal-links"><a href="https://yussamclass.tistory.com/80" target="_blank" rel="noopener noreferrer">티스토리 ↗</a><a href="https://blog.naver.com/mindlemedia/224417844901" target="_blank" rel="noopener noreferrer">네이버 ↗</a><a href="https://www.yussamclass.com/130/?q=YToxOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjt9&amp;bmode=view&amp;idx=174530489&amp;t=board" target="_blank" rel="noopener noreferrer">홈페이지 ↗</a></div></div>
     
     
     <h3 class="section-title">꼭 알아야 할 내용</h3><div class="knowledge-grid"><div class="knowledge-card"><span class="mini-label">핵심 01</span><h3>목적을 먼저 정하기</h3><p>챗봇의 대상·문제·전문분야·말투·금지사항을 기획합니다.</p></div><div class="knowledge-card"><span class="mini-label">핵심 02</span><h3>자료 기반 답변</h3><p>허용된 자료를 제공하고, 자료에 없는 질문에 어떻게 답하는지 확인합니다.</p></div><div class="knowledge-card"><span class="mini-label">핵심 03</span><h3>한 장 한 메시지</h3><p>발표자료 5장과 카드뉴스 7장을 목표로, 제목과 핵심 문장을 짧게 구성합니다.</p></div></div>
@@ -306,7 +661,7 @@ AI로 만든 이미지, 인터넷 사진, 음악, 다른 사람의 얼굴·목�
       </div></div></details>
 <details class="supp-detail"><summary>카드뉴스·포스터 제작 흐름과 완성할 결과물</summary><div class="supp-detail-body"><p>강의계획서의 교육내용과 강사의 전문성을 연결해 AI리터러시 강사 퍼스널브랜딩 콘텐츠를 제작합니다.</p><ul><li>카드뉴스: 7장 기획 → 카드별 문구·레이아웃 → 1:1 이미지 프롬프트 → 이미지 생성·검수</li><li>포스터: 강의 핵심정보 → 문구·배치 순서 → 3:4 이미지 프롬프트 → 이미지 생성·검수</li></ul><p>첨부 HTML의 예시 강사정보는 김유성 강사입니다. 이메일·전화번호는 입력란으로 바꾸었습니다. 실제 홍보물 제작 시 자신의 정보와 확정된 일정으로 바꿉니다.</p><div class="supp-actions"><a href="#p074">카드뉴스 프롬프트 보기</a><a href="#p075">포스터 프롬프트 보기</a></div></div></details>
 </section>
-    <div class="prompt-heading"><div><span class="mini-label">PROMPT WORKBOOK</span><h3>실습 프롬프트 <span>20개</span></h3></div><button class="batch-copy" type="button" data-batch="2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>차시 전체 복사</button></div>
+    <div class="prompt-heading"><div><span class="mini-label">PROMPT WORKBOOK</span><h3>실습 프롬프트 <span>24개</span></h3></div><button class="batch-copy" type="button" data-batch="2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>차시 전체 복사</button></div>
     <p class="prompt-help">[ ]와 ○○를 내 상황으로 바꾸세요. 필요한 카드를 펼쳐 내용을 확인하고, 복사한 뒤 AI 도구에 붙여넣어 실행합니다.</p>
     <div class="prompt-list"><article class="prompt-card" id="p012">
     <div class="prompt-top"><div class="prompt-label"><span class="prompt-num">01</span><div><div class="source ">프롬프트 모음 원문 · P.26</div><h4>나만의 챗봇 기획하기</h4></div></div><button type="button" class="copy-btn" data-copy="p012" aria-label="나만의 챗봇 기획하기 프롬프트 복사"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><span>복사</span></button></div>
@@ -899,17 +1254,91 @@ AI리터러시 강사 김유성의 전문성을 함께 보여주는 고급스러
               자격증 취득은 끝이 아니라 시작입니다. 배우고 → 실습하고 → 가르치고 → 피드백을 받고 → 다시 개선하는 과정을 반복할수록
               AI리터러시지도사는 더욱 신뢰받는 강사로 성장할 수 있습니다.
             </p>
-          </div></section>    <div class="review"><div><span class="mini-label">SELF CHECK</span><h3>제출 전 3가지 확인</h3></div><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>자료 밖 정보에 대한 답변 규칙이 있는가</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>인용 근거를 직접 확인했는가</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>모바일에서 글자를 읽을 수 있는가</li></ul></div>
-    <div class="submit-strip"><div><b>실행한 결과를 함께 나누세요</b><p>사용한 프롬프트, 결과물, 내가 수정한 점을 스터디 게시판에 남깁니다.</p></div><a class="padlet-btn" href="https://padlet.com/yu_ssam/2026-ai-9-inm9shio5akl9hjf" target="_blank" rel="noopener noreferrer">스터디 게시판 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7M21 3l-9 9"/><path d="M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg></a></div>
+          <article class="prompt-card prompt-added" id="p105">
+<div class="prompt-top"><div class="prompt-label"><span class="prompt-num">21</span><div><div class="source extra">강사양성과정 확장 실습</div><h4>맞춤형 챗봇 역할 설계</h4></div></div><button type="button" class="copy-btn" data-copy="p105" aria-label="맞춤형 챗봇 역할 설계 프롬프트 복사"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg><span>복사</span></button></div>
+<details><summary>프롬프트 보기<span class="chevron">⌄</span></summary><div class="prompt-body"><pre id="text-p105">당신은 교육용 AI 챗봇 설계자입니다.
+다음 목적의 챗봇을 기획해주세요.
+
+챗봇 목적: [입력]
+사용자: [입력]
+주요 질문: [입력]
+금지하거나 주의할 내용: [입력]
+
+다음 순서로 작성해주세요.
+1. 챗봇의 역할과 말투
+2. 반드시 해야 할 일 5개
+3. 하지 말아야 할 일 5개
+4. 첫 인사말
+5. 사용자에게 먼저 물어볼 질문 3개
+6. 답변 형식
+7. 안전·사실검증 원칙
+마지막에 시스템 지침으로 바로 붙여넣을 수 있는 완성본을 작성해주세요.</pre></div></details>
+<p class="teacher-tip"><b>실습 팁</b> 상담·의료·법률처럼 전문 판단이 필요한 영역에서는 한계를 명확히 적게 하세요.</p>
+</article><article class="prompt-card prompt-added" id="p106">
+<div class="prompt-top"><div class="prompt-label"><span class="prompt-num">22</span><div><div class="source extra">강사양성과정 확장 실습</div><h4>슬라이드 10장 구조 설계</h4></div></div><button type="button" class="copy-btn" data-copy="p106" aria-label="슬라이드 10장 구조 설계 프롬프트 복사"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg><span>복사</span></button></div>
+<details><summary>프롬프트 보기<span class="chevron">⌄</span></summary><div class="prompt-body"><pre id="text-p106">당신은 성인 대상 교육 슬라이드 기획자입니다.
+주제: [입력]
+대상: [입력]
+강의시간: [입력]
+학습목표: [입력]
+
+10장 분량의 슬라이드 구조를 만들어주세요.
+조건:
+- 한 슬라이드 한 메시지
+- 제목은 짧고 크게
+- 본문은 최대 3~5개 핵심 포인트
+- 중간에 참여 질문 또는 실습 2개 포함
+- 마지막에 요약과 다음 행동 포함
+
+출력:
+| 장 | 슬라이드 제목 | 핵심 메시지 | 시각자료 아이디어 | 강사 멘트 |</pre></div></details>
+<p class="teacher-tip"><b>실습 팁</b> 실제 발표 화면에서 읽을 수 있도록 문장을 짧게 유지하세요.</p>
+</article><article class="prompt-card prompt-added" id="p107">
+<div class="prompt-top"><div class="prompt-label"><span class="prompt-num">23</span><div><div class="source extra">강사양성과정 확장 실습</div><h4>카드뉴스 스토리보드</h4></div></div><button type="button" class="copy-btn" data-copy="p107" aria-label="카드뉴스 스토리보드 프롬프트 복사"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg><span>복사</span></button></div>
+<details><summary>프롬프트 보기<span class="chevron">⌄</span></summary><div class="prompt-body"><pre id="text-p107">당신은 교육 홍보용 카드뉴스 기획자입니다.
+주제: [입력]
+대상: [입력]
+전달하고 싶은 핵심 메시지: [입력]
+총 카드 수: [6~10장]
+
+첫 장은 강한 제목, 중간은 문제→정보→해결, 마지막은 행동 제안으로 구성해주세요.
+각 카드마다
+- 제목
+- 본문 2~3문장
+- 이미지 또는 아이콘 아이디어
+- 강조 키워드
+를 표로 정리해주세요.
+확인되지 않은 수치나 성과를 만들지 마세요.</pre></div></details>
+<p class="teacher-tip"><b>실습 팁</b> 한 카드에 너무 많은 내용을 넣지 말고 모바일 화면에서 한눈에 읽히게 하세요.</p>
+</article><article class="prompt-card prompt-added" id="p108">
+<div class="prompt-top"><div class="prompt-label"><span class="prompt-num">24</span><div><div class="source extra">강사양성과정 확장 실습</div><h4>포스터 카피 3안 비교</h4></div></div><button type="button" class="copy-btn" data-copy="p108" aria-label="포스터 카피 3안 비교 프롬프트 복사"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg><span>복사</span></button></div>
+<details><summary>프롬프트 보기<span class="chevron">⌄</span></summary><div class="prompt-body"><pre id="text-p108">당신은 교육 프로그램 홍보 카피라이터입니다.
+프로그램명: [입력]
+대상: [입력]
+핵심 혜택: [입력]
+일시·장소: [입력 또는 확인 필요]
+신청방법: [입력 또는 확인 필요]
+
+포스터용 카피를 3가지 스타일로 작성해주세요.
+A. 신뢰감 중심
+B. 친근한 참여형
+C. 성과·결과물 중심
+
+각 안에 메인 헤드라인, 서브카피, 핵심 포인트 3개, CTA를 포함해주세요.
+제공되지 않은 일정·가격·성과는 만들지 말고 [확인 필요]로 표시해주세요.</pre></div></details>
+<p class="teacher-tip"><b>실습 팁</b> 대상과 채널에 맞는 톤을 비교한 뒤 한 안을 선택해 다듬어 보세요.</p>
+</article></div></section>    <div class="review"><div><span class="mini-label">SELF CHECK</span><h3>제출 전 3가지 확인</h3></div><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>자료 밖 정보에 대한 답변 규칙이 있는가</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>인용 근거를 직접 확인했는가</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>모바일에서 글자를 읽을 수 있는가</li></ul></div>
+    <div class="submit-strip"><div><b>실행한 결과를 함께 나누세요</b><p>사용한 프롬프트, 결과물, 내가 수정한 점을 스터디 게시판에 남깁니다.</p></div><a class="padlet-btn" href="https://padlet.com/yu_ssam/99" target="_blank" rel="noopener noreferrer">스터디 게시판 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7M21 3l-9 9"/><path d="M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg></a></div>
     <nav class="lesson-bottom" aria-label="차시 이동"><a href="#lesson-1" data-lesson="1">이전 · 1차시</a><a href="#lesson-3" data-lesson="3">다음 · 3차시</a></nav>
     </section><section class="lesson" id="lesson-3" aria-labelledby="heading-3">
     <div class="lesson-heading"><div><div class="eyebrow">LESSON 03 <span>2시간 · 계획서 9월 9일</span></div><h2 id="heading-3">숏폼 영상 기초 &amp; AI 영상 생성</h2><p>나의 경험을 영상 주제로 바꾸고, 시나리오와 AI 영상 클립을 제작합니다.</p></div><div class="lesson-index">03<span>/ 08</span></div></div>
     <div class="tool-row"><b>실습 도구</b><a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">ChatGPT <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7M21 3l-9 9"/><path d="M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg></a><a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer">Gemini <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7M21 3l-9 9"/><path d="M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg></a></div>
+<div class="lesson-journal" aria-label="3차시 교육일지 링크"><div class="lesson-journal-info"><span class="lesson-journal-kicker">LESSON JOURNAL</span><b>제미나이·vStory로 숏폼 AI 영상 만들기</b><small>2026년 9월 9일 교육 · 차시별 복습 포스팅</small></div><div class="lesson-journal-links"><a href="https://yussamclass.tistory.com/88" target="_blank" rel="noopener noreferrer">티스토리 ↗</a><a href="https://blog.naver.com/mindlemedia/224419954533" target="_blank" rel="noopener noreferrer">네이버 ↗</a><a href="https://www.yussamclass.com/130/?q=YToxOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjt9&amp;bmode=view&amp;idx=174632301&amp;t=board" target="_blank" rel="noopener noreferrer">홈페이지 ↗</a></div></div>
     <p class="inline-note">AI 영상 생성은 Gemini와 수업에서 안내한 vStory를 활용합니다. 영상 기능이 제공되지 않으면 장면 프롬프트와 스토리보드를 완성하세요.</p>
     
     <h3 class="section-title">꼭 알아야 할 내용</h3><div class="knowledge-grid"><div class="knowledge-card"><span class="mini-label">핵심 01</span><h3>주제의 교집합</h3><p>내가 아는 것, 누군가 필요로 하는 것, 꾸준히 만들 수 있는 것을 연결합니다.</p></div><div class="knowledge-card"><span class="mini-label">핵심 02</span><h3>후킹·전개·CTA</h3><p>첫 장면에서 관심을 끌고 핵심 정보를 전한 뒤 다음 행동을 안내합니다.</p></div><div class="knowledge-card"><span class="mini-label">핵심 03</span><h3>한 장면 한 행동</h3><p>주체·동작·장소·조명·카메라·비율을 구체적으로 정하고 결과의 왜곡을 확인합니다.</p></div></div>
     <div class="practice-layout"><div class="flow-block"><h3 class="section-title">실습 진행 순서</h3><ol class="practice-steps"><li><span>01</span><div><b>주제 선택</b><p>경험에서 주제 후보를 만들고 시청자 한 집단을 정합니다.</p></div></li><li><span>02</span><div><b>벤치마킹·대본</b><p>전달 구조를 분석하고 독창적인 시나리오를 작성합니다.</p></div></li><li><span>03</span><div><b>장면 제작</b><p>텍스트→영상 또는 이미지→영상으로 필요한 클립을 생성합니다.</p></div></li><li><span>04</span><div><b>클립 검토</b><p>얼굴·손·글자·일관성·자료 사용 권한을 확인하고 저장합니다.</p></div></li></ol></div><aside class="deliverable"><span class="mini-label">TODAY’S OUTPUT</span><h3>오늘 완성할 결과물</h3><div><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>숏폼 시나리오 1개</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>AI 영상 클립</span></div><p>다음 차시 편집용으로 클립·대본·이미지를 한 폴더에 모으세요.</p></aside></div>
-    <div class="prompt-heading"><div><span class="mini-label">PROMPT WORKBOOK</span><h3>실습 프롬프트 <span>10개</span></h3></div><button class="batch-copy" type="button" data-batch="3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>차시 전체 복사</button></div>
+    <div class="prompt-heading"><div><span class="mini-label">PROMPT WORKBOOK</span><h3>실습 프롬프트 <span>14개</span></h3></div><button class="batch-copy" type="button" data-batch="3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>차시 전체 복사</button></div>
     <p class="prompt-help">[ ]와 ○○를 내 상황으로 바꾸세요. 필요한 카드를 펼쳐 내용을 확인하고, 복사한 뒤 AI 도구에 붙여넣어 실행합니다.</p>
     <div class="prompt-list"><article class="prompt-card" id="p017">
     <div class="prompt-top"><div class="prompt-label"><span class="prompt-num">01</span><div><div class="source ">프롬프트 모음 원문 · P.38</div><h4>내 경험을 AI 영상 아이디어로 바꾸기</h4></div></div><button type="button" class="copy-btn" data-copy="p017" aria-label="내 경험을 AI 영상 아이디어로 바꾸기 프롬프트 복사"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><span>복사</span></button></div>
@@ -1044,18 +1473,77 @@ AI가 모든 것을 대신 만드는 영상이 아니라 저의 경험과 관점
 새로운 인물·로고·문자를 추가하지 말고, 얼굴과 손이 왜곡되지 않도록 자연스럽게 표현해주세요.
 입력 이미지는 제가 사용 권한을 확인한 자료입니다.</pre></div></details>
     <p class="teacher-tip"><b>실습 팁</b> 이 문장은 이미지→영상 기능이 있는 도구에 입력합니다. 생성 결과의 왜곡·권리 문제를 직접 점검하세요.</p>
-    </article></div>
+    </article><article class="prompt-card prompt-added" id="p109">
+<div class="prompt-top"><div class="prompt-label"><span class="prompt-num">11</span><div><div class="source extra">강사양성과정 확장 실습</div><h4>숏폼 30초 대본 생성</h4></div></div><button type="button" class="copy-btn" data-copy="p109" aria-label="숏폼 30초 대본 생성 프롬프트 복사"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg><span>복사</span></button></div>
+<details><summary>프롬프트 보기<span class="chevron">⌄</span></summary><div class="prompt-body"><pre id="text-p109">당신은 교육용 숏폼 영상 기획자입니다.
+주제: [입력]
+대상: [입력]
+핵심 메시지: [입력]
+영상 길이: 30초
+
+0~3초 훅, 4~20초 핵심 내용, 21~27초 예시 또는 전환, 28~30초 CTA 구조로 작성해주세요.
+각 구간마다 화면, 자막, 내레이션, 효과음 아이디어를 표로 정리해주세요.
+과장된 표현이나 확인되지 않은 사실은 넣지 마세요.</pre></div></details>
+<p class="teacher-tip"><b>실습 팁</b> 실제로 소리 내어 읽어 30초 안에 들어오는지 확인하세요.</p>
+</article><article class="prompt-card prompt-added" id="p110">
+<div class="prompt-top"><div class="prompt-label"><span class="prompt-num">12</span><div><div class="source extra">강사양성과정 확장 실습</div><h4>6장면 영상 스토리보드</h4></div></div><button type="button" class="copy-btn" data-copy="p110" aria-label="6장면 영상 스토리보드 프롬프트 복사"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg><span>복사</span></button></div>
+<details><summary>프롬프트 보기<span class="chevron">⌄</span></summary><div class="prompt-body"><pre id="text-p110">당신은 AI 영상 스토리보드 디렉터입니다.
+영상 주제: [입력]
+스타일: [입력]
+주인공 또는 핵심 오브젝트: [입력]
+
+6장면으로 구성해주세요.
+각 장면에
+1. 장면 목적
+2. 화면 구성
+3. 카메라 구도/움직임
+4. 조명·분위기
+5. 이미지 생성 프롬프트
+6. 영상 변환 시 움직임 지시
+를 작성해주세요.
+장면마다 인물·의상·색감이 일관되도록 공통 설정도 먼저 정의해주세요.</pre></div></details>
+<p class="teacher-tip"><b>실습 팁</b> 캐릭터·의상·색상 같은 고정 요소를 모든 장면 프롬프트에 반복해 일관성을 높이세요.</p>
+</article><article class="prompt-card prompt-added" id="p111">
+<div class="prompt-top"><div class="prompt-label"><span class="prompt-num">13</span><div><div class="source extra">강사양성과정 확장 실습</div><h4>영상 생성 프롬프트 개선</h4></div></div><button type="button" class="copy-btn" data-copy="p111" aria-label="영상 생성 프롬프트 개선 프롬프트 복사"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg><span>복사</span></button></div>
+<details><summary>프롬프트 보기<span class="chevron">⌄</span></summary><div class="prompt-body"><pre id="text-p111">당신은 AI 영상 생성 프롬프트 코치입니다.
+아래 프롬프트를 영상 생성에 적합하게 개선해주세요.
+
+원문:
+[붙여넣기]
+
+주제/주체, 동작, 배경, 카메라, 조명, 분위기, 스타일, 길이의 요소를 점검하고
+빠진 내용을 질문 3개로 먼저 확인해주세요.
+그 다음
+- 간결 버전
+- 상세 버전
+- 부정 프롬프트 또는 피해야 할 요소
+를 작성해주세요.</pre></div></details>
+<p class="teacher-tip"><b>실습 팁</b> 도구마다 지원하는 프롬프트 방식이 다르므로 실제 생성 화면의 옵션과 함께 조정하세요.</p>
+</article><article class="prompt-card prompt-added" id="p112">
+<div class="prompt-top"><div class="prompt-label"><span class="prompt-num">14</span><div><div class="source extra">강사양성과정 확장 실습</div><h4>숏폼 결과 평가 루브릭</h4></div></div><button type="button" class="copy-btn" data-copy="p112" aria-label="숏폼 결과 평가 루브릭 프롬프트 복사"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg><span>복사</span></button></div>
+<details><summary>프롬프트 보기<span class="chevron">⌄</span></summary><div class="prompt-body"><pre id="text-p112">당신은 미디어교육 평가 코치입니다.
+완성한 숏폼 영상을 아래 기준으로 평가할 수 있는 루브릭을 만들어주세요.
+
+목표: [입력]
+대상: [입력]
+
+평가기준은 메시지 명확성, 첫 3초 주목도, 장면 연결, 자막 가독성, 음성·음악 균형, 저작권·윤리, 행동 유도까지 포함해주세요.
+| 평가항목 | 매우 좋음 | 보완 필요 | 수정 행동 |
+마지막에 제작자가 스스로 묻는 체크 질문 7개를 작성해주세요.</pre></div></details>
+<p class="teacher-tip"><b>실습 팁</b> 평가 후 가장 영향이 큰 2가지만 먼저 수정하게 하세요.</p>
+</article></div>
     <div class="review"><div><span class="mini-label">SELF CHECK</span><h3>제출 전 3가지 확인</h3></div><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>내 경험이나 관점이 드러나는가</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>사용할 이미지의 권한을 확인했는가</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>장면과 대본이 같은 메시지를 전달하는가</li></ul></div>
-    <div class="submit-strip"><div><b>실행한 결과를 함께 나누세요</b><p>사용한 프롬프트, 결과물, 내가 수정한 점을 스터디 게시판에 남깁니다.</p></div><a class="padlet-btn" href="https://padlet.com/yu_ssam/2026-ai-9-inm9shio5akl9hjf" target="_blank" rel="noopener noreferrer">스터디 게시판 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7M21 3l-9 9"/><path d="M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg></a></div>
+    <div class="submit-strip"><div><b>실행한 결과를 함께 나누세요</b><p>사용한 프롬프트, 결과물, 내가 수정한 점을 스터디 게시판에 남깁니다.</p></div><a class="padlet-btn" href="https://padlet.com/yu_ssam/99" target="_blank" rel="noopener noreferrer">스터디 게시판 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7M21 3l-9 9"/><path d="M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg></a></div>
     <nav class="lesson-bottom" aria-label="차시 이동"><a href="#lesson-2" data-lesson="2">이전 · 2차시</a><a href="#lesson-4" data-lesson="4">다음 · 4차시</a></nav>
     </section><section class="lesson" id="lesson-4" aria-labelledby="heading-4">
     <div class="lesson-heading"><div><div class="eyebrow">LESSON 04 <span>2시간 · 계획서 9월 14일</span></div><h2 id="heading-4">AI 음악 제작 &amp; AI 영상 편집</h2><p>로고송·캠페인송·배경음악을 기획하고, CapCut으로 영상 한 편을 완성합니다.</p></div><div class="lesson-index">04<span>/ 08</span></div></div>
     <div class="tool-row"><b>실습 도구</b><a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">ChatGPT <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7M21 3l-9 9"/><path d="M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg></a><a href="https://suno.com/" target="_blank" rel="noopener noreferrer">Suno <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7M21 3l-9 9"/><path d="M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg></a><a href="https://www.capcut.com/" target="_blank" rel="noopener noreferrer">CapCut <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7M21 3l-9 9"/><path d="M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg></a></div>
+<div class="lesson-journal" aria-label="4차시 교육일지 링크"><div class="lesson-journal-info"><span class="lesson-journal-kicker">LESSON JOURNAL</span><b>AI 음악 제작 &amp; CapCut 영상 편집</b><small>2026년 9월 14일 교육 · 차시별 복습 포스팅</small></div><div class="lesson-journal-links"><a href="https://yussamclass.tistory.com/96" target="_blank" rel="noopener noreferrer">티스토리 ↗</a><a href="https://blog.naver.com/mindlemedia/224423289394" target="_blank" rel="noopener noreferrer">네이버 ↗</a><a href="https://www.yussamclass.com/130/?q=YToxOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjt9&amp;bmode=view&amp;idx=174789992&amp;t=board" target="_blank" rel="noopener noreferrer">홈페이지 ↗</a></div></div>
     
     <p class="inline-note">음악 생성 도구는 계획서에 특정되지 않아 Suno를 활용 예시로 연결했습니다. 사용 중인 도구로 대체할 수 있습니다.</p>
     <h3 class="section-title">꼭 알아야 할 내용</h3><div class="knowledge-grid"><div class="knowledge-card"><span class="mini-label">핵심 01</span><h3>가사와 스타일 분리</h3><p>브랜드 메시지를 가사에 담고 장르·분위기·템포·악기를 스타일로 지정합니다.</p></div><div class="knowledge-card"><span class="mini-label">핵심 02</span><h3>말소리가 우선</h3><p>음악이 내레이션을 가리지 않게 조정하고 컷·자막·음악을 순서대로 편집합니다.</p></div><div class="knowledge-card"><span class="mini-label">핵심 03</span><h3>사용조건 확인</h3><p>음악·폰트·영상 소재의 다운로드 및 배포 조건을 확인합니다. 자동 자막은 직접 교정합니다.</p></div></div>
     <div class="practice-layout"><div class="flow-block"><h3 class="section-title">실습 진행 순서</h3><ol class="practice-steps"><li><span>01</span><div><b>음악 기획·생성</b><p>가사와 스타일을 나누어 입력하고 결과를 비교합니다.</p></div></li><li><span>02</span><div><b>컷편집</b><p>3차시 클립을 가져와 대본 순서로 배치하고 불필요한 부분을 자릅니다.</p></div></li><li><span>03</span><div><b>자막·음악 적용</b><p>자동 자막을 교정하고 음량을 조정합니다.</p></div></li><li><span>04</span><div><b>재생·내보내기</b><p>처음부터 끝까지 재생한 뒤 세로 영상 파일로 저장합니다.</p></div></li></ol></div><aside class="deliverable"><span class="mini-label">TODAY’S OUTPUT</span><h3>오늘 완성할 결과물</h3><div><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>로고송 또는 캠페인송 1곡</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>편집 영상 1편</span></div><p>다른 기기에서 영상과 소리를 확인하고, 고칠 부분을 한 번 더 수정하세요.</p></aside></div>
-    <div class="prompt-heading"><div><span class="mini-label">PROMPT WORKBOOK</span><h3>실습 프롬프트 <span>6개</span></h3></div><button class="batch-copy" type="button" data-batch="4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>차시 전체 복사</button></div>
+    <div class="prompt-heading"><div><span class="mini-label">PROMPT WORKBOOK</span><h3>실습 프롬프트 <span>10개</span></h3></div><button class="batch-copy" type="button" data-batch="4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>차시 전체 복사</button></div>
     <p class="prompt-help">[ ]와 ○○를 내 상황으로 바꾸세요. 필요한 카드를 펼쳐 내용을 확인하고, 복사한 뒤 AI 도구에 붙여넣어 실행합니다.</p>
     <div class="prompt-list"><article class="prompt-card" id="p044">
     <div class="prompt-top"><div class="prompt-label"><span class="prompt-num">01</span><div><div class="source extra">계획서 기반 보완</div><h4>브랜드 로고송 가사</h4></div></div><button type="button" class="copy-btn" data-copy="p044" aria-label="브랜드 로고송 가사 프롬프트 복사"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><span>복사</span></button></div>
@@ -1132,18 +1620,68 @@ AI가 이 대화만으로 CapCut 파일을 직접 편집했다고 말하지 마�
 | 점검 항목 | 확인된 문제 | 수정 방법 | 사람이 직접 확인할 사항 |
 우선 고칠 3가지와 내보내기 전 체크리스트를 제시해주세요.</pre></div></details>
     <p class="teacher-tip"><b>실습 팁</b> 완성 영상을 처음부터 끝까지 직접 재생한 뒤 제출합니다.</p>
-    </article></div>
+    </article><article class="prompt-card prompt-added" id="p113">
+<div class="prompt-top"><div class="prompt-label"><span class="prompt-num">07</span><div><div class="source extra">강사양성과정 확장 실습</div><h4>AI 음악 콘셉트 설계</h4></div></div><button type="button" class="copy-btn" data-copy="p113" aria-label="AI 음악 콘셉트 설계 프롬프트 복사"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg><span>복사</span></button></div>
+<details><summary>프롬프트 보기<span class="chevron">⌄</span></summary><div class="prompt-body"><pre id="text-p113">당신은 영상용 음악 기획자입니다.
+영상 주제: [입력]
+대상: [입력]
+원하는 감정: [입력]
+영상 길이: [입력]
+
+장르, 템포, 악기, 분위기, 전개, 피해야 할 요소를 정리하고
+AI 음악 생성 도구에 사용할 수 있는 설명형 프롬프트 3안을 작성해주세요.
+보컬이 필요하다면 가사 주제만 제안하고 기존 곡의 가사나 멜로디를 모방하지 마세요.</pre></div></details>
+<p class="teacher-tip"><b>실습 팁</b> 기존 유명곡을 그대로 따라 하게 하기보다 분위기·악기·템포 중심으로 지시하세요.</p>
+</article><article class="prompt-card prompt-added" id="p114">
+<div class="prompt-top"><div class="prompt-label"><span class="prompt-num">08</span><div><div class="source extra">강사양성과정 확장 실습</div><h4>배경음악과 장면 매칭</h4></div></div><button type="button" class="copy-btn" data-copy="p114" aria-label="배경음악과 장면 매칭 프롬프트 복사"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg><span>복사</span></button></div>
+<details><summary>프롬프트 보기<span class="chevron">⌄</span></summary><div class="prompt-body"><pre id="text-p114">당신은 영상 편집 음악감독입니다.
+장면 목록:
+[장면별 설명 붙여넣기]
+
+전체 영상 길이: [입력]
+각 장면의 감정 흐름을 분석하고, 음악의 강약·전환·쉼을 어디에 둘지 제안해주세요.
+| 시간대 | 장면 | 감정 | 음악 변화 | 편집 포인트 |
+내레이션이 있는 구간에서는 음악이 음성을 방해하지 않도록 제안해주세요.</pre></div></details>
+<p class="teacher-tip"><b>실습 팁</b> 음악이 영상보다 튀지 않게 내레이션 구간의 음량을 특히 점검하세요.</p>
+</article><article class="prompt-card prompt-added" id="p115">
+<div class="prompt-top"><div class="prompt-label"><span class="prompt-num">09</span><div><div class="source extra">강사양성과정 확장 실습</div><h4>영상 편집 체크리스트</h4></div></div><button type="button" class="copy-btn" data-copy="p115" aria-label="영상 편집 체크리스트 프롬프트 복사"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg><span>복사</span></button></div>
+<details><summary>프롬프트 보기<span class="chevron">⌄</span></summary><div class="prompt-body"><pre id="text-p115">당신은 초보 영상편집 코치입니다.
+완성본을 내보내기 전에 확인할 체크리스트를 만들어주세요.
+
+영상 목적: [입력]
+게시 채널: [입력]
+화면 비율: [입력]
+
+영상 길이, 화면 비율, 자막 오탈자, 자막 안전영역, 음량, 음악 저작권, 전환효과, 썸네일, 파일명, 내보내기 화질을 포함해
+&#x27;필수 확인 / 있으면 좋은 확인&#x27;으로 나눠주세요.</pre></div></details>
+<p class="teacher-tip"><b>실습 팁</b> 내보내기 전 전체 영상을 처음부터 끝까지 한 번 재생해 확인하세요.</p>
+</article><article class="prompt-card prompt-added" id="p116">
+<div class="prompt-top"><div class="prompt-label"><span class="prompt-num">10</span><div><div class="source extra">강사양성과정 확장 실습</div><h4>영상 수정 우선순위 코치</h4></div></div><button type="button" class="copy-btn" data-copy="p116" aria-label="영상 수정 우선순위 코치 프롬프트 복사"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg><span>복사</span></button></div>
+<details><summary>프롬프트 보기<span class="chevron">⌄</span></summary><div class="prompt-body"><pre id="text-p116">당신은 영상 피드백 코치입니다.
+받은 피드백:
+[붙여넣기]
+
+영상의 목적:
+[입력]
+
+피드백을 메시지, 구성, 화면, 자막, 오디오, 기술 문제로 분류하고
+영향도와 수정 난이도를 기준으로 우선순위를 정해주세요.
+| 피드백 | 분류 | 영향도 | 수정 난이도 | 먼저 할 수정 | 확인 방법 |
+마지막에 30분 안에 할 수정 3개와 시간이 더 있을 때 할 수정 3개를 나눠주세요.</pre></div></details>
+<p class="teacher-tip"><b>실습 팁</b> 모든 것을 고치려 하기보다 목표 전달에 가장 큰 영향을 주는 항목부터 수정하세요.</p>
+</article></div>
     <div class="review"><div><span class="mini-label">SELF CHECK</span><h3>제출 전 3가지 확인</h3></div><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>음악보다 목소리가 분명히 들리는가</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>자막의 이름·숫자·맞춤법이 정확한가</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>파일이 정상 재생되고 자료 이용조건을 확인했는가</li></ul></div>
-    <div class="submit-strip"><div><b>실행한 결과를 함께 나누세요</b><p>사용한 프롬프트, 결과물, 내가 수정한 점을 스터디 게시판에 남깁니다.</p></div><a class="padlet-btn" href="https://padlet.com/yu_ssam/2026-ai-9-inm9shio5akl9hjf" target="_blank" rel="noopener noreferrer">스터디 게시판 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7M21 3l-9 9"/><path d="M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg></a></div>
+    <div class="submit-strip"><div><b>실행한 결과를 함께 나누세요</b><p>사용한 프롬프트, 결과물, 내가 수정한 점을 스터디 게시판에 남깁니다.</p></div><a class="padlet-btn" href="https://padlet.com/yu_ssam/99" target="_blank" rel="noopener noreferrer">스터디 게시판 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7M21 3l-9 9"/><path d="M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg></a></div>
     <nav class="lesson-bottom" aria-label="차시 이동"><a href="#lesson-3" data-lesson="3">이전 · 3차시</a><a href="#lesson-5" data-lesson="5">다음 · 5차시</a></nav>
     </section><section class="lesson" id="lesson-5" aria-labelledby="heading-5">
     <div class="lesson-heading"><div><div class="eyebrow">LESSON 05 <span>2시간 · 계획서 9월 16일</span></div><h2 id="heading-5">GEO 홍보전략 &amp; 웹페이지 제작</h2><p>공식 정보와 FAQ로 소개 콘텐츠를 정리하고, 홍보용 원페이지를 제작합니다.</p></div><div class="lesson-index">05<span>/ 08</span></div></div>
     <div class="tool-row"><b>실습 도구</b><a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">ChatGPT <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7M21 3l-9 9"/><path d="M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg></a><a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer">Gemini <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7M21 3l-9 9"/><path d="M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg></a></div>
+<div class="lesson-journal" aria-label="5차시 교육일지 링크"><div class="lesson-journal-info"><span class="lesson-journal-kicker">LESSON JOURNAL</span><b>GEO 홍보전략과 웹페이지 제작</b><small>2026년 9월 16일 교육 · 차시별 복습 포스팅</small></div><div class="lesson-journal-links"><a href="https://yussamclass.tistory.com/99" target="_blank" rel="noopener noreferrer">티스토리 ↗</a><a href="https://blog.naver.com/mindlemedia/224423801171" target="_blank" rel="noopener noreferrer">네이버 ↗</a><a href="https://www.yussamclass.com/130/?q=YToxOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjt9&amp;bmode=view&amp;idx=174813291&amp;t=board" target="_blank" rel="noopener noreferrer">홈페이지 ↗</a></div></div>
     
     
     <h3 class="section-title">꼭 알아야 할 내용</h3><div class="knowledge-grid"><div class="knowledge-card"><span class="mini-label">핵심 01</span><h3>SEO와 GEO</h3><p>SEO는 검색엔진의 발견·이해를, GEO는 AI 검색이 이해·참조하기 쉬운 정보를 고려합니다.</p></div><div class="knowledge-card"><span class="mini-label">핵심 02</span><h3>확인 가능한 정보</h3><p>공식 이름·전문분야·연락처를 일관되게 쓰고 근거와 최신 정보를 제공합니다.</p></div><div class="knowledge-card"><span class="mini-label">핵심 03</span><h3>검토하며 제작</h3><p>바이브코딩은 요구사항을 말로 지시하고 결과를 확인·수정하는 과정입니다. 노출 순위는 보장되지 않습니다.</p></div></div>
     <div class="practice-layout"><div class="flow-block"><h3 class="section-title">실습 진행 순서</h3><ol class="practice-steps"><li><span>01</span><div><b>공식 정보 정리</b><p>소개·전문분야·연락처·근거 자료를 모읍니다.</p></div></li><li><span>02</span><div><b>소개·FAQ 작성</b><p>사용자가 실제 궁금해할 질문에 정확하게 답합니다.</p></div></li><li><span>03</span><div><b>웹페이지 제작</b><p>반응형 HTML을 생성하고 브라우저에서 엽니다.</p></div></li><li><span>04</span><div><b>검증·개선</b><p>모바일·태블릿·PC와 문의 링크를 확인하고 수정합니다.</p></div></li></ol></div><aside class="deliverable"><span class="mini-label">TODAY’S OUTPUT</span><h3>오늘 완성할 결과물</h3><div><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>GEO 소개 콘텐츠</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>홍보용 웹페이지</span></div><p>공식 소개 콘텐츠와 실제 AI 검색 결과를 비교하고 개선할 정보를 기록하세요.</p></aside></div>
-    <div class="prompt-heading"><div><span class="mini-label">PROMPT WORKBOOK</span><h3>실습 프롬프트 <span>5개</span></h3></div><button class="batch-copy" type="button" data-batch="5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>차시 전체 복사</button></div>
+    <div class="prompt-heading"><div><span class="mini-label">PROMPT WORKBOOK</span><h3>실습 프롬프트 <span>9개</span></h3></div><button class="batch-copy" type="button" data-batch="5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>차시 전체 복사</button></div>
     <p class="prompt-help">[ ]와 ○○를 내 상황으로 바꾸세요. 필요한 카드를 펼쳐 내용을 확인하고, 복사한 뒤 AI 도구에 붙여넣어 실행합니다.</p>
     <div class="prompt-list"><article class="prompt-card" id="p050">
     <div class="prompt-top"><div class="prompt-label"><span class="prompt-num">01</span><div><div class="source extra">계획서 기반 보완</div><h4>GEO 소개 콘텐츠와 FAQ</h4></div></div><button type="button" class="copy-btn" data-copy="p050" aria-label="GEO 소개 콘텐츠와 FAQ 프롬프트 복사"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><span>복사</span></button></div>
@@ -1211,18 +1749,74 @@ CSS와 JavaScript는 파일 안에 포함하고 외부 빌드 과정 없이 열�
 기록에 없는 결과나 순위를 만들지 마세요.
 수정할 홈페이지 정보와 다음 확인 질문 3개를 제안해주세요.</pre></div></details>
     <p class="teacher-tip"><b>실습 팁</b> 같은 질문으로 실제 결과를 비교합니다. AI 답변의 인용 링크를 열어 정확성을 확인하세요.</p>
-    </article></div>
+    </article><article class="prompt-card prompt-added" id="p117">
+<div class="prompt-top"><div class="prompt-label"><span class="prompt-num">06</span><div><div class="source extra">강사양성과정 확장 실습</div><h4>GEO 질문지도 만들기</h4></div></div><button type="button" class="copy-btn" data-copy="p117" aria-label="GEO 질문지도 만들기 프롬프트 복사"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg><span>복사</span></button></div>
+<details><summary>프롬프트 보기<span class="chevron">⌄</span></summary><div class="prompt-body"><pre id="text-p117">당신은 생성형 검색 환경의 콘텐츠 전략가입니다.
+내 기관/서비스: [입력]
+주요 대상: [입력]
+핵심 주제: [입력]
+
+사용자가 AI 검색에서 실제로 물을 법한 질문을
+입문형, 비교형, 문제해결형, 지역형, 신뢰확인형으로 각각 5개씩 만들어주세요.
+질문별로 어떤 근거·사례·FAQ·구조화된 정보가 필요할지도 제안해주세요.
+확인할 수 없는 순위나 검색노출 효과를 보장하지 마세요.</pre></div></details>
+<p class="teacher-tip"><b>실습 팁</b> 검색어보다 실제 사람이 던지는 질문 문장으로 바꿔보는 데 초점을 두세요.</p>
+</article><article class="prompt-card prompt-added" id="p118">
+<div class="prompt-top"><div class="prompt-label"><span class="prompt-num">07</span><div><div class="source extra">강사양성과정 확장 실습</div><h4>FAQ 콘텐츠 설계</h4></div></div><button type="button" class="copy-btn" data-copy="p118" aria-label="FAQ 콘텐츠 설계 프롬프트 복사"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg><span>복사</span></button></div>
+<details><summary>프롬프트 보기<span class="chevron">⌄</span></summary><div class="prompt-body"><pre id="text-p118">당신은 웹 콘텐츠 편집자입니다.
+주제: [입력]
+대상: [입력]
+
+FAQ 12개를 작성해주세요.
+각 답변은 먼저 1~2문장으로 직접 답하고, 그 다음 필요한 설명을 덧붙여주세요.
+답변마다 신뢰를 높이기 위해 확인해야 할 공식 근거 또는 내부 자료를 표시해주세요.
+모르는 정보는 [확인 필요]라고 표시하세요.</pre></div></details>
+<p class="teacher-tip"><b>실습 팁</b> 답변 첫 문장에서 질문에 직접 답하도록 해 AI 검색과 사람 모두 읽기 쉽게 만드세요.</p>
+</article><article class="prompt-card prompt-added" id="p119">
+<div class="prompt-top"><div class="prompt-label"><span class="prompt-num">08</span><div><div class="source extra">강사양성과정 확장 실습</div><h4>랜딩페이지 정보구조</h4></div></div><button type="button" class="copy-btn" data-copy="p119" aria-label="랜딩페이지 정보구조 프롬프트 복사"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg><span>복사</span></button></div>
+<details><summary>프롬프트 보기<span class="chevron">⌄</span></summary><div class="prompt-body"><pre id="text-p119">당신은 교육기관 웹 UX 기획자입니다.
+페이지 목적: [입력]
+주요 방문자: [입력]
+핵심 행동: [신청/문의/자료다운로드 등]
+필수 정보: [입력]
+
+모바일 우선 랜딩페이지의 섹션 순서를 설계해주세요.
+히어로, 문제·필요성, 핵심 혜택, 교육내용, 결과물, 대상, 일정, 강사, FAQ, CTA 순서를 참고하되 목적에 맞게 조정해주세요.
+각 섹션에 제목, 핵심 문장, 필요한 UI 요소, CTA를 표로 정리해주세요.</pre></div></details>
+<p class="teacher-tip"><b>실습 팁</b> 모바일에서 스크롤할 때 중요한 정보와 CTA가 늦게 나오지 않는지 확인하세요.</p>
+</article><article class="prompt-card prompt-added" id="p120">
+<div class="prompt-top"><div class="prompt-label"><span class="prompt-num">09</span><div><div class="source extra">강사양성과정 확장 실습</div><h4>웹페이지 접근성·가독성 점검</h4></div></div><button type="button" class="copy-btn" data-copy="p120" aria-label="웹페이지 접근성·가독성 점검 프롬프트 복사"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg><span>복사</span></button></div>
+<details><summary>프롬프트 보기<span class="chevron">⌄</span></summary><div class="prompt-body"><pre id="text-p120">당신은 웹 접근성과 가독성 검토자입니다.
+아래 HTML 또는 화면 구성을 검토해주세요.
+
+[코드 또는 설명 붙여넣기]
+
+다음 기준으로 문제와 개선안을 제시해주세요.
+- 제목 계층
+- 글자 크기와 줄간격
+- 색상 대비
+- 버튼 크기와 명확한 라벨
+- 모바일 레이아웃
+- 키보드 포커스
+- 이미지 대체텍스트
+- 폼 라벨
+- 과도한 애니메이션
+
+가능하면 수정 전/수정 후 예시 코드를 함께 제시해주세요.</pre></div></details>
+<p class="teacher-tip"><b>실습 팁</b> 디자인뿐 아니라 키보드와 모바일에서도 사용할 수 있는지 확인하세요.</p>
+</article></div>
     <div class="review"><div><span class="mini-label">SELF CHECK</span><h3>제출 전 3가지 확인</h3></div><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>확인되지 않은 실적·후기가 없는가</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>모든 링크가 의도한 페이지로 연결되는가</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>작은 화면에서 가로 넘침이 없는가</li></ul></div>
-    <div class="submit-strip"><div><b>실행한 결과를 함께 나누세요</b><p>사용한 프롬프트, 결과물, 내가 수정한 점을 스터디 게시판에 남깁니다.</p></div><a class="padlet-btn" href="https://padlet.com/yu_ssam/2026-ai-9-inm9shio5akl9hjf" target="_blank" rel="noopener noreferrer">스터디 게시판 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7M21 3l-9 9"/><path d="M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg></a></div>
+    <div class="submit-strip"><div><b>실행한 결과를 함께 나누세요</b><p>사용한 프롬프트, 결과물, 내가 수정한 점을 스터디 게시판에 남깁니다.</p></div><a class="padlet-btn" href="https://padlet.com/yu_ssam/99" target="_blank" rel="noopener noreferrer">스터디 게시판 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7M21 3l-9 9"/><path d="M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg></a></div>
     <nav class="lesson-bottom" aria-label="차시 이동"><a href="#lesson-4" data-lesson="4">이전 · 4차시</a><a href="#lesson-6" data-lesson="6">다음 · 6차시</a></nav>
     </section><section class="lesson" id="lesson-6" aria-labelledby="heading-6">
     <div class="lesson-heading"><div><div class="eyebrow">LESSON 06 <span>2시간 · 계획서 9월 21일</span></div><h2 id="heading-6">강의계획서 작성 &amp; 실천콘텐츠 개발</h2><p>학습목표·실습·평가가 연결되는 강의계획서와 수업자료를 제작합니다.</p></div><div class="lesson-index">06<span>/ 08</span></div></div>
     <div class="tool-row"><b>실습 도구</b><a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">ChatGPT <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7M21 3l-9 9"/><path d="M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg></a><a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer">Gemini <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7M21 3l-9 9"/><path d="M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg></a><a href="https://gamma.app/" target="_blank" rel="noopener noreferrer">Gamma <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7M21 3l-9 9"/><path d="M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg></a><a href="https://notebooklm.google.com/" target="_blank" rel="noopener noreferrer">NotebookLM <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7M21 3l-9 9"/><path d="M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg></a></div>
+<div class="lesson-journal" aria-label="6차시 교육일지 링크"><div class="lesson-journal-info"><span class="lesson-journal-kicker">LESSON JOURNAL</span><b>AI 강의계획서 작성과 교육콘텐츠 제작</b><small>2026년 9월 21일 교육 · 차시별 복습 포스팅</small></div><div class="lesson-journal-links"><a href="https://yussamclass.tistory.com/103" target="_blank" rel="noopener noreferrer">티스토리 ↗</a><a href="https://blog.naver.com/mindlemedia/224424449430" target="_blank" rel="noopener noreferrer">네이버 ↗</a><a href="https://www.yussamclass.com/130/?q=YToxOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjt9&amp;bmode=view&amp;idx=174842562&amp;t=board" target="_blank" rel="noopener noreferrer">홈페이지 ↗</a></div></div>
     
     
     <h3 class="section-title">꼭 알아야 할 내용</h3><div class="knowledge-grid"><div class="knowledge-card"><span class="mini-label">핵심 01</span><h3>대상부터 확인</h3><p>연령보다 사전 경험·학습 목적·기기 환경을 먼저 파악합니다.</p></div><div class="knowledge-card"><span class="mini-label">핵심 02</span><h3>관찰 가능한 목표</h3><p>작성한다·구분한다·검증한다·시연한다처럼 결과를 확인할 수 있는 목표를 씁니다.</p></div><div class="knowledge-card"><span class="mini-label">핵심 03</span><h3>목표·활동·평가 연결</h3><p>설명보다 실행 시간을 확보하고, 최종 결과물과 확인 질문을 계획합니다.</p></div></div>
     <div class="practice-layout"><div class="flow-block"><h3 class="section-title">실습 진행 순서</h3><ol class="practice-steps"><li><span>01</span><div><b>주제·목표 선택</b><p>내 전문성과 교육생의 필요가 만나는 주제를 정합니다.</p></div></li><li><span>02</span><div><b>120분 계획 작성</b><p>이론 24분·실습 96분을 기준으로 시간 합계를 확인합니다.</p></div></li><li><span>03</span><div><b>수업자료 제작</b><p>발표자료·실습 안내·복사용 프롬프트·공지를 만듭니다.</p></div></li><li><span>04</span><div><b>실행 가능성 점검</b><p>준비물·계정·실패 대체안·평가 기준을 확인합니다.</p></div></li></ol></div><aside class="deliverable"><span class="mini-label">TODAY’S OUTPUT</span><h3>오늘 완성할 결과물</h3><div><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>강의계획서</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>강의자료·수업 안내자료</span></div><p>7차시 시연용 주제 하나를 선택해 짧은 대본과 실습자료를 준비하세요.</p></aside></div>
-    <div class="prompt-heading"><div><span class="mini-label">PROMPT WORKBOOK</span><h3>실습 프롬프트 <span>5개</span></h3></div><button class="batch-copy" type="button" data-batch="6"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>차시 전체 복사</button></div>
+    <div class="prompt-heading"><div><span class="mini-label">PROMPT WORKBOOK</span><h3>실습 프롬프트 <span>9개</span></h3></div><button class="batch-copy" type="button" data-batch="6"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>차시 전체 복사</button></div>
     <p class="prompt-help">[ ]와 ○○를 내 상황으로 바꾸세요. 필요한 카드를 펼쳐 내용을 확인하고, 복사한 뒤 AI 도구에 붙여넣어 실행합니다.</p>
     <div class="prompt-list"><article class="prompt-card" id="p055">
     <div class="prompt-top"><div class="prompt-label"><span class="prompt-num">01</span><div><div class="source extra">계획서 기반 보완</div><h4>강의 주제와 학습목표 설계</h4></div></div><button type="button" class="copy-btn" data-copy="p055" aria-label="강의 주제와 학습목표 설계 프롬프트 복사"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><span>복사</span></button></div>
@@ -1290,18 +1884,73 @@ CSS와 JavaScript는 파일 안에 포함하고 외부 빌드 과정 없이 열�
 이는 수업 연습용 기준이며 자격증 공식 심사표로 표시하지 마세요.
 학습자가 제출 전 스스로 점검할 질문 5개도 작성해주세요.</pre></div></details>
     <p class="teacher-tip"><b>실습 팁</b> 평가 기준을 실습 시작 전에 알려주면 교육생이 무엇을 완성해야 하는지 알 수 있습니다.</p>
-    </article></div>
+    </article><article class="prompt-card prompt-added" id="p121">
+<div class="prompt-top"><div class="prompt-label"><span class="prompt-num">06</span><div><div class="source extra">강사양성과정 확장 실습</div><h4>학습자 페르소나 설계</h4></div></div><button type="button" class="copy-btn" data-copy="p121" aria-label="학습자 페르소나 설계 프롬프트 복사"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg><span>복사</span></button></div>
+<details><summary>프롬프트 보기<span class="chevron">⌄</span></summary><div class="prompt-body"><pre id="text-p121">당신은 성인학습자 분석 전문가입니다.
+강의 주제: [입력]
+예상 대상: [입력]
+
+학습자의 디지털 경험, 기대, 불안, 자주 막히는 지점, 필요한 지원을 가정이 아니라 확인 질문 중심으로 정리해주세요.
+1. 사전 설문 질문 8개
+2. 초보/중간/경험자 3수준 지원전략
+3. 강의에서 피해야 할 설명 방식
+4. 실습 난이도 조절 방법
+을 작성해주세요.</pre></div></details>
+<p class="teacher-tip"><b>실습 팁</b> 페르소나를 사실처럼 단정하지 말고 사전 설문으로 확인할 항목을 분리하세요.</p>
+</article><article class="prompt-card prompt-added" id="p122">
+<div class="prompt-top"><div class="prompt-label"><span class="prompt-num">07</span><div><div class="source extra">강사양성과정 확장 실습</div><h4>2시간 강의 타임테이블</h4></div></div><button type="button" class="copy-btn" data-copy="p122" aria-label="2시간 강의 타임테이블 프롬프트 복사"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg><span>복사</span></button></div>
+<details><summary>프롬프트 보기<span class="chevron">⌄</span></summary><div class="prompt-body"><pre id="text-p122">당신은 실습형 AI 강의 설계자입니다.
+주제: [입력]
+대상: [입력]
+학습목표: [입력]
+최종 결과물: [입력]
+총 시간: 120분
+
+도입, 핵심개념, 강사 시범, 따라하기, 개별실습, 공유·피드백, 정리 순서로 설계해주세요.
+이론 20%, 실습 80%에 가깝게 구성하고 각 활동별 분 단위를 합산해 정확히 120분이 되게 해주세요.
+| 시간 | 활동 | 강사 역할 | 학습자 활동 | 결과물/확인 |</pre></div></details>
+<p class="teacher-tip"><b>실습 팁</b> 시간 합계를 반드시 확인하고, 생성 대기 시간을 고려한 대체 활동도 준비하세요.</p>
+</article><article class="prompt-card prompt-added" id="p123">
+<div class="prompt-top"><div class="prompt-label"><span class="prompt-num">08</span><div><div class="source extra">강사양성과정 확장 실습</div><h4>강사용 멘트 스크립트</h4></div></div><button type="button" class="copy-btn" data-copy="p123" aria-label="강사용 멘트 스크립트 프롬프트 복사"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg><span>복사</span></button></div>
+<details><summary>프롬프트 보기<span class="chevron">⌄</span></summary><div class="prompt-body"><pre id="text-p123">당신은 초보 강사를 돕는 강의 코치입니다.
+강의계획서:
+[붙여넣기]
+
+각 구간에서 실제로 말할 수 있는 짧은 강사 멘트를 작성해주세요.
+- 시작 인사와 기대 조정
+- 핵심 개념 설명
+- 실습 시작 안내
+- 막힌 학습자 지원
+- 중간 확인 질문
+- 결과 공유
+- 마무리와 다음 행동
+
+전문용어는 쉬운 말로 바꾸고 한 문장은 짧게 작성해주세요.</pre></div></details>
+<p class="teacher-tip"><b>실습 팁</b> 대본을 그대로 읽기보다 핵심 문장만 남겨 본인의 말투로 연습하세요.</p>
+</article><article class="prompt-card prompt-added" id="p124">
+<div class="prompt-top"><div class="prompt-label"><span class="prompt-num">09</span><div><div class="source extra">강사양성과정 확장 실습</div><h4>실습 실패 대비 플랜B</h4></div></div><button type="button" class="copy-btn" data-copy="p124" aria-label="실습 실패 대비 플랜B 프롬프트 복사"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg><span>복사</span></button></div>
+<details><summary>프롬프트 보기<span class="chevron">⌄</span></summary><div class="prompt-body"><pre id="text-p124">당신은 디지털 교육 운영 코치입니다.
+실습 도구: [입력]
+수업 환경: [PC/모바일/와이파이 등]
+예상 학습자 수준: [입력]
+
+로그인 실패, 가입 제한, 인터넷 지연, 생성 오류, 파일 저장 실패, 유료기능 제한이 발생했을 때
+각 상황별 즉시 대응, 대체 활동, 강사가 미리 준비할 자료를 표로 작성해주세요.
+학습자가 당황하지 않도록 사용할 안내 문장도 함께 제시해주세요.</pre></div></details>
+<p class="teacher-tip"><b>실습 팁</b> 캡처 화면·샘플 결과·공유 파일 등 인터넷이 없어도 보여줄 자료를 준비하세요.</p>
+</article></div>
     <div class="review"><div><span class="mini-label">SELF CHECK</span><h3>제출 전 3가지 확인</h3></div><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>목표에 대응하는 실습 결과물이 있는가</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>교육시간 합계가 맞는가</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>초보자가 안내만 보고 다음 행동을 할 수 있는가</li></ul></div>
-    <div class="submit-strip"><div><b>실행한 결과를 함께 나누세요</b><p>사용한 프롬프트, 결과물, 내가 수정한 점을 스터디 게시판에 남깁니다.</p></div><a class="padlet-btn" href="https://padlet.com/yu_ssam/2026-ai-9-inm9shio5akl9hjf" target="_blank" rel="noopener noreferrer">스터디 게시판 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7M21 3l-9 9"/><path d="M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg></a></div>
+    <div class="submit-strip"><div><b>실행한 결과를 함께 나누세요</b><p>사용한 프롬프트, 결과물, 내가 수정한 점을 스터디 게시판에 남깁니다.</p></div><a class="padlet-btn" href="https://padlet.com/yu_ssam/99" target="_blank" rel="noopener noreferrer">스터디 게시판 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7M21 3l-9 9"/><path d="M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg></a></div>
     <nav class="lesson-bottom" aria-label="차시 이동"><a href="#lesson-5" data-lesson="5">이전 · 5차시</a><a href="#lesson-7" data-lesson="7">다음 · 7차시</a></nav>
     </section><section class="lesson" id="lesson-7" aria-labelledby="heading-7">
     <div class="lesson-heading"><div><div class="eyebrow">LESSON 07 <span>2시간 · 계획서 9월 28일</span></div><h2 id="heading-7">수업시연 및 평가</h2><p>실습 중심의 수업을 시연하고, 받은 피드백을 구체적인 수정 행동으로 바꿉니다.</p></div><div class="lesson-index">07<span>/ 08</span></div></div>
     <div class="tool-row"><b>실습 도구</b><a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">ChatGPT <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7M21 3l-9 9"/><path d="M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg></a><a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer">Gemini <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7M21 3l-9 9"/><path d="M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg></a></div>
+<div class="lesson-journal" aria-label="7차시 교육일지 링크"><div class="lesson-journal-info"><span class="lesson-journal-kicker">LESSON JOURNAL</span><b>6명의 AI 강의시연</b><small>2026년 9월 28일 교육 · 차시별 복습 포스팅</small></div><div class="lesson-journal-links"><a href="https://yussamclass.tistory.com/105" target="_blank" rel="noopener noreferrer">티스토리 ↗</a><a href="https://blog.naver.com/mindlemedia/224427921699" target="_blank" rel="noopener noreferrer">네이버 ↗</a><a href="https://www.yussamclass.com/130/?q=YToxOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjt9&amp;bmode=view&amp;idx=174919360&amp;t=board" target="_blank" rel="noopener noreferrer">홈페이지 ↗</a></div></div>
     
     
     <h3 class="section-title">꼭 알아야 할 내용</h3><div class="knowledge-grid"><div class="knowledge-card"><span class="mini-label">핵심 01</span><h3>설명보다 실습</h3><p>시연에서도 학습자가 직접 실행할 시간을 확보합니다.</p></div><div class="knowledge-card"><span class="mini-label">핵심 02</span><h3>보여주고 확인</h3><p>강사가 한 단계를 보여주고 학습자의 실행 결과를 확인합니다.</p></div><div class="knowledge-card"><span class="mini-label">핵심 03</span><h3>피드백의 구체화</h3><p>관찰한 문제·학습자 영향·수정 행동·재확인 방법을 연결합니다.</p></div></div>
     <div class="practice-layout"><div class="flow-block"><h3 class="section-title">실습 진행 순서</h3><ol class="practice-steps"><li><span>01</span><div><b>역할·환경 점검</b><p>2인 조의 역할과 기기·파일·대체 자료를 확인합니다.</p></div></li><li><span>02</span><div><b>15분 연습 시연</b><p>도입 2분·시범 3분·실습 7분·정리 3분으로 연습합니다.</p></div></li><li><span>03</span><div><b>피드백 기록</b><p>평가자의 실제 의견과 스스로 관찰한 점을 적습니다.</p></div></li><li><span>04</span><div><b>보완 재실습</b><p>가장 중요한 3가지를 고치고 다시 실행합니다.</p></div></li></ol></div><aside class="deliverable"><span class="mini-label">TODAY’S OUTPUT</span><h3>오늘 완성할 결과물</h3><div><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>수업시연 자료</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>피드백·보완 기록</span></div><p>수정 전후 자료와 개선 이유를 정리해 최종 시연에 반영하세요.</p></aside></div>
-    <div class="prompt-heading"><div><span class="mini-label">PROMPT WORKBOOK</span><h3>실습 프롬프트 <span>4개</span></h3></div><button class="batch-copy" type="button" data-batch="7"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>차시 전체 복사</button></div>
+    <div class="prompt-heading"><div><span class="mini-label">PROMPT WORKBOOK</span><h3>실습 프롬프트 <span>8개</span></h3></div><button class="batch-copy" type="button" data-batch="7"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>차시 전체 복사</button></div>
     <p class="prompt-help">[ ]와 ○○를 내 상황으로 바꾸세요. 필요한 카드를 펼쳐 내용을 확인하고, 복사한 뒤 AI 도구에 붙여넣어 실행합니다.</p>
     <div class="prompt-list"><article class="prompt-card" id="p060">
     <div class="prompt-top"><div class="prompt-label"><span class="prompt-num">01</span><div><div class="source extra">계획서 기반 보완</div><h4>15분 수업시연 대본</h4></div></div><button type="button" class="copy-btn" data-copy="p060" aria-label="15분 수업시연 대본 프롬프트 복사"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><span>복사</span></button></div>
@@ -1352,18 +2001,69 @@ CSS와 JavaScript는 파일 안에 포함하고 외부 빌드 과정 없이 열�
 현재 화면이나 계정 상태를 모르면 확인 질문을 먼저 하도록 안내해주세요.
 교육생의 실패를 탓하는 표현은 쓰지 마세요.</pre></div></details>
     <p class="teacher-tip"><b>실습 팁</b> 현재 화면을 함께 확인하고 한 단계씩 안내하는 연습을 해보세요.</p>
-    </article></div>
+    </article><article class="prompt-card prompt-added" id="p125">
+<div class="prompt-top"><div class="prompt-label"><span class="prompt-num">05</span><div><div class="source extra">강사양성과정 확장 실습</div><h4>시연 시간 압축 훈련</h4></div></div><button type="button" class="copy-btn" data-copy="p125" aria-label="시연 시간 압축 훈련 프롬프트 복사"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg><span>복사</span></button></div>
+<details><summary>프롬프트 보기<span class="chevron">⌄</span></summary><div class="prompt-body"><pre id="text-p125">당신은 강사 시연 코치입니다.
+현재 수업 대본:
+[붙여넣기]
+목표 시간: [예: 15분]
+
+학습목표와 핵심 실습은 유지하면서 설명을 줄여 목표 시간 안에 들어오게 재구성해주세요.
+삭제 가능한 내용, 꼭 남길 내용, 말로 설명하지 않고 화면으로 보여줄 내용을 구분해주세요.
+마지막에 분 단위 타임라인을 작성해주세요.</pre></div></details>
+<p class="teacher-tip"><b>실습 팁</b> 한 번 소리 내어 실제 시간을 재고 다시 줄이는 방식으로 연습하세요.</p>
+</article><article class="prompt-card prompt-added" id="p126">
+<div class="prompt-top"><div class="prompt-label"><span class="prompt-num">06</span><div><div class="source extra">강사양성과정 확장 실습</div><h4>평가자 관점 예상 질문</h4></div></div><button type="button" class="copy-btn" data-copy="p126" aria-label="평가자 관점 예상 질문 프롬프트 복사"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg><span>복사</span></button></div>
+<details><summary>프롬프트 보기<span class="chevron">⌄</span></summary><div class="prompt-body"><pre id="text-p126">당신은 AI리터러시 강사 시연 평가자 역할입니다.
+시연 주제: [입력]
+수업안:
+[붙여넣기]
+
+평가자가 물을 수 있는 질문 10개를 만들어주세요.
+학습목표, 대상 적합성, 윤리·개인정보, 사실검증, 도구 선택, 실습 지원, 시간 운영을 포함해주세요.
+각 질문마다 좋은 답변에 들어가야 할 핵심 포인트만 제시하고, 존재하지 않는 공식 평가기준을 만들지 마세요.</pre></div></details>
+<p class="teacher-tip"><b>실습 팁</b> 답변을 외우기보다 본인이 왜 그렇게 설계했는지 근거를 말하는 연습을 하세요.</p>
+</article><article class="prompt-card prompt-added" id="p127">
+<div class="prompt-top"><div class="prompt-label"><span class="prompt-num">07</span><div><div class="source extra">강사양성과정 확장 실습</div><h4>동료 피드백 질문지</h4></div></div><button type="button" class="copy-btn" data-copy="p127" aria-label="동료 피드백 질문지 프롬프트 복사"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg><span>복사</span></button></div>
+<details><summary>프롬프트 보기<span class="chevron">⌄</span></summary><div class="prompt-body"><pre id="text-p127">당신은 수업 관찰 도구를 만드는 교육 코치입니다.
+AI리터러시 수업시연을 본 동료가 사용할 피드백 질문지를 만들어주세요.
+
+관찰영역:
+- 목표가 분명했는가
+- 설명이 이해되었는가
+- 학습자가 직접 해보는 시간이 충분했는가
+- 안전·윤리 안내가 있었는가
+- 막힌 학습자를 지원했는가
+- 마무리에서 목표를 확인했는가
+
+각 영역을 &#x27;관찰 사실 / 좋았던 점 / 한 가지 제안&#x27;으로 기록하게 해주세요.</pre></div></details>
+<p class="teacher-tip"><b>실습 팁</b> 막연한 칭찬보다 실제로 관찰한 행동을 기록하도록 안내하세요.</p>
+</article><article class="prompt-card prompt-added" id="p128">
+<div class="prompt-top"><div class="prompt-label"><span class="prompt-num">08</span><div><div class="source extra">강사양성과정 확장 실습</div><h4>재시연 개선 대본</h4></div></div><button type="button" class="copy-btn" data-copy="p128" aria-label="재시연 개선 대본 프롬프트 복사"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg><span>복사</span></button></div>
+<details><summary>프롬프트 보기<span class="chevron">⌄</span></summary><div class="prompt-body"><pre id="text-p128">당신은 수업 개선 코치입니다.
+기존 대본:
+[붙여넣기]
+받은 피드백:
+[붙여넣기]
+
+피드백 중 학습자 경험에 영향이 큰 3가지를 골라
+수정 전 문장/행동과 수정 후 문장/행동을 비교해주세요.
+그 다음 개선 내용을 반영한 재시연 대본을 작성하고,
+재시연 후 확인할 관찰 포인트 5개를 제시해주세요.</pre></div></details>
+<p class="teacher-tip"><b>실습 팁</b> 수정한 이유와 기대 효과를 본인 말로 설명할 수 있게 정리하세요.</p>
+</article></div>
     <div class="review"><div><span class="mini-label">SELF CHECK</span><h3>제출 전 3가지 확인</h3></div><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>교육생이 직접 실행하는 장면이 있는가</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>로그인·생성 실패에 대비했는가</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>피드백을 수정한 증거가 있는가</li></ul></div>
-    <div class="submit-strip"><div><b>실행한 결과를 함께 나누세요</b><p>사용한 프롬프트, 결과물, 내가 수정한 점을 스터디 게시판에 남깁니다.</p></div><a class="padlet-btn" href="https://padlet.com/yu_ssam/2026-ai-9-inm9shio5akl9hjf" target="_blank" rel="noopener noreferrer">스터디 게시판 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7M21 3l-9 9"/><path d="M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg></a></div>
+    <div class="submit-strip"><div><b>실행한 결과를 함께 나누세요</b><p>사용한 프롬프트, 결과물, 내가 수정한 점을 스터디 게시판에 남깁니다.</p></div><a class="padlet-btn" href="https://padlet.com/yu_ssam/99" target="_blank" rel="noopener noreferrer">스터디 게시판 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7M21 3l-9 9"/><path d="M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg></a></div>
     <nav class="lesson-bottom" aria-label="차시 이동"><a href="#lesson-6" data-lesson="6">이전 · 6차시</a><a href="#lesson-8" data-lesson="8">다음 · 8차시</a></nav>
     </section><section class="lesson" id="lesson-8" aria-labelledby="heading-8">
     <div class="lesson-heading"><div><div class="eyebrow">LESSON 08 <span>2시간 · 계획서 9월 30일</span></div><h2 id="heading-8">최종 수업시연 &amp; 자격증 시험 준비</h2><p>최종 시연을 점검하고, 핵심 개념과 실제 결과물을 정리해 다음 강의를 준비합니다.</p></div><div class="lesson-index">08<span>/ 08</span></div></div>
     <div class="tool-row"><b>실습 도구</b><a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">ChatGPT <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7M21 3l-9 9"/><path d="M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg></a><a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer">Gemini <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7M21 3l-9 9"/><path d="M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg></a></div>
+<div class="lesson-journal" aria-label="8차시 교육일지 링크"><div class="lesson-journal-info"><span class="lesson-journal-kicker">LESSON JOURNAL</span><b>최종 강의시연 &amp; 자격증 수여</b><small>2026년 9월 30일 교육 · 차시별 복습 포스팅</small></div><div class="lesson-journal-links"><a href="https://yussamclass.tistory.com/107" target="_blank" rel="noopener noreferrer">티스토리 ↗</a><a href="https://blog.naver.com/mindlemedia/224428021202" target="_blank" rel="noopener noreferrer">네이버 ↗</a><a href="https://www.yussamclass.com/130/?q=YToxOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjt9&amp;bmode=view&amp;idx=174920846&amp;t=board" target="_blank" rel="noopener noreferrer">홈페이지 ↗</a></div></div>
     
     
     <h3 class="section-title">꼭 알아야 할 내용</h3><div class="knowledge-grid"><div class="knowledge-card"><span class="mini-label">핵심 01</span><h3>최종 시연은 증거</h3><p>목표·실습·결과물이 연결되는지 실제 자료와 리허설로 확인합니다.</p></div><div class="knowledge-card"><span class="mini-label">핵심 02</span><h3>공식 안내가 기준</h3><p>시험의 명칭·범위·시간·합격 기준은 운영진의 최종 안내를 따릅니다.</p></div><div class="knowledge-card"><span class="mini-label">핵심 03</span><h3>배운 것을 재사용</h3><p>내가 만든 자료와 직접 판단한 과정을 포트폴리오에 남깁니다.</p></div></div>
     <div class="practice-layout"><div class="flow-block"><h3 class="section-title">실습 진행 순서</h3><ol class="practice-steps"><li><span>01</span><div><b>최종 점검</b><p>피드백 반영·파일·링크·시연시간·대체안을 확인합니다.</p></div></li><li><span>02</span><div><b>시연·역량 확인</b><p>학습자의 실습 결과와 확인 질문으로 목표 달성을 확인합니다.</p></div></li><li><span>03</span><div><b>개념 복습</b><p>원자료에 근거한 연습문제를 풀고 틀린 개념을 정리합니다.</p></div></li><li><span>04</span><div><b>결과물·실행계획</b><p>포트폴리오와 수료 후 첫 수업 계획을 작성합니다.</p></div></li></ol></div><aside class="deliverable"><span class="mini-label">TODAY’S OUTPUT</span><h3>오늘 완성할 결과물</h3><div><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>최종 시연 자료</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>실습 포트폴리오</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>첫 강의 실행계획</span></div><p>작은 실습 수업 한 번을 직접 실행하고, 학습자 피드백으로 다음 수업을 개선하세요.</p></aside></div>
-    <div class="prompt-heading"><div><span class="mini-label">PROMPT WORKBOOK</span><h3>실습 프롬프트 <span>4개</span></h3></div><button class="batch-copy" type="button" data-batch="8"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>차시 전체 복사</button></div>
+    <div class="prompt-heading"><div><span class="mini-label">PROMPT WORKBOOK</span><h3>실습 프롬프트 <span>8개</span></h3></div><button class="batch-copy" type="button" data-batch="8"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>차시 전체 복사</button></div>
     <p class="prompt-help">[ ]와 ○○를 내 상황으로 바꾸세요. 필요한 카드를 펼쳐 내용을 확인하고, 복사한 뒤 AI 도구에 붙여넣어 실행합니다.</p>
     <div class="prompt-list"><article class="prompt-card" id="p064">
     <div class="prompt-top"><div class="prompt-label"><span class="prompt-num">01</span><div><div class="source extra">계획서 기반 보완</div><h4>최종 시연 보완과 점검</h4></div></div><button type="button" class="copy-btn" data-copy="p064" aria-label="최종 시연 보완과 점검 프롬프트 복사"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><span>복사</span></button></div>
@@ -1412,17 +2112,78 @@ CSS와 JavaScript는 파일 안에 포함하고 외부 빌드 과정 없이 열�
 관찰 가능한 실행 목표와 개인정보·자료 사용 권한 점검을 포함해주세요.
 취업·수익·자격 취득 효과를 보장하는 표현은 쓰지 마세요.</pre></div></details>
     <p class="teacher-tip"><b>실습 팁</b> 작은 수업을 직접 실행하고 받은 피드백으로 다음 수업을 개선하세요.</p>
-    </article></div>
+    </article><article class="prompt-card prompt-added" id="p129">
+<div class="prompt-top"><div class="prompt-label"><span class="prompt-num">05</span><div><div class="source extra">강사양성과정 확장 실습</div><h4>최종 포트폴리오 목차 만들기</h4></div></div><button type="button" class="copy-btn" data-copy="p129" aria-label="최종 포트폴리오 목차 만들기 프롬프트 복사"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg><span>복사</span></button></div>
+<details><summary>프롬프트 보기<span class="chevron">⌄</span></summary><div class="prompt-body"><pre id="text-p129">당신은 AI리터러시 강사 포트폴리오 코치입니다.
+제가 과정에서 만든 결과물:
+[목록 붙여넣기]
+
+강사 포트폴리오 목차를 설계해주세요.
+각 항목에 결과물명, 학습목표, 사용한 AI 도구, 내가 직접 판단·수정한 부분, 검증한 내용, 다음 개선점을 포함해주세요.
+개인정보나 수강생 정보가 있다면 공개 전에 제거하도록 표시해주세요.</pre></div></details>
+<p class="teacher-tip"><b>실습 팁</b> 결과물만 모으지 말고 본인의 판단과 수정 과정을 함께 남기세요.</p>
+</article><article class="prompt-card prompt-added" id="p130">
+<div class="prompt-top"><div class="prompt-label"><span class="prompt-num">06</span><div><div class="source extra">강사양성과정 확장 실습</div><h4>핵심 개념 구술 복습</h4></div></div><button type="button" class="copy-btn" data-copy="p130" aria-label="핵심 개념 구술 복습 프롬프트 복사"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg><span>복사</span></button></div>
+<details><summary>프롬프트 보기<span class="chevron">⌄</span></summary><div class="prompt-body"><pre id="text-p130">당신은 AI리터러시지도사 과정 복습 코치입니다.
+다음 주제를 중심으로 구술형 복습을 진행해주세요.
+- 생성형 AI의 한계
+- 개인정보와 민감정보
+- 프롬프트 5요소
+- 사실검증
+- 저작권·출처
+- 수업 설계
+- 실습 운영
+
+한 번에 질문 하나만 하고, 내가 답하면
+1. 잘한 점
+2. 빠진 핵심
+3. 더 정확한 답변 예시
+를 알려준 뒤 다음 질문으로 넘어가세요.
+공식 시험 범위나 출제기준이라고 단정하지 마세요.</pre></div></details>
+<p class="teacher-tip"><b>실습 팁</b> 정답 암기보다 자신의 말로 설명할 수 있는지 확인하세요.</p>
+</article><article class="prompt-card prompt-added" id="p131">
+<div class="prompt-top"><div class="prompt-label"><span class="prompt-num">07</span><div><div class="source extra">강사양성과정 확장 실습</div><h4>첫 강의 30일 실행계획</h4></div></div><button type="button" class="copy-btn" data-copy="p131" aria-label="첫 강의 30일 실행계획 프롬프트 복사"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg><span>복사</span></button></div>
+<details><summary>프롬프트 보기<span class="chevron">⌄</span></summary><div class="prompt-body"><pre id="text-p131">당신은 신규 AI 강사의 실행 코치입니다.
+내가 가르치고 싶은 대상: [입력]
+강의 주제: [입력]
+현재 준비된 자료: [입력]
+가능한 시간: [입력]
+
+30일 동안 첫 수업을 실행하기 위한 주간 계획을 만들어주세요.
+1주차: 대상·문제 정의
+2주차: 강의안·실습자료 제작
+3주차: 리허설·수정
+4주차: 실제 실행·피드백
+각 주차에 해야 할 일, 완료 기준, 필요한 결과물을 표로 정리해주세요.</pre></div></details>
+<p class="teacher-tip"><b>실습 팁</b> 크게 시작하기보다 60~120분의 작은 실습 수업 한 번을 실제로 실행하는 목표가 좋습니다.</p>
+</article><article class="prompt-card prompt-added" id="p132">
+<div class="prompt-top"><div class="prompt-label"><span class="prompt-num">08</span><div><div class="source extra">강사양성과정 확장 실습</div><h4>과정 전체 회고와 다음 성장목표</h4></div></div><button type="button" class="copy-btn" data-copy="p132" aria-label="과정 전체 회고와 다음 성장목표 프롬프트 복사"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg><span>복사</span></button></div>
+<details><summary>프롬프트 보기<span class="chevron">⌄</span></summary><div class="prompt-body"><pre id="text-p132">당신은 강사 성장 코치입니다.
+과정에서 내가 잘한 점: [입력]
+어려웠던 점: [입력]
+가장 유용했던 결과물: [입력]
+앞으로 하고 싶은 강의: [입력]
+
+다음 형식으로 회고를 도와주세요.
+- 유지할 강점 3개
+- 개선할 역량 3개
+- 다음 4주 동안 연습할 행동
+- 포트폴리오에 남길 증거
+- 다음 강의 후 받을 피드백 질문 5개
+
+과장된 평가 대신 내가 제공한 근거에 기반해 작성해주세요.</pre></div></details>
+<p class="teacher-tip"><b>실습 팁</b> 과정 종료를 끝이 아니라 실제 강의 실행과 반복 개선의 시작으로 연결하세요.</p>
+</article></div>
     <div class="review"><div><span class="mini-label">SELF CHECK</span><h3>제출 전 3가지 확인</h3></div><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>최종 안내와 제출 조건을 확인했는가</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>결과물 링크를 다른 기기에서 열 수 있는가</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>출처·개인정보·자료 이용조건을 확인했는가</li></ul></div>
-    <div class="submit-strip"><div><b>실행한 결과를 함께 나누세요</b><p>사용한 프롬프트, 결과물, 내가 수정한 점을 스터디 게시판에 남깁니다.</p></div><a class="padlet-btn" href="https://padlet.com/yu_ssam/2026-ai-9-inm9shio5akl9hjf" target="_blank" rel="noopener noreferrer">스터디 게시판 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7M21 3l-9 9"/><path d="M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg></a></div>
+    <div class="submit-strip"><div><b>실행한 결과를 함께 나누세요</b><p>사용한 프롬프트, 결과물, 내가 수정한 점을 스터디 게시판에 남깁니다.</p></div><a class="padlet-btn" href="https://padlet.com/yu_ssam/99" target="_blank" rel="noopener noreferrer">스터디 게시판 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7M21 3l-9 9"/><path d="M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg></a></div>
     <nav class="lesson-bottom" aria-label="차시 이동"><a href="#lesson-7" data-lesson="7">이전 · 7차시</a><a href="#lesson-1" data-lesson="1">1차시 다시 보기</a></nav>
     </section>
-<details class="source-notes"><summary>자료 출처와 활용 안내</summary><h3>이 가이드의 구성</h3><ol><li>첨부된 2026년 9월 AI리터러시 강사양성 교육계획서: 8차시 주제·목표·실습 결과물 구성의 기준입니다.</li><li>실습용 프롬프트 모음: 1~3차시 16개 묶음을 반영했습니다. 질문 비교와 문서 선택은 각각 나누어 복사할 수 있습니다.</li><li>실습용 프롬프트 워크북 1~3차시: 기본형·빈칸형 프롬프트를 원문으로 함께 제공합니다.</li><li>추가 첨부된 anseonglic2.html: 교육용 챗봇·맞춤화, 슬라이드 제작 4개, 카드뉴스·포스터의 프롬프트 8개와 입력 예시, 슬라이드 제작 5단계, 강사 점검·성장 항목을 2차시에 통합했습니다.</li><li>‘계획서 기반 보완’은 계획서에 필요한 실습을 위해 추가 작성한 프롬프트입니다. 게시판 원문에서 가져온 내용으로 표시하지 않습니다.</li></ol><p>프롬프트의 P.13~P.43 표기는 첨부 문서가 참조한 강의 슬라이드의 페이지입니다. 이번에 첨부된 6쪽 교육계획서의 페이지 번호와는 다릅니다.</p><p>스터디 게시판은 제목을 확인했으나 본문 로딩 제한으로 게시물 내용은 확인하지 못했습니다. 실제 공유 자료는 <a href="https://padlet.com/yu_ssam/2026-ai-9-inm9shio5akl9hjf" target="_blank" rel="noopener noreferrer">원본 게시판</a>에서 확인하세요.</p><p>계획서의 자격 명칭은 ‘AI리터러시강사’로 표기되어 있습니다. 이 가이드의 과정명은 요청에 따라 ‘AI리터러시지도사’로 사용했습니다. 최종 시연 시간은 계획서에 15분·20분 표기가 함께 있어 운영진 안내를 확인합니다.</p><h3>도구 사용 안내</h3><p>도구의 메뉴·기능·생성 횟수·요금제는 계정과 시점에 따라 달라질 수 있습니다. 필요한 기능을 먼저 확인하고, 자료·이미지·음악의 이용조건을 점검하세요. 아래는 관련 공식 안내입니다.</p><p><a href="https://support.google.com/gemini/answer/15146780?hl=ko" target="_blank" rel="noopener noreferrer">Gemini Gems 안내</a> · <a href="https://support.google.com/notebooklm/?hl=ko" target="_blank" rel="noopener noreferrer">NotebookLM 도움말</a> · <a href="https://help.suno.com/en/categories/550145" target="_blank" rel="noopener noreferrer">Suno 이용 권한 안내</a> · <a href="https://www.capcut.com/resource/how-to-add-subtitle-in-capcut" target="_blank" rel="noopener noreferrer">CapCut 자막 안내</a></p><p>날짜는 2026년 9월 계획서의 일정입니다. 연습문제와 자가점검은 학습용이며 공식 시험문제·심사표가 아닙니다.</p></details>
+<details class="source-notes"><summary>자료 출처와 활용 안내</summary><h3>이 가이드의 구성</h3><ol><li>첨부된 2026년 9월 AI리터러시 강사양성 교육계획서: 8차시 주제·목표·실습 결과물 구성의 기준입니다.</li><li>실습용 프롬프트 모음: 1~3차시 16개 묶음을 반영했습니다. 질문 비교와 문서 선택은 각각 나누어 복사할 수 있습니다.</li><li>실습용 프롬프트 워크북 1~3차시: 기본형·빈칸형 프롬프트를 원문으로 함께 제공합니다.</li><li>추가 첨부된 anseonglic2.html: 교육용 챗봇·맞춤화, 슬라이드 제작 4개, 카드뉴스·포스터의 프롬프트 8개와 입력 예시, 슬라이드 제작 5단계, 강사 점검·성장 항목을 2차시에 통합했습니다.</li><li>‘계획서 기반 보완’은 계획서에 필요한 실습을 위해 추가 작성한 프롬프트입니다. 게시판 원문에서 가져온 내용으로 표시하지 않습니다.</li></ol><p>프롬프트의 P.13~P.43 표기는 첨부 문서가 참조한 강의 슬라이드의 페이지입니다. 이번에 첨부된 6쪽 교육계획서의 페이지 번호와는 다릅니다.</p><p>스터디 게시판은 제목을 확인했으나 본문 로딩 제한으로 게시물 내용은 확인하지 못했습니다. 실제 공유 자료는 <a href="https://padlet.com/yu_ssam/99" target="_blank" rel="noopener noreferrer">원본 게시판</a>에서 확인하세요.</p><p>계획서의 자격 명칭은 ‘AI리터러시강사’로 표기되어 있습니다. 이 가이드의 과정명은 요청에 따라 ‘AI리터러시지도사’로 사용했습니다. 최종 시연 시간은 계획서에 15분·20분 표기가 함께 있어 운영진 안내를 확인합니다.</p><h3>도구 사용 안내</h3><p>도구의 메뉴·기능·생성 횟수·요금제는 계정과 시점에 따라 달라질 수 있습니다. 필요한 기능을 먼저 확인하고, 자료·이미지·음악의 이용조건을 점검하세요. 아래는 관련 공식 안내입니다.</p><p><a href="https://support.google.com/gemini/answer/15146780?hl=ko" target="_blank" rel="noopener noreferrer">Gemini Gems 안내</a> · <a href="https://support.google.com/notebooklm/?hl=ko" target="_blank" rel="noopener noreferrer">NotebookLM 도움말</a> · <a href="https://help.suno.com/en/categories/550145" target="_blank" rel="noopener noreferrer">Suno 이용 권한 안내</a> · <a href="https://www.capcut.com/resource/how-to-add-subtitle-in-capcut" target="_blank" rel="noopener noreferrer">CapCut 자막 안내</a></p><p>날짜는 2026년 9월 계획서의 일정입니다. 연습문제와 자가점검은 학습용이며 공식 시험문제·심사표가 아닙니다.</p></details>
 <footer class="footer"><span>AI콘텐츠마케팅연구소 유쌤클래스<br>김유성 강사 · 친절한유성쌤</span><a href="https://www.yussamclass.com/" target="_blank" rel="noopener noreferrer">www.yussamclass.com</a></footer>
 </main></div>
 <div class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
 <dialog id="copy-dialog" aria-labelledby="dialog-title"><h2 id="dialog-title">텍스트를 직접 복사하세요</h2><p>자동 복사가 지원되지 않는 환경입니다. 아래 텍스트를 선택한 뒤 복사해 주세요.</p><textarea id="manual-copy" aria-label="복사할 프롬프트" readonly></textarea><form method="dialog"><button>닫기</button></form></dialog>
-<script type="application/json" id="prompt-data">{"1": [{"title": "개인정보 O/X 퀴즈", "prompt": "당신은 성인 학습자를 대상으로 AI리터러시를 교육하는 강사입니다.\n\n생성형 AI에 입력해도 되는 정보와 입력하면 안 되는 정보를 구분하는 O/X 퀴즈를 만들어주세요.\n\n조건:\n1. 일상생활과 직장에서 실제로 일어날 만한 사례 10개\n2. 한 문제씩 제시\n3. 내가 O 또는 X라고 답하면 정답과 이유를 설명\n4. 개인정보, 금융정보, 비밀번호, 기관 내부자료, 고객정보, 학생정보 등이 골고루 포함되도록 구성\n5. 너무 어려운 법률 용어는 사용하지 말 것\n\n첫 번째 문제부터 시작해주세요.", "id": "p001"}, {"title": "답변 검증하기", "prompt": "다음 질문에 답해주세요.\n\n질문:\n[내가 궁금한 내용을 입력하세요]\n\n답변할 때 다음 형식을 지켜주세요.\n\n1. 핵심 답변\n2. 답변의 근거\n3. 출처가 있다면 출처명\n4. 정보의 기준 날짜\n5. 확실하지 않은 내용\n6. 추가로 확인해야 할 사항\n\n모르는 내용은 추측해서 작성하지 말고 '확인 필요'라고 표시해주세요.", "id": "p002"}, {"title": "프롬프트 만들기 도우미", "prompt": "당신은 생성형 AI 프롬프트 설계 전문가입니다.\n\n제가 하고 싶은 일을 설명하면 아래 5가지 구조를 사용하여 좋은 프롬프트로 만들어주세요.\n\n1. 역할\n2. 목적\n3. 맥락\n4. 조건\n5. 출력형식\n\n제가 하고 싶은 일:\n[예: 안성시 평생학습 프로그램 홍보문을 만들고 싶습니다.]\n\n먼저 5가지 요소를 표로 정리한 뒤, 마지막에 제가 ChatGPT에 바로 사용할 수 있는 완성형 프롬프트를 작성해주세요.", "id": "p003"}, {"title": "결과 비교 ① 모호한 질문", "prompt": "AI 강의계획서 만들어줘.", "id": "p004"}, {"title": "결과 비교 ② 구체적인 질문", "prompt": "당신은 성인 평생교육 전문 강사입니다.\n\n50~60대 성인 초보자를 대상으로 '생성형 AI 기초 활용' 교육을 진행하려고 합니다.\n교육시간은 2시간이고, 교육생 대부분은 ChatGPT를 처음 사용합니다.\n\n교육목표:\n- 생성형 AI의 기본 개념을 이해한다.\n- 좋은 질문을 작성할 수 있다.\n- ChatGPT를 활용해 실제 결과물 하나를 만든다.\n\n조건:\n- 이론 20%, 실습 80%\n- 어려운 전문용어 최소화\n- 실습 최소 3개 포함\n- 각 활동별 시간 표시\n\n다음 형식으로 작성해주세요.\n| 시간 | 교육내용 | 강사활동 | 학습자활동 | 실습결과물 |", "id": "p005"}, {"title": "결과 비교 ③ 두 답변 비교", "prompt": "첫 번째 답변과 두 번째 답변을 구체성, 실용성, 원하는 결과와의 일치도 관점에서 비교해주세요.", "id": "p006"}, {"title": "AI에게 바로 답하지 말라고 하기", "prompt": "당신은 문제해결 코치입니다.\n\n제가 해결하고 싶은 문제는 다음과 같습니다.\n[해결하고 싶은 문제를 입력하세요]\n\n바로 해결책을 제시하지 마세요.\n\n다음 순서대로 저와 대화해주세요.\n1단계. 문제를 정확하게 정의하기\n2단계. 필요한 정보 확인하기\n3단계. 가능한 해결방법 5개 만들기\n4단계. 장점과 단점 비교하기\n5단계. 가장 현실적인 방법 선택하기\n6단계. 실행계획 만들기\n\n먼저 문제를 정확히 이해하기 위해 저에게 필요한 질문을 3개 해주세요.", "id": "p007"}, {"title": "업무 문서 ① 민원답변", "prompt": "당신은 공공기관 민원 업무를 담당하는 친절하고 전문적인 행정 담당자입니다.\n다음 민원에 대한 공식 답변 초안을 작성해주세요.\n민원 내용: [입력]\n조건: 감정 존중, 방어적 표현 금지, 확인되지 않은 내용 단정 금지, 처리 가능/불가 구분, 추가 안내 제시, 500자 내외\n구성: 인사 및 민원 확인 → 관련 내용 설명 → 처리 또는 안내 → 마무리", "id": "p008"}, {"title": "업무 문서 ② 프로그램 제안서", "prompt": "당신은 평생교육 프로그램 기획 전문가입니다.\n주제: [입력]\n대상: [입력]\n교육기간: [입력]\n프로그램명, 기획 배경, 교육 대상, 교육 목표 3개, 차시별 내용, 교육 방법, 준비물, 기대효과, 결과물을 작성해주세요.\n조건: 성인 초보자 대상, 이론 20%, 실습 80%", "id": "p009"}, {"title": "업무 문서 ③ 업무보고서", "prompt": "당신은 업무보고서를 잘 작성하는 행정·기획 전문가입니다.\n업무 내용: [입력]\n업무명, 추진 목적, 주요 추진 내용, 진행 결과, 문제점/특이사항, 향후 계획 순으로 작성해주세요.\n조건: 짧고 명확한 문장, 불필요한 수식어 제외, 중요한 숫자와 결과 우선, A4 1페이지 분량.", "id": "p010"}, {"title": "반복업무 찾기", "prompt": "당신은 AI 업무혁신 컨설턴트입니다.\n\n제가 평소 반복해서 하는 일을 알려드리겠습니다.\n하는 일: [평소 자주 하는 일을 5개 정도 입력하세요]\n\n각 업무를 분석해서 다음 표로 정리해주세요.\n| 업무 | 반복 빈도 | AI 활용 가능 부분 | 사람이 해야 할 부분 | 추천 활용방법 |\n\n그리고 가장 쉽게 AI를 적용할 수 있는 업무 1개를 골라주세요.\n그 업무에 바로 사용할 수 있는 실전 프롬프트까지 만들어주세요.", "id": "p011"}, {"title": "AI에 입력하면 안 되는 정보 — 사례형 O/X 활동", "prompt": "너는 공공기관 개인정보보호 교육강사야. 안성시평생학습관에서 진행하는\n성인 대상 AI리터러시 교육에서 쓸 'AI에 입력하면 안 되는 정보' O/X 사례\n퀴즈를 5개 만들어줘. 문항은 민원업무·학습관 업무·개인생활 상황으로\n구성하고, 정답(O/X)과 이유를 표로 정리해줘.", "id": "p021"}, {"title": "좋은 프롬프트 기본 공식 — 예시 프롬프트 직접 작성", "prompt": "[역할] 너는 ○○ 전문가야.\n[목적] ○○을 하기 위해서\n[맥락] ○○인 상황에서\n[조건] ○○을 반드시 포함하고, ○○은 제외해줘\n[출력형식] ○○ 형식(표 / 목록 / 단계별)으로 작성해줘", "id": "p022"}, {"title": "나쁜 질문", "prompt": "AI 강의계획서 만들어줘", "id": "p023"}, {"title": "좋은 질문", "prompt": "너는 평생학습관 AI 교육 강사야. 안성시평생학습관에서 진행할\n'AI 활용 첫걸음' 2시간 강의계획서를 만들어줘. 대상은 디지털기기가\n익숙하지 않은 50~60대이고, 목표는 'ChatGPT로 문서 초안 작성하기'야.\n실습 중심으로 구성하고 표 형식으로 출력해줘.", "id": "p024"}, {"title": "① 민원답변", "prompt": "너는 안성시평생학습관 행정 담당자야. 다음 민원에 정중하고 명확한\n답변을 작성해줘. [민원 내용: 강좌 정원 초과로 신청이 안 됩니다]\n사과 인사, 원인 설명, 해결 방안, 문의처 안내를 포함해 500자 내외로\n작성해줘.", "id": "p025"}, {"title": "② 프로그램 제안서", "prompt": "너는 평생학습 프로그램 기획자야. 안성시평생학습관에서 운영할 신규\n강좌 제안서를 작성해줘. [강좌명: AI로 손자녀와 소통하기]\n[대상: 60대 이상 조부모]\n개설 배경, 목표, 4주 커리큘럼, 기대효과를 포함해 표 형식으로\n정리해줘.", "id": "p026"}, {"title": "③ 업무보고서", "prompt": "너는 평생학습관 강좌 담당자야. 이번 달 진행한 'AI리터러시강사\n자격증 과정 1차시' 운영 결과 보고서를 작성해줘. 교육 개요, 참석\n인원, 주요 진행 내용, 만족도, 개선사항을 포함해 보고서 형식으로\n작성해줘.", "id": "p027"}, {"title": "오늘의 결과물 & 미션 — 다음 시간 전 과제", "prompt": "내가 반복적으로 하는 업무는 [ ]야. 이 업무 중 AI에게 맡길 수 있는\n부분과 사람이 직접 해야 하는 부분을 구분해서 표로 정리해줘.", "id": "p028"}, {"title": "AI 답변을 초보자에게 설명하기", "prompt": "당신은 AI리터러시 교육 강사입니다.\n대상: [학습자의 연령·디지털 사용 경험]\n생성형 AI, AI리터러시, 할루시네이션을 각각 쉬운 말과 일상 비유로 설명해주세요.\n다음 내용을 포함해주세요.\n1. AI가 잘하는 일과 사람이 판단해야 할 일\n2. 사실 확인을 하지 않아 생길 수 있는 실수 3가지\n3. 개인정보를 가상정보로 바꾸는 예시 3가지\n4. 교육생에게 던질 확인 질문 3개\n전문용어는 처음 나올 때 뜻을 설명하고, AI를 사람처럼 생각하거나 모든 것을 안다고 표현하지 마세요.", "id": "p035"}, {"title": "저작권·초상권 판단 연습", "prompt": "당신은 AI리터러시 수업의 사례 토론 진행자입니다.\nAI로 만든 이미지, 인터넷 사진, 음악, 다른 사람의 얼굴·목소리를 활용하는 가상 수업 사례 6개를 만들어주세요.\n사례마다 [사용 전 확인할 사항 | 동의 또는 이용허락이 필요한 부분 | 안전한 대안]을 정리해주세요.\n확정적인 법률 판단은 하지 말고, 자료의 이용조건과 권리자의 동의를 확인하도록 안내해주세요.\n실제 개인정보나 특정인의 얼굴·목소리를 요구하지 마세요.\n마지막에 학습자가 자신의 사용 목적과 배포 범위를 점검하는 질문 3개를 제시해주세요.", "id": "p036"}], "2": [{"title": "나만의 챗봇 기획하기", "prompt": "당신은 AI 챗봇 서비스 기획 전문가입니다.\n\n저의 경험과 전문성을 활용해서 나만의 AI 챗봇을 만들고 싶습니다.\n\n저에 대한 정보:\n- 나이 또는 세대: [입력]\n- 현재 또는 이전 직업: [입력]\n- 잘 아는 분야: [입력]\n- 좋아하는 분야: [입력]\n- 도움을 주고 싶은 사람: [입력]\n\n이 정보를 바탕으로 제가 만들기 좋은 챗봇 아이디어 5개를 제안해주세요.\n각 아이디어마다 1. 챗봇 이름 2. 대상 3. 해결하는 문제 4. 전문분야 5. 말투 6. 하지 말아야 할 것 7. 사용자가 처음 입력할 질문을 표로 정리해주세요.\n너무 거창하지 않고 실제로 만들고 운영할 수 있는 아이디어를 우선해주세요.", "id": "p012"}, {"title": "Gemini Gems 지침 만들기", "prompt": "당신은 Gemini Gems 제작 전문가입니다.\n\n다음 정보를 바탕으로 Gemini Gems에 입력할 수 있는 '지침(Instructions)'을 작성해주세요.\n\nGem 이름: [예: 안성 평생학습 안내봇]\n대상: [입력]\n목적: [입력]\n전문분야: [입력]\n원하는 말투: [예: 친절하고 쉽고 간결한 존댓말]\n\n반드시 지켜야 할 규칙:\n- 모르는 정보는 만들어내지 않는다.\n- 제공된 자료를 우선 근거로 사용한다.\n- 어려운 용어는 쉽게 설명한다.\n- 확인되지 않은 일정이나 비용은 단정하지 않는다.\n- 개인정보 입력을 요구하지 않는다.\n\n답변 형식: 핵심 답변 → 필요한 정보 → 다음 행동 제안\n마지막에는 사용자가 Gems를 테스트할 수 있는 예상 질문 5개도 작성해주세요.", "id": "p013"}, {"title": "첨부자료 기반으로 답하기", "prompt": "지금 첨부한 자료만을 우선 근거로 분석해주세요.\n\n먼저 다음 내용을 정리해주세요.\n1. 이 자료의 핵심 주제\n2. 가장 중요한 내용 5가지\n3. 초보자가 이해하기 어려운 내용\n4. 반드시 기억해야 할 숫자·개념\n5. 실제 생활이나 업무에서 활용할 수 있는 내용\n\n중요:\n첨부자료에 없는 사실은 임의로 만들어내지 마세요.\n자료에 없는 내용은 '첨부자료에서 확인할 수 없습니다'라고 답해주세요.\n\n마지막으로 이 자료를 학습하기 위한 질문 5개를 만들어주세요.", "id": "p014"}, {"title": "Gamma용 5장 PPT 구성안", "prompt": "당신은 전문 프레젠테이션 기획자입니다.\n\n제가 잘하는 분야를 소개하는 5장짜리 프레젠테이션을 만들려고 합니다.\n나의 전문분야: [입력]\n주요 대상: [입력]\n제가 가진 경험: [입력]\n전달하고 싶은 핵심 메시지: [입력]\n\n다음 5장 구조로 작성해주세요.\n1장. 표지\n2장. 대상이 겪고 있는 문제\n3장. 내가 제공하는 해결방법\n4장. 나의 경험 또는 사례\n5장. 행동요청 CTA\n\n각 슬라이드마다 제목, 핵심문장 1개, 본문 핵심내용 3개, 추천 이미지 또는 시각자료를 작성해주세요.\n한 장에 하나의 핵심메시지만 담아주세요.", "id": "p015"}, {"title": "SNS 카드뉴스 7장", "prompt": "당신은 SNS 콘텐츠 마케팅 전문가입니다.\n\n제가 잘하는 것을 주제로 7장의 SNS 카드뉴스를 만들려고 합니다.\n주제: [입력]\n대상: [입력]\n\n구조:\n1장: 시선을 끄는 후킹\n2장: 대상이 겪는 문제\n3장: 핵심정보 1\n4장: 핵심정보 2\n5장: 핵심정보 3\n6장: 해결방법\n7장: 행동요청 CTA\n\n각 장마다 제목 15자 이내, 본문 40자 이내, 추천 이미지를 작성해주세요.\n조건: 어려운 전문용어 금지, 한 장에 하나의 메시지, 과장 광고문구 금지, 성인 학습자가 쉽게 읽을 수 있게 작성.", "id": "p016"}, {"title": "챗봇 기획서 작성 — 빈칸 작성", "prompt": "아래 정보로 나만의 챗봇 기획서를 정리해줘.\n- 챗봇 이름: [ ]     - 대상: [ ]     - 해결하는 문제: [ ]\n- 전문분야: [ ]     - 말투: [ ]     - 하지 말아야 할 것: [ ]\n- 첫 질문: [ ]\n표 형식으로 정리하고, 부족한 부분은 예시를 제안해줘.", "id": "p029"}, {"title": "(Gem 지침란에 입력)", "prompt": "너는 [전문분야]에 대해 [대상]에게 [상담/안내/홍보]하는 챗봇이야.\n- 목적: [ ]\n- 말투: 친절하고 이해하기 쉬운 존댓말\n- 반드시 지킬 규칙: [예: 의학적 진단 금지, 개인정보 요구 금지]\n- 답변 형식: 3문장 이내, 필요하면 추가 질문 유도\n첫 메시지는 \"안녕하세요! 저는 ○○입니다. 무엇을 도와드릴까요?\"로\n시작해줘.", "id": "p030"}, {"title": "Gamma로 프레젠테이션 만들기 — 5장 실습", "prompt": "너는 프레젠테이션 기획자야. 나의 전문분야를 소개하는 5장짜리\n프레젠테이션 내용을 만들어줘. [전문분야: ○○]\n1페이지 표지(이름+한줄소개) / 2페이지 문제 / 3페이지 해결 /\n4페이지 사례 / 5페이지 CTA(연락처·제안)\n페이지별 제목과 핵심 문장을 간결히 작성해줘.", "id": "p031"}, {"title": "카드뉴스 만들기 — '내가 잘하는 것' (7장)", "prompt": "너는 SNS 카드뉴스 작가야. '내가 잘하는 것: [ ]'을 주제로 7장짜리\n인스타그램 카드뉴스 문구를 만들어줘.\n1장 후킹 / 2장 문제 제기 / 3~5장 정보(핵심 3가지) /\n6장 해결·노하우 / 7장 행동요청(팔로우·문의·방문 유도)\n각 장은 제목 15자 이내 + 설명 30자 이내로 작성해줘.", "id": "p032"}, {"title": "NotebookLM 자료 읽기와 출처 확인", "prompt": "지금 선택한 소스만을 근거로 수업 준비를 도와주세요.\n수업 주제: [입력]\n대상: [입력]\n1. 핵심 개념 5개를 초보자도 이해할 수 있게 설명해주세요.\n2. 각 설명에 해당하는 소스의 근거를 함께 제시해주세요.\n3. 자료에서 확인할 수 없는 내용은 '자료에서 확인 불가'라고 표시해주세요.\n4. 서로 다른 자료의 내용이 충돌하면 두 내용을 구분해 알려주세요.\n5. 학습자가 직접 확인할 질문 5개를 만들어주세요.\n추가 사실이나 수치를 임의로 만들지 마세요.", "id": "p037"}, {"title": "NotebookLM 발표자료 구성", "prompt": "선택한 자료를 근거로 [대상]을 위한 [주제] 발표자료를 구성해주세요.\n총 5장: 표지 / 문제 / 핵심 개념 / 적용 실습 / 정리와 다음 행동.\n각 장에 제목, 핵심 문장 1개, 본문 3개 이내, 시각자료 제안, 강사 설명 메모를 작성해주세요.\n본문은 큰 글자로 보여줄 수 있게 짧게 작성해주세요.\n사실·숫자는 근거 소스를 함께 표시하고 자료에 없는 내용은 넣지 마세요.\n실습은 학습자가 10분 안에 수행할 수 있는 활동으로 제안해주세요.", "id": "p038"}, {"title": "챗봇 테스트와 지침 개선", "prompt": "당신은 교육용 챗봇 품질 점검자입니다.\n챗봇 목적: [입력]\n현재 지침: [붙여넣기]\n실제 질문과 답변: [가상정보로 처리한 테스트 기록]\n다음 항목으로 점검해주세요: 목적 적합성, 근거 있는 답변, 쉬운 설명, 개인정보 보호, 모르는 정보 처리.\n[문제 | 근거가 되는 답변 | 수정할 지침 | 다시 테스트할 질문] 표로 작성해주세요.\n일반 질문 3개, 자료에 없는 질문 1개, 부적절한 개인정보 요청 1개로 재시험안을 만들어주세요.\n마지막에 수정된 지침 전체를 바로 복사할 수 있게 작성해주세요.", "id": "p039"}, {"title": "교육용 AI리터러시 코치 챗봇 만들기", "prompt": "너는 성인 학습자를 대상으로 AI리터러시를 쉽고 친절하게 가르치는 ‘AI리터러시 학습 코치 챗봇’이야.\n\n[챗봇의 목적]\n사용자가 생성형 AI를 처음 배우는 성인 학습자라고 가정하고,\nAI의 기본 개념, 프롬프트 작성법, AI 윤리, 사실 확인, 개인정보 보호, 저작권, 실제 활용법을 단계적으로 안내해줘.\n\n[대상]\n- 생성형 AI 입문자\n- 30~60대 성인 학습자\n- 어려운 전문용어보다 쉬운 설명과 실제 사례가 필요한 사람\n\n[챗봇의 역할]\n1. 사용자의 질문 의도를 먼저 파악한다.\n2. 어려운 AI 용어가 나오면 쉬운 한국어로 풀어서 설명한다.\n3. 설명만 하지 말고 반드시 생활 또는 업무 사례를 1개 이상 들어준다.\n4. 필요하면 사용자의 수준을 확인하기 위한 짧은 질문을 먼저 한다.\n5. 답변 마지막에는 사용자가 직접 해볼 수 있는 ‘1분 실습’을 제안한다.\n6. 잘못된 정보일 가능성이 있는 내용은 확정적으로 단정하지 말고 확인 필요성을 알려준다.\n7. 개인정보, 저작권, 허위정보, AI 윤리와 관련된 위험이 있으면 주의사항을 알려준다.\n\n[대화 방식]\n- 한 번에 너무 많은 정보를 주지 않는다.\n- 답변은 ‘핵심 설명 → 쉬운 예시 → 주의할 점 → 1분 실습’ 순서로 한다.\n- 문장은 짧고 명확하게 작성한다.\n- 표가 도움이 될 때만 표를 사용한다.\n- 사용자가 “더 자세히”라고 하면 심화 설명을 제공한다.\n\n[첫 인사]\n처음 대화를 시작할 때 다음 4가지 중 무엇을 배우고 싶은지 물어봐.\n① 생성형 AI 기초\n② 좋은 프롬프트 만들기\n③ AI 윤리·저작권·개인정보\n④ 업무·생활에서 AI 활용하기\n\n이제 위 조건을 따르는 AI리터러시 학습 코치 챗봇으로 대화를 시작해줘.", "id": "p068"}, {"title": "내 교육주제에 맞는 챗봇으로 바꾸기", "prompt": "방금 만든 챗봇을 내가 실제 강의에서 사용할 수 있도록 맞춤형으로 수정해줘.\n\n아래 빈칸의 정보를 먼저 나에게 한 항목씩 질문해서 받아.\n- 교육주제 :\n- 교육대상 :\n- 학습자의 AI 수준 :\n- 챗봇이 가장 많이 도와줄 내용 :\n- 답변 분량 :\n- 답변 말투 :\n- 반드시 지켜야 할 주의사항 :\n\n내 답변을 모두 받은 뒤,\n1. 챗봇 이름\n2. 챗봇 소개문\n3. 챗봇의 핵심 역할 5가지\n4. 대화 운영 규칙\n5. 첫 인사 문구\n6. 추천 시작 질문 6개\n7. ChatGPT 또는 Gemini에 그대로 넣어 사용할 수 있는 ‘최종 챗봇 제작 프롬프트’\n순서로 완성해줘.", "id": "p069"}, {"title": "슬라이드 제작 1단계 · 4차시 강의계획서 생성", "prompt": "너는 대한민국 성인 평생교육 현장에서 활동하는 ‘AI리터러시 교육과정 설계 전문가’이자 전문 강사야.\n\n아래 조건으로 실제 기관에 제출하고 강의에 바로 사용할 수 있는 수준의 「AI리터러시 교육 강의계획서 및 상세 커리큘럼」을 만들어줘.\n\n[교육 기본정보]\n- 교육주제 : AI리터러시 교육하기\n- 총 교육시간 : 차시당 2시간, 총 4차시 / 총 8시간\n- 교육대상 : 성인\n- 교육장소 : 안성시평생학습관 컴퓨터실\n- 강사이름 : 김유성\n- 교육형태 : 설명 + 시연 + 개별 PC 실습 + 결과 공유\n- 교육난이도 : 생성형 AI 입문~초중급\n- 교육방향 : 이론보다 실제 활용과 실습을 중심으로 구성\n\n[교육과정에 반드시 포함할 내용]\n- AI리터러시의 의미와 필요성\n- 생성형 AI의 기본 개념\n- ChatGPT 등 대화형 생성형 AI 활용\n- 좋은 프롬프트를 만드는 방법\n- 사실 확인과 AI 환각 이해\n- AI 윤리\n- 개인정보 보호\n- 저작권과 생성형 AI\n- 이미지 생성 AI 활용\n- AI를 교육·업무·생활에 적용하는 방법\n- 학습자가 직접 결과물을 만드는 실습\n\n[강의계획서 작성 요구사항]\n1. 교육과정명\n2. 교육목적\n3. 교육대상 분석\n4. 전체 학습목표 5개\n5. 기대효과\n6. 준비물 및 교육환경\n7. 총 4차시 커리큘럼\n8. 차시별 세부 학습목표\n9. 차시별 120분 시간배분\n10. 도입-이론-시연-실습-공유-정리 단계\n11. 각 단계에서 강사가 설명할 핵심내용\n12. 교육생이 직접 수행할 실습내용\n13. 실습 결과물\n14. 사용할 AI 도구\n15. 강사가 사전에 준비해야 할 자료\n16. 교육생 유의사항\n17. 수업 후 평가 또는 확인 방법\n\n[출력형식]\n먼저 전체 교육과정을 한눈에 볼 수 있는 요약표를 작성하고,\n그 다음 1차시부터 4차시까지 각각 다음 형식의 표로 아주 자세하게 작성해줘.\n\n| 시간 | 수업단계 | 교육내용 | 강사활동 | 교육생활동 | AI도구 | 실습결과물 |\n\n각 차시는 정확히 120분이 되도록 시간 합계를 맞춰줘.\n교육생이 실제 컴퓨터실에서 따라 할 수 있도록 추상적인 표현보다 구체적인 활동 중심으로 작성해줘.\n마지막에는 “강사 준비 체크리스트”와 “교육생 준비 체크리스트”를 각각 만들어줘.", "id": "p070"}, {"title": "슬라이드 제작 2단계 · PPT 페이지별 세부 구성안", "prompt": "첨부한 파일은 내가 실제 교육에 사용할 「AI리터러시 교육 강의계획서」야.\n\n너는 지금부터 성인 대상 AI교육에 특화된 ‘강의설계자 + 프레젠테이션 콘텐츠 기획자’ 역할을 해줘.\n\n[목표]\n첨부한 강의계획서를 바탕으로 실제 2시간 수업에서 사용할 수 있는 강의 PPT의 ‘페이지별 세부 구성안’을 만들어줘.\n\n[중요 조건]\n- 강의계획서에 없는 내용을 임의로 크게 바꾸지 않는다.\n- 학습자가 슬라이드만 보아도 흐름을 이해할 수 있도록 순서를 설계한다.\n- 설명용 슬라이드와 실습용 슬라이드를 적절히 섞는다.\n- 성인 초보자에게 어려운 용어는 쉬운 표현과 사례로 바꾼다.\n- 한 페이지에 너무 많은 내용을 넣지 않는다.\n- 핵심 개념 → 사례 → 비교 → 실습 → 정리 흐름을 만든다.\n- 필요한 경우 체크리스트, 단계도, 비교표, 사례 화면, 실습 안내 화면을 포함한다.\n\n[슬라이드 수]\n첨부한 강의계획서의 교육시간과 내용량을 분석하여 적정 슬라이드 수를 먼저 제안해줘.\n2시간 수업 기준으로 너무 빠르거나 너무 느리지 않게 설계해줘.\n\n[각 페이지마다 반드시 작성할 항목]\n1. 페이지 번호\n2. 페이지 목적\n3. 화면에 들어갈 핵심 문구\n4. 화면에 들어갈 세부 교육내용\n5. 강사가 구두로 설명할 추가 내용\n6. 교육생에게 던질 질문\n7. 사례 또는 예시\n8. 추천 시각자료 형태\n   - 사진\n   - 아이콘\n   - 인포그래픽\n   - 비교표\n   - 프로세스\n   - 실습화면\n   중 가장 적절한 것\n9. 실습 페이지라면 교육생 수행방법\n10. 이 페이지에서 반드시 기억해야 할 한 문장\n\n[출력형식]\n먼저 전체 슬라이드 흐름을 표로 요약하고,\n그 다음 아래 형식으로 모든 페이지를 빠짐없이 상세 작성해줘.\n\n### 페이지 1\n- 목적 :\n- 핵심 문구 :\n- 세부 교육내용 :\n- 강사 설명 :\n- 교육생 질문 :\n- 사례 :\n- 추천 시각자료 :\n- 실습방법 :\n- 기억할 한 문장 :\n\n같은 형식으로 마지막 페이지까지 작성해줘.", "id": "p071"}, {"title": "슬라이드 제작 3단계 · 공통 디자인과 이미지 프롬프트", "prompt": "아래 또는 첨부한 내용은 내가 만든 「AI리터러시 강의 PPT 페이지별 세부 구성안」이야.\n\n너는 ‘AI교육 전문 프레젠테이션 아트디렉터 + 이미지 프롬프트 엔지니어’ 역할을 해줘.\n\n[목표]\n각 슬라이드의 교육내용을 그대로 전달할 수 있는 16:9 강의 슬라이드 이미지를 생성할 수 있도록\n① 전체 슬라이드 공통 디자인 프롬프트를 먼저 만들고,\n② 공통 디자인과 각 페이지 교육내용을 하나로 합친\n③ 페이지별 최종 이미지 생성 프롬프트를 만들어줘.\n\n[전체 공통 디자인 방향]\n- 주제 : 전문적인 AI리터러시 지도사 교육\n- 화면비율 : 16:9 가로형\n- 분위기 : 고급스럽고 현대적인 AI교육, 신뢰감, 전문성, 미래지향적 느낌\n- 배경 : 화이트 또는 밝은 아이보리 기반\n- 메인 컬러 : 딥 네이비, 다크 그린 계열\n- 포인트 컬러 : 시안 블루와 골드\n- 구성 : 정돈된 카드형 UI, 라인 아이콘, 고급 인포그래픽\n- 정보 우선순위가 명확한 레이아웃\n- 한국어 글자는 크고 굵고 선명하게\n- 모바일 화면으로 보더라도 핵심 글자가 인식될 만큼 가독성을 높인다.\n- 한 화면에 텍스트가 지나치게 많지 않게 핵심내용을 시각적으로 요약한다.\n- 교육내용과 직접 관련된 그림, 도식, 아이콘을 함께 배치한다.\n- 모든 페이지의 디자인 언어, 여백, 카드 모양, 아이콘 스타일, 조명, 질감을 일관되게 유지한다.\n\n[절대 조건]\n- 슬라이드 제목을 별도로 넣지 않는다.\n- 슬라이드 번호를 넣지 않는다.\n- 로고, 워터마크, 불필요한 영어 장식문구를 넣지 않는다.\n- 교육내용과 무관한 장식 요소를 과도하게 넣지 않는다.\n- 작은 글자를 빽빽하게 넣지 않는다.\n- 한국어 텍스트가 깨지거나 틀리지 않도록 짧고 명확한 문구 중심으로 구성한다.\n\n[페이지별 작업방법]\n각 페이지마다 다음 순서로 작성해줘.\n1. 해당 페이지에서 이미지 안에 반드시 보여야 할 핵심 메시지 1개\n2. 이미지 안에 넣을 한국어 문구\n3. 시각적으로 표현할 그림·아이콘·도식\n4. 추천 레이아웃\n5. 공통 디자인 프롬프트 + 해당 페이지 내용을 완전히 합친 ‘최종 이미지 생성 프롬프트’\n\n[최종 프롬프트 작성조건]\n각 페이지의 최종 프롬프트는 ChatGPT, Google Gemini, Google Flow 등 이미지 생성 AI에 그대로 복사해 넣을 수 있을 정도로 상세하게 작성해줘.\n각 페이지 프롬프트 안에 반드시 “16:9 가로형”, “한국어 글자 크게”, “높은 가독성”, “슬라이드 제목과 슬라이드 번호 제외” 조건을 반복해서 포함해줘.\n\n이제 아래/첨부된 PPT 페이지별 구성안을 분석해서 전체 공통 디자인 프롬프트와 페이지별 최종 이미지 생성 프롬프트를 만들어줘.", "id": "p072"}, {"title": "슬라이드 제작 4단계 · 이미지 생성 추가 지시문", "prompt": "위 페이지용 이미지 생성 프롬프트를 그대로 적용해서 실제 강의 슬라이드 이미지를 만들어줘.\n\n반드시 지켜줘.\n- 16:9 가로형\n- 교육용 프레젠테이션에 적합한 고해상도 이미지\n- 한국어 문구는 정확하게 표현\n- 핵심 글자는 크고 굵게\n- 충분한 여백\n- 교육내용과 직접 관련된 이미지와 인포그래픽 사용\n- 다른 슬라이드와 동일한 디자인 컨셉 유지\n- 슬라이드 제목 별도 표기 금지\n- 슬라이드 번호 표기 금지\n- 불필요한 로고와 워터마크 금지\n- 화면 가장자리에서 글자가 잘리지 않도록 안전 여백 확보", "id": "p073"}, {"title": "퍼스널브랜딩 카드뉴스 7장 기획과 제작", "prompt": "첨부한 파일은 내가 진행할 「AI리터러시 교육 강의계획서」야.\n\n너는 ‘AI교육 전문 콘텐츠마케터 + 카드뉴스 기획자 + 비주얼 디자이너’ 역할을 해줘.\n\n[목표]\n강의계획서를 바탕으로\n① 교육과정의 핵심 내용을 알리고\n② AI리터러시 강사로서 나의 전문성을 소개하며\n③ 교육 문의 또는 강의 참여에 관심이 생기도록 만드는\n퍼스널브랜딩용 카드뉴스를 제작하려고 해.\n\n[강사정보]\n- 강사명 : 김유성 강사(친절한유성쌤)\n- 홈페이지 : www.yussamclass.com\n- 이메일 : [강사 이메일 입력]\n- 전화 : [강사 전화번호 입력]\n\n[카드뉴스 구성]\n총 7장으로 구성해줘.\n\n1장 : 강한 관심을 끄는 표지\n2장 : 왜 지금 AI리터러시가 필요한가\n3장 : 이 교육에서 배우는 핵심내용\n4장 : 교육생이 직접 하게 될 실습\n5장 : 교육 후 기대할 수 있는 변화\n6장 : 강사 김유성 소개와 교육 강점\n7장 : 교육 문의 / 홈페이지 / 연락처 / 마무리 CTA\n\n[각 카드마다 작성할 내용]\n- 카드 번호\n- 핵심 목적\n- 메인 카피\n- 서브 카피\n- 화면에 반드시 들어갈 핵심정보\n- 추천 그림 또는 아이콘\n- 추천 레이아웃\n- 최종 이미지 생성 프롬프트\n\n[디자인 공통조건]\n- 정사각형 1:1 카드뉴스\n- 고급스럽고 전문적인 AI교육 브랜드 분위기\n- 화이트/아이보리 배경\n- 딥 네이비 또는 다크 그린 메인\n- 시안 블루와 골드 포인트\n- 카드형 UI와 세련된 인포그래픽\n- 한국어 글자를 크고 선명하게\n- 한 카드에 문장이 너무 많지 않게\n- 핵심 단어를 시각적으로 강조\n- 전체 7장의 디자인이 동일한 시리즈처럼 보이게\n- 교육기관, 기업, 성인교육 홍보물로 사용해도 어색하지 않은 품질\n- 로고나 워터마크를 임의로 만들지 않는다.\n\n[최종 출력]\n먼저 7장 전체 기획안을 표로 정리한 뒤,\n1장부터 7장까지 각각 ‘이미지 생성 AI에 그대로 넣을 수 있는 최종 프롬프트’를 자세하게 작성해줘.", "id": "p074"}, {"title": "강의 홍보 포스터 기획과 제작", "prompt": "첨부한 파일은 내가 진행할 「AI리터러시 교육 강의계획서」야.\n\n너는 ‘교육 홍보 전문 카피라이터 + 포스터 아트디렉터 + AI 이미지 프롬프트 전문가’ 역할을 해줘.\n\n[목표]\n강의계획서의 핵심 내용을 한눈에 전달하고,\nAI리터러시 강사 김유성의 전문성을 함께 보여주는 고급스러운 교육 홍보 포스터를 만들려고 해.\n\n[강사정보]\n- 강사명 : 김유성 강사(친절한유성쌤)\n- 홈페이지 : www.yussamclass.com\n- 이메일 : [강사 이메일 입력]\n- 전화 : [강사 전화번호 입력]\n\n[먼저 해야 할 일]\n첨부한 강의계획서를 분석해서 아래 내용을 짧고 강하게 정리해줘.\n1. 교육을 한 문장으로 설명하는 메인 카피\n2. 교육대상\n3. 교육 핵심내용 4가지\n4. 대표 실습 3가지\n5. 교육의 기대효과 3가지\n6. 강사 전문성을 보여줄 소개문 1~2문장\n7. 신청 또는 문의를 유도하는 CTA 문구\n\n[포스터 디자인 조건]\n- 세로형 3:4 비율\n- 고급 교육기관 홍보 포스터 스타일\n- AI리터러시와 미래교육의 전문성을 느낄 수 있는 분위기\n- 화이트 또는 밝은 아이보리 배경\n- 딥 네이비와 다크 그린을 메인 컬러로 사용\n- 시안 블루와 골드를 포인트로 사용\n- AI 네트워크, 대화형 AI, 데이터, 교육을 상징하는 정제된 시각요소\n- 카드형 정보영역과 깔끔한 그리드\n- 가장 중요한 메인 카피를 가장 크게\n- 교육 핵심내용은 짧고 읽기 쉽게\n- 강사정보와 연락처는 하단에 정돈해서 배치\n- 한국어 가독성을 최우선으로 한다.\n- 작은 글씨를 과도하게 사용하지 않는다.\n- 불필요한 영어, 가짜 로고, 워터마크를 넣지 않는다.\n\n[최종 결과]\n① 포스터에 실제로 넣을 최종 문구\n② 정보의 배치 순서\n③ 추천 시각요소\n④ 이미지 생성 AI에 그대로 복사할 수 있는 ‘최종 포스터 이미지 생성 프롬프트’\n순서로 만들어줘.\n\n최종 이미지 생성 프롬프트에는 포스터 안에 들어갈 한국어 문구를 정확하게 따옴표로 표시해서 포함해줘.", "id": "p075"}], "3": [{"title": "내 경험을 AI 영상 아이디어로 바꾸기", "prompt": "당신은 AI 영상 콘텐츠 기획자입니다.\n\n제가 가진 경험을 바탕으로 AI를 활용해 만들 수 있는 30~60초 영상 아이디어를 5개 제안해주세요.\n저의 경험: [나의 직업, 취미, 경험, 전문분야를 입력]\n영상 대상: [입력]\n\n각 아이디어마다 1. 영상 제목 2. 핵심 메시지 3. 첫 3초 후킹 4. 영상 장면 3개 5. AI가 만들 부분 6. 제가 직접 넣어야 할 경험·의견을 작성해주세요.\nAI가 모든 것을 대신 만드는 영상이 아니라 저의 경험과 관점이 드러나도록 구성해주세요.", "id": "p017"}, {"title": "YouTube 주제 3개 찾기", "prompt": "당신은 초보자를 위한 YouTube 채널 기획 코치입니다.\n\n저와 대화를 하면서 제가 꾸준히 운영할 수 있는 YouTube 주제를 찾아주세요.\n기준은 ① 내가 아는 것 ② 사람들이 필요로 하는 것 ③ 내가 꾸준히 만들 수 있는 것입니다.\n\n바로 주제를 추천하지 말고 다음 질문을 한 개씩 해주세요.\n1. 지금까지 가장 오래 해본 일은 무엇인가요?\n2. 주변 사람들이 자주 물어보는 것은 무엇인가요?\n3. 다른 사람보다 조금 더 잘 알고 있는 것은 무엇인가요?\n4. 돈을 받지 않아도 이야기하기 좋아하는 분야는 무엇인가요?\n5. 일주일에 한 번씩 1년 동안 이야기할 수 있는 분야는 무엇인가요?\n\n제 답변이 끝나면 추천 YouTube 주제 3개를 제안하고, 각 주제마다 추천 이유, 예상 시청자, 영상 아이디어 5개, 지속 가능성을 알려주세요.", "id": "p018"}, {"title": "내 경험에서 채널 후보 10개 만들기", "prompt": "당신은 40~60대 성인의 경험을 콘텐츠로 바꾸는 YouTube 기획 전문가입니다.\n\n저의 정보:\n나이: [입력]\n직업 또는 과거 직업: [입력]\n경력: [입력]\n잘하는 것: [입력]\n관심 있는 것: [입력]\n도움을 주고 싶은 사람: [입력]\n\n이 경험을 활용하여 제가 운영할 수 있는 YouTube 채널 주제 후보 10개를 제안해주세요.\n각 주제마다 1. 채널 주제 2. 주요 시청자 3. 사람들이 이 채널을 볼 이유 4. 첫 영상 제목 3개 5. 제작 난이도(쉬움/보통/어려움)를 표로 정리해주세요.\n유행만 따라가는 아이디어보다 제가 가진 경험과 전문성이 자산이 되는 주제를 우선해주세요.", "id": "p019"}, {"title": "안성 지역 콘텐츠 아이디어", "prompt": "당신은 지역 기반 YouTube 콘텐츠 기획 전문가입니다.\n\n안성시 시민 또는 소상공인이 스마트폰과 AI를 활용해서 쉽게 만들 수 있는 영상 콘텐츠 아이디어를 제안해주세요.\n관심 분야: [안성 맛집 / 안성 여행 / 전통시장 / 농산물 / 공방 / 지역행사 / 평생학습 / 전문지식 / 상품 / 강의 중 선택]\n대상 시청자: [입력]\n제가 가진 경험: [입력]\n\n30~60초 Shorts 영상 아이디어 10개를 만들어주세요.\n| 영상 제목 | 첫 3초 후킹 | 핵심내용 | 촬영할 장면 | AI 활용 부분 |\n\n조건:\n- 실제 안성 지역의 가치가 드러날 것\n- 광고만 하는 영상보다 정보가 있는 영상\n- 스마트폰으로 촬영 가능한 수준\n- 초보자가 제작할 수 있을 것", "id": "p020"}, {"title": "초보자의 첫 YouTube 주제 정하기 — 교집합 3개", "prompt": "너는 유튜브 채널 기획 컨설턴트야. 아래 세 가지를 참고해서 내가\n시작할 수 있는 유튜브 주제 3개를 추천해줘.\n- 내가 아는 것: [ ]\n- 누군가 필요로 하는 것: [ ]\n- 꾸준히 만들 수 있는 것: [ ]\n주제마다 채널명 아이디어와 첫 영상 소재도 함께 제안해줘.", "id": "p033"}, {"title": "무슨 영상을 만들지 모르겠습니다 — 주제 후보 10개", "prompt": "나는 [나이]세이고 [분야]에서 [경력]년간 일했다. [대상]에게 도움을\n줄 유튜브 주제 10개를 제안해줘. 각 주제는 제목 예시와 함께\n알려줘.", "id": "p034"}, {"title": "인기 영상 벤치마킹 분석", "prompt": "당신은 숏폼 콘텐츠 분석 코치입니다.\n분석할 영상의 제목·대본·장면 설명: [직접 확인한 내용 붙여넣기]\n링크만으로 영상을 확인할 수 없다면 분석을 추측하지 말고 필요한 자료를 요청해주세요.\n다음 표로 분석해주세요.\n| 구간 | 후킹·전개·행동요청의 역할 | 화면 구성 | 자막·소리 | 내가 배울 원리 |\n원본의 표현과 장면을 그대로 복제하지 말고 구조와 전달 원리만 분석해주세요.\n나의 주제 [입력]에 적용할 독창적인 기획 3개를 제안해주세요.\n조회 수만으로 효과를 단정하지 말고 확인된 정보와 해석을 구분해주세요.", "id": "p040"}, {"title": "30~60초 숏폼 시나리오", "prompt": "당신은 교육·정보형 숏폼 영상 기획자입니다.\n주제: [입력]\n대상 시청자: [입력]\n내 경험·관점: [입력]\n영상 길이: [30~60초 중 선택]\n영상 비율: 세로 9:16\n첫 3초 후킹 → 핵심 정보 → 적용 사례 → 행동요청 구조로 시나리오를 작성해주세요.\n| 시간 | 장면 | 내레이션 | 화면 자막 | 직접 촬영·AI 생성 구분 |\n시간 합계가 설정한 길이를 넘지 않게 해주세요. 자막은 한 화면에 짧게, 한 영상에 한 주제로 구성해주세요.\n확인되지 않은 실적, 후기, 숫자를 만들지 마세요.", "id": "p041"}, {"title": "AI 영상용 장면 프롬프트", "prompt": "당신은 AI 영상 생성용 장면 프롬프트 작성자입니다.\n확정한 시나리오: [붙여넣기]\n각 장면마다 주체, 행동, 장소, 시간대, 조명, 카메라 구도와 움직임, 분위기, 화면 비율을 작성해주세요.\n영상 생성 도구에 입력할 한국어 프롬프트와 영어 프롬프트를 각각 제시해주세요.\n각 클립의 희망 길이는 [초]이고 실제 생성 가능 길이는 사용하는 도구에서 확인하겠습니다.\n인물·소품·색감이 이어지도록 공통 설정을 먼저 정해주세요.\n실존인물의 얼굴·목소리 모사, 타인의 로고, 불필요한 화면 속 글자는 제외해주세요.\n한 클립에는 하나의 주요 행동만 넣어주세요.", "id": "p042"}, {"title": "이미지를 영상으로 만들기", "prompt": "첨부한 이미지를 첫 장면의 기준으로 사용합니다.\n이미지의 주요 인물·소품·색감을 유지하면서 [주체]가 [동작]을 하는 짧은 영상으로 만들어주세요.\n장소: [입력]\n움직임: [작고 구체적인 움직임]\n카메라: [고정·천천히 이동 중 선택]\n분위기와 조명: [입력]\n화면 비율: 9:16\n새로운 인물·로고·문자를 추가하지 말고, 얼굴과 손이 왜곡되지 않도록 자연스럽게 표현해주세요.\n입력 이미지는 제가 사용 권한을 확인한 자료입니다.", "id": "p043"}], "4": [{"title": "브랜드 로고송 가사", "prompt": "당신은 짧은 브랜드 로고송 작사가입니다.\n브랜드명: [입력]\n대상: [입력]\n브랜드가 제공하는 가치: [입력]\n희망 길이: 약 20~30초\n분위기: [밝음·따뜻함·신뢰감 중 선택]\n따라 부르기 쉬운 짧은 가사 3안을 작성해주세요.\n브랜드명은 자연스럽게 반복하고, 확인되지 않은 성과나 최고·유일 같은 단정 표현은 쓰지 마세요.\n각 안에 핵심 메시지, 가사, 추천 템포·악기, 음악 생성용 스타일 문장을 제시해주세요.\n특정 가수·기존 곡을 모방하지 말고 독창적으로 구성해주세요.", "id": "p044"}, {"title": "지역·교육 캠페인송", "prompt": "당신은 교육 캠페인송 작사가입니다.\n캠페인 주제: [입력]\n대상: [입력]\n함께 실천할 행동: [입력]\n약 40초에 어울리는 1절과 짧은 후렴을 작성해주세요.\n쉬운 한국어, 긍정적인 표현, 따라 부르기 쉬운 반복을 사용해주세요.\n후렴에는 핵심 행동 한 가지를 분명하게 담아주세요.\n결과는 [제목 | 핵심 메시지 | 가사 | 추천 음악 분위기 | 음악 생성용 스타일 문장] 순으로 제시해주세요.\n기존 노래의 가사·선율이나 특정 가수의 목소리를 재현하지 마세요.", "id": "p045"}, {"title": "내레이션용 배경음악 스타일", "prompt": "Create an original instrumental background track for a [교육·정보] video.\nMood: [calm, warm, confident].\nTempo: approximately [90] BPM.\nInstruments: [soft piano, light acoustic guitar, subtle percussion].\nKeep the arrangement minimal and leave room for spoken narration.\nNo vocals, no lyrics, no imitation of existing songs or named artists.\nUse a gentle opening and a clean ending. Target length: [60] seconds if supported.\nAvoid sudden volume changes or distracting sound effects.", "id": "p046"}, {"title": "CapCut 편집 구성표", "prompt": "당신은 초보자를 위한 영상 편집 코치입니다.\n완성 목표: [30~60초] 세로 영상 1편\n대본: [붙여넣기]\n보유 파일: [영상·이미지·내레이션·음악 파일명과 길이]\n다음 표로 편집 계획을 만들어주세요.\n| 순서 | 시작·끝 시간 | 사용할 파일 | 자를 부분 | 자막 문구 | 내레이션·음악 | 전환 |\n과도한 효과를 줄이고, 핵심 문장이 읽힐 만큼 화면을 유지해주세요.\n음악은 말소리를 가리지 않도록 조정할 원칙을 알려주세요.\n마지막에 CapCut에서 사람이 직접 수행할 순서를 가져오기 → 컷편집 → 자막 → 음악 → 검토 → 내보내기로 정리해주세요.\nAI가 이 대화만으로 CapCut 파일을 직접 편집했다고 말하지 마세요.", "id": "p047"}, {"title": "자동 자막 교정", "prompt": "당신은 영상 자막 편집자입니다.\n자동 생성한 자막: [가상정보 또는 공개 가능한 자막 붙여넣기]\n원래 의도한 대본: [붙여넣기]\n오인식, 맞춤법, 띄어쓰기, 전문용어를 교정해주세요.\n원래 말의 뜻을 바꾸지 말고 확인이 필요한 단어는 [확인 필요]로 표시해주세요.\n한 화면에 읽기 쉬운 짧은 문장으로 나누되, 시간정보가 없다면 임의의 타임코드를 만들지 마세요.\n결과는 [원문 | 교정문 | 수정 이유] 표와 최종 자막 문구로 작성해주세요.", "id": "p048"}, {"title": "영상 최종 검수", "prompt": "당신은 교육 영상 검수 코치입니다.\n영상의 대본·장면 설명·사용 자료: [붙여넣기]\n목적과 대상: [입력]\n메시지 정확성, 초보자 이해도, 자막 가독성, 음량, 길이, 자료 사용 권한, 개인정보, 행동요청을 점검해주세요.\n실제 영상이나 소리를 확인하지 못한 항목은 '직접 재생 확인 필요'로 표시해주세요.\n| 점검 항목 | 확인된 문제 | 수정 방법 | 사람이 직접 확인할 사항 |\n우선 고칠 3가지와 내보내기 전 체크리스트를 제시해주세요.", "id": "p049"}], "5": [{"title": "GEO 소개 콘텐츠와 FAQ", "prompt": "당신은 근거 중심의 온라인 소개 콘텐츠 편집자입니다.\n소개할 사람·브랜드·기관: [입력]\n확인된 정보: [공식 명칭, 전문분야, 대상, 서비스, 연락처, 홈페이지]\n참고할 공식 자료: [본문 또는 링크와 확인한 내용]\nAI 검색 사용자가 쉽게 이해하고 확인할 수 있는 소개 콘텐츠를 작성해주세요.\n구성: 2~3문장 소개 → 주요 분야 → 대상별 활용 → 자주 묻는 질문 5개 → 공식 문의 경로.\n이름·연락처·전문분야를 일관되게 표기하고, 사실과 의견을 구분해주세요.\n자료에 없는 경력·실적·후기·가격을 만들지 마세요.\n검색 상위 노출이나 AI 답변에 인용되는 것을 보장하는 표현은 쓰지 마세요.", "id": "p050"}, {"title": "SEO와 GEO 콘텐츠 점검", "prompt": "당신은 웹 콘텐츠 품질 점검자입니다.\n점검할 소개 글: [붙여넣기]\n공식 정보: [붙여넣기]\n제목과 본문의 일치, 명확한 질문·답변, 고유명사 표기 일관성, 근거·출처, 정보 최신성, 접근 가능한 본문을 점검해주세요.\nSEO 관점과 AI 검색에서 이해하기 쉬운 GEO 관점을 나누어 [문제 | 이유 | 수정안 | 확인 방법]으로 정리해주세요.\n불필요한 키워드 반복을 줄이고 사람에게 유용한 내용을 우선해주세요.\n현재 검색 순위·AI 인용 여부를 직접 확인하지 않았다면 추정하지 마세요.\n최종 수정본과 사용자가 확인할 검색 질문 5개를 제시해주세요.", "id": "p051"}, {"title": "홍보용 원페이지 HTML 제작", "prompt": "당신은 반응형 웹페이지 개발자입니다.\n목적: [강사·브랜드·교육 프로그램 소개]\n대상: [입력]\n확인된 소개 정보: [입력]\n공식 문의 URL: [입력]\n이 정보만으로 index.html 한 파일을 만들어주세요.\n구성: 소개 / 주요 분야 / 대상 / 수업 또는 서비스 내용 / FAQ / 문의.\nCSS와 JavaScript는 파일 안에 포함하고 외부 빌드 과정 없이 열리게 해주세요.\n디자인: 깊은 네이비와 블루, 본문 18px 이상, 충분한 줄간격, 명확한 제목, 큰 버튼.\n모바일 360px, 태블릿 768px, PC 1440px에서 가로 스크롤 없이 표시해주세요.\n키보드 조작, 눈에 보이는 포커스, 시맨틱 HTML, 명확한 링크 이름을 적용해주세요.\n확인되지 않은 후기·성과·가격, 가짜 문의폼, 작동하지 않는 버튼은 넣지 마세요.\n완성 HTML 코드와 저장·미리보기 방법을 알려주세요.", "id": "p052"}, {"title": "웹페이지 수정 지시서", "prompt": "당신은 웹페이지 개선 담당 개발자입니다.\n현재 HTML: [붙여넣기]\n문제 화면과 기기: [설명 또는 스크린샷]\n원하는 수정: [입력]\n기존 내용과 링크를 보존하며 문제를 해결해주세요.\n특히 큰 글자, 줄바꿈, 버튼 터치 영역, 모바일 가로 넘침을 확인해주세요.\n수정 이유를 짧게 설명하고, 일부 조각이 아닌 전체 최종 HTML을 제시해주세요.\n확인하지 못한 화면은 확인했다고 말하지 마세요.\n마지막에 모바일·태블릿·PC에서 사용자가 직접 확인할 항목 5개를 알려주세요.", "id": "p053"}, {"title": "AI 검색 노출 확인 기록", "prompt": "당신은 검색 결과 기록을 정리하는 분석 보조자입니다.\n질문 목록: [입력]\n제가 직접 확인한 결과: [도구명, 확인 날짜, 질문, 답변, 인용 URL]\n확인한 데이터만 바탕으로 [질문 | 도구 | 날짜 | 이름·브랜드 언급 | 인용된 출처 | 틀린 정보 | 개선할 공식 콘텐츠] 표로 정리해주세요.\n검색 결과가 질문·도구·시점에 따라 달라질 수 있음을 고려하고, 원인을 확정하지 마세요.\n기록에 없는 결과나 순위를 만들지 마세요.\n수정할 홈페이지 정보와 다음 확인 질문 3개를 제안해주세요.", "id": "p054"}], "6": [{"title": "강의 주제와 학습목표 설계", "prompt": "당신은 성인 대상 AI 교육 설계자입니다.\n내 전문분야: [입력]\n대상과 사전 경험: [입력]\n현장에서 해결하고 싶은 문제: [입력]\n교육시간과 환경: [입력]\n실제 수업이 가능한 주제 3개를 제안해주세요.\n각 주제마다 대상의 필요, 시작 조건, 관찰 가능한 학습목표 3개, 실습 결과물, 필요한 도구, 예상 어려움을 작성해주세요.\n학습목표는 '이해한다'만 쓰지 말고 '작성한다·구분한다·검증한다·시연한다'처럼 결과를 확인할 수 있게 제시해주세요.\n마지막에 제가 주제를 선택하도록 질문해주세요.", "id": "p055"}, {"title": "2시간 강의계획서 작성", "prompt": "당신은 평생교육 강의 설계 전문가입니다.\n강의명: [입력]\n교육 대상·인원·사전 경험: [입력]\n교육환경과 도구: [입력]\n총 시간: 120분\n학습목표: [입력]\n이론 24분, 실습 96분을 기준으로 강의계획서를 작성해주세요.\n| 시간 | 분량 | 학습목표 | 교육내용 | 강사활동 | 학습자활동 | 결과물·확인방법 |\n시간 합계를 정확히 120분으로 맞추고, 설명·개별실습·공유·피드백 시간을 구분해주세요.\n로그인·파일 저장 시간이 필요한 경우 실습 시간에 포함해주세요.\n학습목표와 결과물·평가가 연결되게 작성하고, 도구 사용이 어려운 교육생의 대체 활동도 넣어주세요.", "id": "p056"}, {"title": "여러 차시 커리큘럼 구성", "prompt": "당신은 AI리터러시 교육과정 설계자입니다.\n과정명: [입력]\n대상: [입력]\n차시 수와 차시별 시간: [입력]\n최종 결과물: [입력]\n기초 → 연습 → 응용 → 시연 순서로 커리큘럼을 작성해주세요.\n| 차시 | 주제 | 관찰 가능한 학습목표 | 핵심 개념 | 실습 | 결과물 | 다음 차시 연결 |\n각 차시에 개인정보·사실 검증·자료 사용 권한 중 필요한 확인 요소를 넣어주세요.\n이전 차시의 결과물을 다음 차시에 활용하게 구성하고, 시간에 비해 과도한 과제를 줄여주세요.\n마지막에 준비물과 사전 안내사항을 정리해주세요.", "id": "p057"}, {"title": "강의자료와 실습 안내자료", "prompt": "당신은 수업자료 제작자입니다.\n확정한 강의계획서: [붙여넣기]\n아래 자료를 각각 구분해서 작성해주세요.\n1. 강의 슬라이드 구성: 제목, 한 장 한 메시지, 핵심 내용, 질문, 실습 시작 안내.\n2. 교육생 실습 안내서: 목표, 준비물, 단계별 행동, 복사용 프롬프트, 예시 결과, 막힐 때 대처.\n3. 수업 공지: 일시·장소·준비물·계정·제출 방법. 미확정 정보는 [확인 필요].\n디지털 초보자가 읽고 따라 할 수 있게 쉬운 말과 짧은 문장을 사용해주세요.\n제공하지 않은 일정·비용·연락처를 만들지 마세요.", "id": "p058"}, {"title": "학습 결과 평가 기준", "prompt": "당신은 교육 평가 설계자입니다.\n학습목표: [입력]\n평가할 결과물: [입력]\n초보자에게 공개할 평가 기준을 5개 이내로 만들어주세요.\n| 평가 기준 | 확인할 증거 | 충분함 | 보완 필요 | 피드백 질문 |\n도구를 빠르게 다루는 능력만 평가하지 말고, 목표 달성·근거 확인·안전한 사용·자기 수정 과정을 반영해주세요.\n이는 수업 연습용 기준이며 자격증 공식 심사표로 표시하지 마세요.\n학습자가 제출 전 스스로 점검할 질문 5개도 작성해주세요.", "id": "p059"}], "7": [{"title": "15분 수업시연 대본", "prompt": "당신은 AI리터러시 강사 시연 코치입니다.\n시연 주제: [입력]\n대상과 학습목표: [입력]\n도구와 결과물: [입력]\n연습 시간: 15분\n도입 2분 / 설명·시범 3분 / 학습자 실습 7분 / 공유·정리 3분으로 대본을 작성해주세요.\n| 시간 | 강사가 할 말 | 강사가 보여줄 것 | 학습자가 할 일 | 확인 질문 |\n실습 프롬프트 1개, 개인정보·사실 검증 안내, 종료 시 결과물 확인을 포함해주세요.\n설명을 줄이고 학습자가 직접 실행할 시간을 확보해주세요.\n실제 심사 시간은 운영진 안내에 따라 조정하겠습니다.", "id": "p060"}, {"title": "2인 조 역할 분담과 리허설", "prompt": "당신은 2인 조 수업시연 리허설 코치입니다.\n시연 대본: [붙여넣기]\n조원별 강점: [A의 강점 / B의 강점]\n발표·도구 시연·학습자 지원·시간 확인·결과물 확인 역할을 균형 있게 나누어주세요.\n| 구간 | 담당자 | 해야 할 일 | 넘겨줄 때 사용할 문장 |\n시간 초과, 로그인 실패, 생성 지연, 잘못된 답변, 복사 실패를 가정한 대응 문장과 대체 활동을 작성해주세요.\n마지막에 리허설 체크리스트를 제시해주세요.", "id": "p061"}, {"title": "피드백을 개선 행동으로 바꾸기", "prompt": "당신은 수업 피드백 코치입니다.\n시연 주제: [입력]\n실제로 받은 피드백: [붙여넣기]\n스스로 관찰한 문제: [입력]\n없는 평가를 만들거나 점수를 추측하지 마세요.\n피드백을 학습목표, 설명, 실습 지원, 시간 운영, 안전한 AI 활용 관점으로 분류해주세요.\n| 피드백 | 학습자에게 미친 영향 | 구체적 수정 행동 | 수정 후 확인 방법 | 우선순위 |\n다음 시연에서 바로 바꿀 행동 3개를 선택하고 수정된 대본 구간을 작성해주세요.", "id": "p062"}, {"title": "디지털 초보자 질문 대응", "prompt": "당신은 AI 교육 강사 코치입니다.\n교육 대상: [입력]\n실습 주제·도구: [입력]\n교육생이 할 법한 질문 10개를 만들어주세요.\n로그인, 복사·붙여넣기, 프롬프트 수정, AI 오답, 파일 저장, 도구 제한 관련 질문을 포함해주세요.\n각 질문에 2~3문장의 쉬운 답변, 강사가 보여줄 행동, 학습자가 다시 할 행동을 작성해주세요.\n현재 화면이나 계정 상태를 모르면 확인 질문을 먼저 하도록 안내해주세요.\n교육생의 실패를 탓하는 표현은 쓰지 마세요.", "id": "p063"}], "8": [{"title": "최종 시연 보완과 점검", "prompt": "당신은 최종 수업시연 점검 코치입니다.\n현재 대본·자료: [붙여넣기]\n지난 피드백과 수정한 내용: [입력]\n실제 안내받은 시연 시간: [분]\n학습목표·실습·결과물·확인 질문의 연결을 검토해주세요.\n시간 합계, 도구 준비, 큰 글자, 복사용 프롬프트, 개인정보·사실 검증 안내, 생성 실패 대체안, 제출 링크를 점검해주세요.\n| 항목 | 확인된 상태 | 남은 보완 | 직접 확인할 사항 |\n자료를 보지 못한 항목은 완료라고 하지 마세요. 마지막에 시연 직전 1분 체크리스트를 만들어주세요.", "id": "p064"}, {"title": "필기 대비 개념 연습문제", "prompt": "당신은 AI리터러시 학습을 돕는 튜터입니다.\n학습한 자료: [요약 또는 첨부]\n범위: AI 개념·윤리 / 프롬프트 / 챗봇·자료 기반 답변 / 콘텐츠 제작 / 강의 설계.\n제공 자료에 근거한 4지선다 연습문제 10개를 만들어주세요.\n이것은 학습용 예상문제이며 실제 자격증 시험 문제라고 표시하지 마세요.\n한 문제씩 제시하고 제가 답하면 정답·해설·관련 개념을 알려주세요.\n애매한 문항이나 자료에 없는 법률·가격·기능 정보는 피해주세요.\n틀린 개념은 마지막에 복습 목록으로 정리해주세요. 첫 문제부터 시작해주세요.", "id": "p065"}, {"title": "실습 포트폴리오 정리", "prompt": "당신은 AI 교육 포트폴리오 편집자입니다.\n제가 실제 만든 결과물 목록과 링크: [입력]\n프롬프트, 문서, 챗봇, 발표자료, 카드뉴스, 영상, 음악, 소개 웹페이지, 강의계획서, 시연자료를 확인해주세요.\n| 결과물 | 해결한 문제 | 사용 도구 | 내가 판단·수정한 부분 | 안전·검증 절차 | 파일·링크 |\n실제로 만들지 않은 결과물을 만들었다고 쓰지 마세요.\n공개 가능한 내용과 비공개로 보관할 내용을 구분하고, 다음 교육에서 재사용할 자료 3개를 제안해주세요.", "id": "p066"}, {"title": "수료 후 첫 강의 실행계획", "prompt": "당신은 AI리터러시 강사의 실행계획 코치입니다.\n나의 전문분야: [입력]\n교육하고 싶은 대상: [입력]\n현재 활용 가능한 자료·도구·시간: [입력]\n첫 교육 또는 소규모 실습을 준비하는 4주 계획을 작성해주세요.\n| 주차 | 준비할 일 | 직접 실행할 일 | 결과물 | 확인할 피드백 |\n배운 도구를 모두 쓰려고 하지 말고 대상에게 필요한 문제 하나에 집중해주세요.\n관찰 가능한 실행 목표와 개인정보·자료 사용 권한 점검을 포함해주세요.\n취업·수익·자격 취득 효과를 보장하는 표현은 쓰지 마세요.", "id": "p067"}]}</script>
+<script type="application/json" id="prompt-data">{"1": [{"title": "개인정보 O/X 퀴즈", "prompt": "당신은 성인 학습자를 대상으로 AI리터러시를 교육하는 강사입니다.\n\n생성형 AI에 입력해도 되는 정보와 입력하면 안 되는 정보를 구분하는 O/X 퀴즈를 만들어주세요.\n\n조건:\n1. 일상생활과 직장에서 실제로 일어날 만한 사례 10개\n2. 한 문제씩 제시\n3. 내가 O 또는 X라고 답하면 정답과 이유를 설명\n4. 개인정보, 금융정보, 비밀번호, 기관 내부자료, 고객정보, 학생정보 등이 골고루 포함되도록 구성\n5. 너무 어려운 법률 용어는 사용하지 말 것\n\n첫 번째 문제부터 시작해주세요.", "id": "p001"}, {"title": "답변 검증하기", "prompt": "다음 질문에 답해주세요.\n\n질문:\n[내가 궁금한 내용을 입력하세요]\n\n답변할 때 다음 형식을 지켜주세요.\n\n1. 핵심 답변\n2. 답변의 근거\n3. 출처가 있다면 출처명\n4. 정보의 기준 날짜\n5. 확실하지 않은 내용\n6. 추가로 확인해야 할 사항\n\n모르는 내용은 추측해서 작성하지 말고 '확인 필요'라고 표시해주세요.", "id": "p002"}, {"title": "프롬프트 만들기 도우미", "prompt": "당신은 생성형 AI 프롬프트 설계 전문가입니다.\n\n제가 하고 싶은 일을 설명하면 아래 5가지 구조를 사용하여 좋은 프롬프트로 만들어주세요.\n\n1. 역할\n2. 목적\n3. 맥락\n4. 조건\n5. 출력형식\n\n제가 하고 싶은 일:\n[예: 안성시 평생학습 프로그램 홍보문을 만들고 싶습니다.]\n\n먼저 5가지 요소를 표로 정리한 뒤, 마지막에 제가 ChatGPT에 바로 사용할 수 있는 완성형 프롬프트를 작성해주세요.", "id": "p003"}, {"title": "결과 비교 ① 모호한 질문", "prompt": "AI 강의계획서 만들어줘.", "id": "p004"}, {"title": "결과 비교 ② 구체적인 질문", "prompt": "당신은 성인 평생교육 전문 강사입니다.\n\n50~60대 성인 초보자를 대상으로 '생성형 AI 기초 활용' 교육을 진행하려고 합니다.\n교육시간은 2시간이고, 교육생 대부분은 ChatGPT를 처음 사용합니다.\n\n교육목표:\n- 생성형 AI의 기본 개념을 이해한다.\n- 좋은 질문을 작성할 수 있다.\n- ChatGPT를 활용해 실제 결과물 하나를 만든다.\n\n조건:\n- 이론 20%, 실습 80%\n- 어려운 전문용어 최소화\n- 실습 최소 3개 포함\n- 각 활동별 시간 표시\n\n다음 형식으로 작성해주세요.\n| 시간 | 교육내용 | 강사활동 | 학습자활동 | 실습결과물 |", "id": "p005"}, {"title": "결과 비교 ③ 두 답변 비교", "prompt": "첫 번째 답변과 두 번째 답변을 구체성, 실용성, 원하는 결과와의 일치도 관점에서 비교해주세요.", "id": "p006"}, {"title": "AI에게 바로 답하지 말라고 하기", "prompt": "당신은 문제해결 코치입니다.\n\n제가 해결하고 싶은 문제는 다음과 같습니다.\n[해결하고 싶은 문제를 입력하세요]\n\n바로 해결책을 제시하지 마세요.\n\n다음 순서대로 저와 대화해주세요.\n1단계. 문제를 정확하게 정의하기\n2단계. 필요한 정보 확인하기\n3단계. 가능한 해결방법 5개 만들기\n4단계. 장점과 단점 비교하기\n5단계. 가장 현실적인 방법 선택하기\n6단계. 실행계획 만들기\n\n먼저 문제를 정확히 이해하기 위해 저에게 필요한 질문을 3개 해주세요.", "id": "p007"}, {"title": "업무 문서 ① 민원답변", "prompt": "당신은 공공기관 민원 업무를 담당하는 친절하고 전문적인 행정 담당자입니다.\n다음 민원에 대한 공식 답변 초안을 작성해주세요.\n민원 내용: [입력]\n조건: 감정 존중, 방어적 표현 금지, 확인되지 않은 내용 단정 금지, 처리 가능/불가 구분, 추가 안내 제시, 500자 내외\n구성: 인사 및 민원 확인 → 관련 내용 설명 → 처리 또는 안내 → 마무리", "id": "p008"}, {"title": "업무 문서 ② 프로그램 제안서", "prompt": "당신은 평생교육 프로그램 기획 전문가입니다.\n주제: [입력]\n대상: [입력]\n교육기간: [입력]\n프로그램명, 기획 배경, 교육 대상, 교육 목표 3개, 차시별 내용, 교육 방법, 준비물, 기대효과, 결과물을 작성해주세요.\n조건: 성인 초보자 대상, 이론 20%, 실습 80%", "id": "p009"}, {"title": "업무 문서 ③ 업무보고서", "prompt": "당신은 업무보고서를 잘 작성하는 행정·기획 전문가입니다.\n업무 내용: [입력]\n업무명, 추진 목적, 주요 추진 내용, 진행 결과, 문제점/특이사항, 향후 계획 순으로 작성해주세요.\n조건: 짧고 명확한 문장, 불필요한 수식어 제외, 중요한 숫자와 결과 우선, A4 1페이지 분량.", "id": "p010"}, {"title": "반복업무 찾기", "prompt": "당신은 AI 업무혁신 컨설턴트입니다.\n\n제가 평소 반복해서 하는 일을 알려드리겠습니다.\n하는 일: [평소 자주 하는 일을 5개 정도 입력하세요]\n\n각 업무를 분석해서 다음 표로 정리해주세요.\n| 업무 | 반복 빈도 | AI 활용 가능 부분 | 사람이 해야 할 부분 | 추천 활용방법 |\n\n그리고 가장 쉽게 AI를 적용할 수 있는 업무 1개를 골라주세요.\n그 업무에 바로 사용할 수 있는 실전 프롬프트까지 만들어주세요.", "id": "p011"}, {"title": "AI에 입력하면 안 되는 정보 — 사례형 O/X 활동", "prompt": "너는 공공기관 개인정보보호 교육강사야. 안성시평생학습관에서 진행하는\n성인 대상 AI리터러시 교육에서 쓸 'AI에 입력하면 안 되는 정보' O/X 사례\n퀴즈를 5개 만들어줘. 문항은 민원업무·학습관 업무·개인생활 상황으로\n구성하고, 정답(O/X)과 이유를 표로 정리해줘.", "id": "p021"}, {"title": "좋은 프롬프트 기본 공식 — 예시 프롬프트 직접 작성", "prompt": "[역할] 너는 ○○ 전문가야.\n[목적] ○○을 하기 위해서\n[맥락] ○○인 상황에서\n[조건] ○○을 반드시 포함하고, ○○은 제외해줘\n[출력형식] ○○ 형식(표 / 목록 / 단계별)으로 작성해줘", "id": "p022"}, {"title": "나쁜 질문", "prompt": "AI 강의계획서 만들어줘", "id": "p023"}, {"title": "좋은 질문", "prompt": "너는 평생학습관 AI 교육 강사야. 안성시평생학습관에서 진행할\n'AI 활용 첫걸음' 2시간 강의계획서를 만들어줘. 대상은 디지털기기가\n익숙하지 않은 50~60대이고, 목표는 'ChatGPT로 문서 초안 작성하기'야.\n실습 중심으로 구성하고 표 형식으로 출력해줘.", "id": "p024"}, {"title": "① 민원답변", "prompt": "너는 안성시평생학습관 행정 담당자야. 다음 민원에 정중하고 명확한\n답변을 작성해줘. [민원 내용: 강좌 정원 초과로 신청이 안 됩니다]\n사과 인사, 원인 설명, 해결 방안, 문의처 안내를 포함해 500자 내외로\n작성해줘.", "id": "p025"}, {"title": "② 프로그램 제안서", "prompt": "너는 평생학습 프로그램 기획자야. 안성시평생학습관에서 운영할 신규\n강좌 제안서를 작성해줘. [강좌명: AI로 손자녀와 소통하기]\n[대상: 60대 이상 조부모]\n개설 배경, 목표, 4주 커리큘럼, 기대효과를 포함해 표 형식으로\n정리해줘.", "id": "p026"}, {"title": "③ 업무보고서", "prompt": "너는 평생학습관 강좌 담당자야. 이번 달 진행한 'AI리터러시강사\n자격증 과정 1차시' 운영 결과 보고서를 작성해줘. 교육 개요, 참석\n인원, 주요 진행 내용, 만족도, 개선사항을 포함해 보고서 형식으로\n작성해줘.", "id": "p027"}, {"title": "오늘의 결과물 & 미션 — 다음 시간 전 과제", "prompt": "내가 반복적으로 하는 업무는 [ ]야. 이 업무 중 AI에게 맡길 수 있는\n부분과 사람이 직접 해야 하는 부분을 구분해서 표로 정리해줘.", "id": "p028"}, {"title": "AI 답변을 초보자에게 설명하기", "prompt": "당신은 AI리터러시 교육 강사입니다.\n대상: [학습자의 연령·디지털 사용 경험]\n생성형 AI, AI리터러시, 할루시네이션을 각각 쉬운 말과 일상 비유로 설명해주세요.\n다음 내용을 포함해주세요.\n1. AI가 잘하는 일과 사람이 판단해야 할 일\n2. 사실 확인을 하지 않아 생길 수 있는 실수 3가지\n3. 개인정보를 가상정보로 바꾸는 예시 3가지\n4. 교육생에게 던질 확인 질문 3개\n전문용어는 처음 나올 때 뜻을 설명하고, AI를 사람처럼 생각하거나 모든 것을 안다고 표현하지 마세요.", "id": "p035"}, {"title": "저작권·초상권 판단 연습", "prompt": "당신은 AI리터러시 수업의 사례 토론 진행자입니다.\nAI로 만든 이미지, 인터넷 사진, 음악, 다른 사람의 얼굴·목소리를 활용하는 가상 수업 사례 6개를 만들어주세요.\n사례마다 [사용 전 확인할 사항 | 동의 또는 이용허락이 필요한 부분 | 안전한 대안]을 정리해주세요.\n확정적인 법률 판단은 하지 말고, 자료의 이용조건과 권리자의 동의를 확인하도록 안내해주세요.\n실제 개인정보나 특정인의 얼굴·목소리를 요구하지 마세요.\n마지막에 학습자가 자신의 사용 목적과 배포 범위를 점검하는 질문 3개를 제시해주세요.", "id": "p036"}, {"title": "민감정보 비식별화 연습", "prompt": "당신은 AI리터러시 교육을 위한 개인정보 보호 코치입니다.\n아래 원문을 생성형 AI에 입력하기 전에 안전한 실습용 정보로 바꾸고 싶습니다.\n\n원문:\n[여기에 문장을 붙여넣기]\n\n다음 순서로 답해주세요.\n1. 개인정보·민감정보·기관 내부정보로 볼 수 있는 부분 표시\n2. 삭제 / 가명처리 / 범주화 중 적절한 방법 제안\n3. 의미는 유지하면서 비식별화한 실습용 문장 작성\n4. 여전히 주의가 필요한 부분 표시\n\n실제 개인정보를 새로 추측하거나 복원하지 마세요."}, {"title": "프롬프트 품질 진단표", "prompt": "당신은 생성형 AI 프롬프트 코치입니다.\n아래 프롬프트를 분석해주세요.\n\n프롬프트:\n[붙여넣기]\n\n역할·목적·맥락·조건·출력형식의 5요소를 기준으로 각 항목을 5점 만점으로 평가하고,\n부족한 요소를 설명한 뒤 개선 버전을 작성해주세요.\n\n출력:\n| 요소 | 점수 | 현재 상태 | 개선 방법 |\n마지막에 '원문 대비 무엇이 좋아졌는지'를 3줄로 요약해주세요."}, {"title": "AI 답변 사실검증 체크리스트", "prompt": "당신은 정보 검증 코치입니다.\n아래 AI 답변을 검토해주세요.\n\nAI 답변:\n[붙여넣기]\n\n다음 기준으로 검증 계획을 만들어주세요.\n- 사실 주장\n- 숫자·통계\n- 날짜·정책·제도\n- 인용·출처\n- 추정 또는 의견\n\n각 항목을 '검증 필요 / 비교적 안전 / 판단 불가'로 분류하고,\n검증이 필요한 항목은 어떤 공식 자료를 확인해야 하는지 제안해주세요.\n직접 확인하지 못한 사실을 사실인 것처럼 확정하지 마세요."}, {"title": "내 업무용 재사용 프롬프트 템플릿", "prompt": "당신은 업무 자동화를 돕는 프롬프트 설계자입니다.\n제가 반복하는 업무 한 가지를 재사용 가능한 템플릿으로 만들어주세요.\n\n업무명: [입력]\n입력자료: [입력]\n원하는 결과: [입력]\n반드시 지킬 조건: [입력]\n\n다음 형식으로 작성해주세요.\n1. 사용 전 준비사항\n2. 복사해서 매번 쓸 수 있는 완성형 프롬프트\n3. 매번 바꿔야 하는 부분을 [대괄호]로 표시\n4. 결과 검토 체크리스트 5개\n5. 잘못된 결과가 나왔을 때 수정 프롬프트 2개"}], "2": [{"title": "나만의 챗봇 기획하기", "prompt": "당신은 AI 챗봇 서비스 기획 전문가입니다.\n\n저의 경험과 전문성을 활용해서 나만의 AI 챗봇을 만들고 싶습니다.\n\n저에 대한 정보:\n- 나이 또는 세대: [입력]\n- 현재 또는 이전 직업: [입력]\n- 잘 아는 분야: [입력]\n- 좋아하는 분야: [입력]\n- 도움을 주고 싶은 사람: [입력]\n\n이 정보를 바탕으로 제가 만들기 좋은 챗봇 아이디어 5개를 제안해주세요.\n각 아이디어마다 1. 챗봇 이름 2. 대상 3. 해결하는 문제 4. 전문분야 5. 말투 6. 하지 말아야 할 것 7. 사용자가 처음 입력할 질문을 표로 정리해주세요.\n너무 거창하지 않고 실제로 만들고 운영할 수 있는 아이디어를 우선해주세요.", "id": "p012"}, {"title": "Gemini Gems 지침 만들기", "prompt": "당신은 Gemini Gems 제작 전문가입니다.\n\n다음 정보를 바탕으로 Gemini Gems에 입력할 수 있는 '지침(Instructions)'을 작성해주세요.\n\nGem 이름: [예: 안성 평생학습 안내봇]\n대상: [입력]\n목적: [입력]\n전문분야: [입력]\n원하는 말투: [예: 친절하고 쉽고 간결한 존댓말]\n\n반드시 지켜야 할 규칙:\n- 모르는 정보는 만들어내지 않는다.\n- 제공된 자료를 우선 근거로 사용한다.\n- 어려운 용어는 쉽게 설명한다.\n- 확인되지 않은 일정이나 비용은 단정하지 않는다.\n- 개인정보 입력을 요구하지 않는다.\n\n답변 형식: 핵심 답변 → 필요한 정보 → 다음 행동 제안\n마지막에는 사용자가 Gems를 테스트할 수 있는 예상 질문 5개도 작성해주세요.", "id": "p013"}, {"title": "첨부자료 기반으로 답하기", "prompt": "지금 첨부한 자료만을 우선 근거로 분석해주세요.\n\n먼저 다음 내용을 정리해주세요.\n1. 이 자료의 핵심 주제\n2. 가장 중요한 내용 5가지\n3. 초보자가 이해하기 어려운 내용\n4. 반드시 기억해야 할 숫자·개념\n5. 실제 생활이나 업무에서 활용할 수 있는 내용\n\n중요:\n첨부자료에 없는 사실은 임의로 만들어내지 마세요.\n자료에 없는 내용은 '첨부자료에서 확인할 수 없습니다'라고 답해주세요.\n\n마지막으로 이 자료를 학습하기 위한 질문 5개를 만들어주세요.", "id": "p014"}, {"title": "Gamma용 5장 PPT 구성안", "prompt": "당신은 전문 프레젠테이션 기획자입니다.\n\n제가 잘하는 분야를 소개하는 5장짜리 프레젠테이션을 만들려고 합니다.\n나의 전문분야: [입력]\n주요 대상: [입력]\n제가 가진 경험: [입력]\n전달하고 싶은 핵심 메시지: [입력]\n\n다음 5장 구조로 작성해주세요.\n1장. 표지\n2장. 대상이 겪고 있는 문제\n3장. 내가 제공하는 해결방법\n4장. 나의 경험 또는 사례\n5장. 행동요청 CTA\n\n각 슬라이드마다 제목, 핵심문장 1개, 본문 핵심내용 3개, 추천 이미지 또는 시각자료를 작성해주세요.\n한 장에 하나의 핵심메시지만 담아주세요.", "id": "p015"}, {"title": "SNS 카드뉴스 7장", "prompt": "당신은 SNS 콘텐츠 마케팅 전문가입니다.\n\n제가 잘하는 것을 주제로 7장의 SNS 카드뉴스를 만들려고 합니다.\n주제: [입력]\n대상: [입력]\n\n구조:\n1장: 시선을 끄는 후킹\n2장: 대상이 겪는 문제\n3장: 핵심정보 1\n4장: 핵심정보 2\n5장: 핵심정보 3\n6장: 해결방법\n7장: 행동요청 CTA\n\n각 장마다 제목 15자 이내, 본문 40자 이내, 추천 이미지를 작성해주세요.\n조건: 어려운 전문용어 금지, 한 장에 하나의 메시지, 과장 광고문구 금지, 성인 학습자가 쉽게 읽을 수 있게 작성.", "id": "p016"}, {"title": "챗봇 기획서 작성 — 빈칸 작성", "prompt": "아래 정보로 나만의 챗봇 기획서를 정리해줘.\n- 챗봇 이름: [ ]     - 대상: [ ]     - 해결하는 문제: [ ]\n- 전문분야: [ ]     - 말투: [ ]     - 하지 말아야 할 것: [ ]\n- 첫 질문: [ ]\n표 형식으로 정리하고, 부족한 부분은 예시를 제안해줘.", "id": "p029"}, {"title": "(Gem 지침란에 입력)", "prompt": "너는 [전문분야]에 대해 [대상]에게 [상담/안내/홍보]하는 챗봇이야.\n- 목적: [ ]\n- 말투: 친절하고 이해하기 쉬운 존댓말\n- 반드시 지킬 규칙: [예: 의학적 진단 금지, 개인정보 요구 금지]\n- 답변 형식: 3문장 이내, 필요하면 추가 질문 유도\n첫 메시지는 \"안녕하세요! 저는 ○○입니다. 무엇을 도와드릴까요?\"로\n시작해줘.", "id": "p030"}, {"title": "Gamma로 프레젠테이션 만들기 — 5장 실습", "prompt": "너는 프레젠테이션 기획자야. 나의 전문분야를 소개하는 5장짜리\n프레젠테이션 내용을 만들어줘. [전문분야: ○○]\n1페이지 표지(이름+한줄소개) / 2페이지 문제 / 3페이지 해결 /\n4페이지 사례 / 5페이지 CTA(연락처·제안)\n페이지별 제목과 핵심 문장을 간결히 작성해줘.", "id": "p031"}, {"title": "카드뉴스 만들기 — '내가 잘하는 것' (7장)", "prompt": "너는 SNS 카드뉴스 작가야. '내가 잘하는 것: [ ]'을 주제로 7장짜리\n인스타그램 카드뉴스 문구를 만들어줘.\n1장 후킹 / 2장 문제 제기 / 3~5장 정보(핵심 3가지) /\n6장 해결·노하우 / 7장 행동요청(팔로우·문의·방문 유도)\n각 장은 제목 15자 이내 + 설명 30자 이내로 작성해줘.", "id": "p032"}, {"title": "NotebookLM 자료 읽기와 출처 확인", "prompt": "지금 선택한 소스만을 근거로 수업 준비를 도와주세요.\n수업 주제: [입력]\n대상: [입력]\n1. 핵심 개념 5개를 초보자도 이해할 수 있게 설명해주세요.\n2. 각 설명에 해당하는 소스의 근거를 함께 제시해주세요.\n3. 자료에서 확인할 수 없는 내용은 '자료에서 확인 불가'라고 표시해주세요.\n4. 서로 다른 자료의 내용이 충돌하면 두 내용을 구분해 알려주세요.\n5. 학습자가 직접 확인할 질문 5개를 만들어주세요.\n추가 사실이나 수치를 임의로 만들지 마세요.", "id": "p037"}, {"title": "NotebookLM 발표자료 구성", "prompt": "선택한 자료를 근거로 [대상]을 위한 [주제] 발표자료를 구성해주세요.\n총 5장: 표지 / 문제 / 핵심 개념 / 적용 실습 / 정리와 다음 행동.\n각 장에 제목, 핵심 문장 1개, 본문 3개 이내, 시각자료 제안, 강사 설명 메모를 작성해주세요.\n본문은 큰 글자로 보여줄 수 있게 짧게 작성해주세요.\n사실·숫자는 근거 소스를 함께 표시하고 자료에 없는 내용은 넣지 마세요.\n실습은 학습자가 10분 안에 수행할 수 있는 활동으로 제안해주세요.", "id": "p038"}, {"title": "챗봇 테스트와 지침 개선", "prompt": "당신은 교육용 챗봇 품질 점검자입니다.\n챗봇 목적: [입력]\n현재 지침: [붙여넣기]\n실제 질문과 답변: [가상정보로 처리한 테스트 기록]\n다음 항목으로 점검해주세요: 목적 적합성, 근거 있는 답변, 쉬운 설명, 개인정보 보호, 모르는 정보 처리.\n[문제 | 근거가 되는 답변 | 수정할 지침 | 다시 테스트할 질문] 표로 작성해주세요.\n일반 질문 3개, 자료에 없는 질문 1개, 부적절한 개인정보 요청 1개로 재시험안을 만들어주세요.\n마지막에 수정된 지침 전체를 바로 복사할 수 있게 작성해주세요.", "id": "p039"}, {"title": "교육용 AI리터러시 코치 챗봇 만들기", "prompt": "너는 성인 학습자를 대상으로 AI리터러시를 쉽고 친절하게 가르치는 ‘AI리터러시 학습 코치 챗봇’이야.\n\n[챗봇의 목적]\n사용자가 생성형 AI를 처음 배우는 성인 학습자라고 가정하고,\nAI의 기본 개념, 프롬프트 작성법, AI 윤리, 사실 확인, 개인정보 보호, 저작권, 실제 활용법을 단계적으로 안내해줘.\n\n[대상]\n- 생성형 AI 입문자\n- 30~60대 성인 학습자\n- 어려운 전문용어보다 쉬운 설명과 실제 사례가 필요한 사람\n\n[챗봇의 역할]\n1. 사용자의 질문 의도를 먼저 파악한다.\n2. 어려운 AI 용어가 나오면 쉬운 한국어로 풀어서 설명한다.\n3. 설명만 하지 말고 반드시 생활 또는 업무 사례를 1개 이상 들어준다.\n4. 필요하면 사용자의 수준을 확인하기 위한 짧은 질문을 먼저 한다.\n5. 답변 마지막에는 사용자가 직접 해볼 수 있는 ‘1분 실습’을 제안한다.\n6. 잘못된 정보일 가능성이 있는 내용은 확정적으로 단정하지 말고 확인 필요성을 알려준다.\n7. 개인정보, 저작권, 허위정보, AI 윤리와 관련된 위험이 있으면 주의사항을 알려준다.\n\n[대화 방식]\n- 한 번에 너무 많은 정보를 주지 않는다.\n- 답변은 ‘핵심 설명 → 쉬운 예시 → 주의할 점 → 1분 실습’ 순서로 한다.\n- 문장은 짧고 명확하게 작성한다.\n- 표가 도움이 될 때만 표를 사용한다.\n- 사용자가 “더 자세히”라고 하면 심화 설명을 제공한다.\n\n[첫 인사]\n처음 대화를 시작할 때 다음 4가지 중 무엇을 배우고 싶은지 물어봐.\n① 생성형 AI 기초\n② 좋은 프롬프트 만들기\n③ AI 윤리·저작권·개인정보\n④ 업무·생활에서 AI 활용하기\n\n이제 위 조건을 따르는 AI리터러시 학습 코치 챗봇으로 대화를 시작해줘.", "id": "p068"}, {"title": "내 교육주제에 맞는 챗봇으로 바꾸기", "prompt": "방금 만든 챗봇을 내가 실제 강의에서 사용할 수 있도록 맞춤형으로 수정해줘.\n\n아래 빈칸의 정보를 먼저 나에게 한 항목씩 질문해서 받아.\n- 교육주제 :\n- 교육대상 :\n- 학습자의 AI 수준 :\n- 챗봇이 가장 많이 도와줄 내용 :\n- 답변 분량 :\n- 답변 말투 :\n- 반드시 지켜야 할 주의사항 :\n\n내 답변을 모두 받은 뒤,\n1. 챗봇 이름\n2. 챗봇 소개문\n3. 챗봇의 핵심 역할 5가지\n4. 대화 운영 규칙\n5. 첫 인사 문구\n6. 추천 시작 질문 6개\n7. ChatGPT 또는 Gemini에 그대로 넣어 사용할 수 있는 ‘최종 챗봇 제작 프롬프트’\n순서로 완성해줘.", "id": "p069"}, {"title": "슬라이드 제작 1단계 · 4차시 강의계획서 생성", "prompt": "너는 대한민국 성인 평생교육 현장에서 활동하는 ‘AI리터러시 교육과정 설계 전문가’이자 전문 강사야.\n\n아래 조건으로 실제 기관에 제출하고 강의에 바로 사용할 수 있는 수준의 「AI리터러시 교육 강의계획서 및 상세 커리큘럼」을 만들어줘.\n\n[교육 기본정보]\n- 교육주제 : AI리터러시 교육하기\n- 총 교육시간 : 차시당 2시간, 총 4차시 / 총 8시간\n- 교육대상 : 성인\n- 교육장소 : 안성시평생학습관 컴퓨터실\n- 강사이름 : 김유성\n- 교육형태 : 설명 + 시연 + 개별 PC 실습 + 결과 공유\n- 교육난이도 : 생성형 AI 입문~초중급\n- 교육방향 : 이론보다 실제 활용과 실습을 중심으로 구성\n\n[교육과정에 반드시 포함할 내용]\n- AI리터러시의 의미와 필요성\n- 생성형 AI의 기본 개념\n- ChatGPT 등 대화형 생성형 AI 활용\n- 좋은 프롬프트를 만드는 방법\n- 사실 확인과 AI 환각 이해\n- AI 윤리\n- 개인정보 보호\n- 저작권과 생성형 AI\n- 이미지 생성 AI 활용\n- AI를 교육·업무·생활에 적용하는 방법\n- 학습자가 직접 결과물을 만드는 실습\n\n[강의계획서 작성 요구사항]\n1. 교육과정명\n2. 교육목적\n3. 교육대상 분석\n4. 전체 학습목표 5개\n5. 기대효과\n6. 준비물 및 교육환경\n7. 총 4차시 커리큘럼\n8. 차시별 세부 학습목표\n9. 차시별 120분 시간배분\n10. 도입-이론-시연-실습-공유-정리 단계\n11. 각 단계에서 강사가 설명할 핵심내용\n12. 교육생이 직접 수행할 실습내용\n13. 실습 결과물\n14. 사용할 AI 도구\n15. 강사가 사전에 준비해야 할 자료\n16. 교육생 유의사항\n17. 수업 후 평가 또는 확인 방법\n\n[출력형식]\n먼저 전체 교육과정을 한눈에 볼 수 있는 요약표를 작성하고,\n그 다음 1차시부터 4차시까지 각각 다음 형식의 표로 아주 자세하게 작성해줘.\n\n| 시간 | 수업단계 | 교육내용 | 강사활동 | 교육생활동 | AI도구 | 실습결과물 |\n\n각 차시는 정확히 120분이 되도록 시간 합계를 맞춰줘.\n교육생이 실제 컴퓨터실에서 따라 할 수 있도록 추상적인 표현보다 구체적인 활동 중심으로 작성해줘.\n마지막에는 “강사 준비 체크리스트”와 “교육생 준비 체크리스트”를 각각 만들어줘.", "id": "p070"}, {"title": "슬라이드 제작 2단계 · PPT 페이지별 세부 구성안", "prompt": "첨부한 파일은 내가 실제 교육에 사용할 「AI리터러시 교육 강의계획서」야.\n\n너는 지금부터 성인 대상 AI교육에 특화된 ‘강의설계자 + 프레젠테이션 콘텐츠 기획자’ 역할을 해줘.\n\n[목표]\n첨부한 강의계획서를 바탕으로 실제 2시간 수업에서 사용할 수 있는 강의 PPT의 ‘페이지별 세부 구성안’을 만들어줘.\n\n[중요 조건]\n- 강의계획서에 없는 내용을 임의로 크게 바꾸지 않는다.\n- 학습자가 슬라이드만 보아도 흐름을 이해할 수 있도록 순서를 설계한다.\n- 설명용 슬라이드와 실습용 슬라이드를 적절히 섞는다.\n- 성인 초보자에게 어려운 용어는 쉬운 표현과 사례로 바꾼다.\n- 한 페이지에 너무 많은 내용을 넣지 않는다.\n- 핵심 개념 → 사례 → 비교 → 실습 → 정리 흐름을 만든다.\n- 필요한 경우 체크리스트, 단계도, 비교표, 사례 화면, 실습 안내 화면을 포함한다.\n\n[슬라이드 수]\n첨부한 강의계획서의 교육시간과 내용량을 분석하여 적정 슬라이드 수를 먼저 제안해줘.\n2시간 수업 기준으로 너무 빠르거나 너무 느리지 않게 설계해줘.\n\n[각 페이지마다 반드시 작성할 항목]\n1. 페이지 번호\n2. 페이지 목적\n3. 화면에 들어갈 핵심 문구\n4. 화면에 들어갈 세부 교육내용\n5. 강사가 구두로 설명할 추가 내용\n6. 교육생에게 던질 질문\n7. 사례 또는 예시\n8. 추천 시각자료 형태\n   - 사진\n   - 아이콘\n   - 인포그래픽\n   - 비교표\n   - 프로세스\n   - 실습화면\n   중 가장 적절한 것\n9. 실습 페이지라면 교육생 수행방법\n10. 이 페이지에서 반드시 기억해야 할 한 문장\n\n[출력형식]\n먼저 전체 슬라이드 흐름을 표로 요약하고,\n그 다음 아래 형식으로 모든 페이지를 빠짐없이 상세 작성해줘.\n\n### 페이지 1\n- 목적 :\n- 핵심 문구 :\n- 세부 교육내용 :\n- 강사 설명 :\n- 교육생 질문 :\n- 사례 :\n- 추천 시각자료 :\n- 실습방법 :\n- 기억할 한 문장 :\n\n같은 형식으로 마지막 페이지까지 작성해줘.", "id": "p071"}, {"title": "슬라이드 제작 3단계 · 공통 디자인과 이미지 프롬프트", "prompt": "아래 또는 첨부한 내용은 내가 만든 「AI리터러시 강의 PPT 페이지별 세부 구성안」이야.\n\n너는 ‘AI교육 전문 프레젠테이션 아트디렉터 + 이미지 프롬프트 엔지니어’ 역할을 해줘.\n\n[목표]\n각 슬라이드의 교육내용을 그대로 전달할 수 있는 16:9 강의 슬라이드 이미지를 생성할 수 있도록\n① 전체 슬라이드 공통 디자인 프롬프트를 먼저 만들고,\n② 공통 디자인과 각 페이지 교육내용을 하나로 합친\n③ 페이지별 최종 이미지 생성 프롬프트를 만들어줘.\n\n[전체 공통 디자인 방향]\n- 주제 : 전문적인 AI리터러시 지도사 교육\n- 화면비율 : 16:9 가로형\n- 분위기 : 고급스럽고 현대적인 AI교육, 신뢰감, 전문성, 미래지향적 느낌\n- 배경 : 화이트 또는 밝은 아이보리 기반\n- 메인 컬러 : 딥 네이비, 다크 그린 계열\n- 포인트 컬러 : 시안 블루와 골드\n- 구성 : 정돈된 카드형 UI, 라인 아이콘, 고급 인포그래픽\n- 정보 우선순위가 명확한 레이아웃\n- 한국어 글자는 크고 굵고 선명하게\n- 모바일 화면으로 보더라도 핵심 글자가 인식될 만큼 가독성을 높인다.\n- 한 화면에 텍스트가 지나치게 많지 않게 핵심내용을 시각적으로 요약한다.\n- 교육내용과 직접 관련된 그림, 도식, 아이콘을 함께 배치한다.\n- 모든 페이지의 디자인 언어, 여백, 카드 모양, 아이콘 스타일, 조명, 질감을 일관되게 유지한다.\n\n[절대 조건]\n- 슬라이드 제목을 별도로 넣지 않는다.\n- 슬라이드 번호를 넣지 않는다.\n- 로고, 워터마크, 불필요한 영어 장식문구를 넣지 않는다.\n- 교육내용과 무관한 장식 요소를 과도하게 넣지 않는다.\n- 작은 글자를 빽빽하게 넣지 않는다.\n- 한국어 텍스트가 깨지거나 틀리지 않도록 짧고 명확한 문구 중심으로 구성한다.\n\n[페이지별 작업방법]\n각 페이지마다 다음 순서로 작성해줘.\n1. 해당 페이지에서 이미지 안에 반드시 보여야 할 핵심 메시지 1개\n2. 이미지 안에 넣을 한국어 문구\n3. 시각적으로 표현할 그림·아이콘·도식\n4. 추천 레이아웃\n5. 공통 디자인 프롬프트 + 해당 페이지 내용을 완전히 합친 ‘최종 이미지 생성 프롬프트’\n\n[최종 프롬프트 작성조건]\n각 페이지의 최종 프롬프트는 ChatGPT, Google Gemini, Google Flow 등 이미지 생성 AI에 그대로 복사해 넣을 수 있을 정도로 상세하게 작성해줘.\n각 페이지 프롬프트 안에 반드시 “16:9 가로형”, “한국어 글자 크게”, “높은 가독성”, “슬라이드 제목과 슬라이드 번호 제외” 조건을 반복해서 포함해줘.\n\n이제 아래/첨부된 PPT 페이지별 구성안을 분석해서 전체 공통 디자인 프롬프트와 페이지별 최종 이미지 생성 프롬프트를 만들어줘.", "id": "p072"}, {"title": "슬라이드 제작 4단계 · 이미지 생성 추가 지시문", "prompt": "위 페이지용 이미지 생성 프롬프트를 그대로 적용해서 실제 강의 슬라이드 이미지를 만들어줘.\n\n반드시 지켜줘.\n- 16:9 가로형\n- 교육용 프레젠테이션에 적합한 고해상도 이미지\n- 한국어 문구는 정확하게 표현\n- 핵심 글자는 크고 굵게\n- 충분한 여백\n- 교육내용과 직접 관련된 이미지와 인포그래픽 사용\n- 다른 슬라이드와 동일한 디자인 컨셉 유지\n- 슬라이드 제목 별도 표기 금지\n- 슬라이드 번호 표기 금지\n- 불필요한 로고와 워터마크 금지\n- 화면 가장자리에서 글자가 잘리지 않도록 안전 여백 확보", "id": "p073"}, {"title": "퍼스널브랜딩 카드뉴스 7장 기획과 제작", "prompt": "첨부한 파일은 내가 진행할 「AI리터러시 교육 강의계획서」야.\n\n너는 ‘AI교육 전문 콘텐츠마케터 + 카드뉴스 기획자 + 비주얼 디자이너’ 역할을 해줘.\n\n[목표]\n강의계획서를 바탕으로\n① 교육과정의 핵심 내용을 알리고\n② AI리터러시 강사로서 나의 전문성을 소개하며\n③ 교육 문의 또는 강의 참여에 관심이 생기도록 만드는\n퍼스널브랜딩용 카드뉴스를 제작하려고 해.\n\n[강사정보]\n- 강사명 : 김유성 강사(친절한유성쌤)\n- 홈페이지 : www.yussamclass.com\n- 이메일 : [강사 이메일 입력]\n- 전화 : [강사 전화번호 입력]\n\n[카드뉴스 구성]\n총 7장으로 구성해줘.\n\n1장 : 강한 관심을 끄는 표지\n2장 : 왜 지금 AI리터러시가 필요한가\n3장 : 이 교육에서 배우는 핵심내용\n4장 : 교육생이 직접 하게 될 실습\n5장 : 교육 후 기대할 수 있는 변화\n6장 : 강사 김유성 소개와 교육 강점\n7장 : 교육 문의 / 홈페이지 / 연락처 / 마무리 CTA\n\n[각 카드마다 작성할 내용]\n- 카드 번호\n- 핵심 목적\n- 메인 카피\n- 서브 카피\n- 화면에 반드시 들어갈 핵심정보\n- 추천 그림 또는 아이콘\n- 추천 레이아웃\n- 최종 이미지 생성 프롬프트\n\n[디자인 공통조건]\n- 정사각형 1:1 카드뉴스\n- 고급스럽고 전문적인 AI교육 브랜드 분위기\n- 화이트/아이보리 배경\n- 딥 네이비 또는 다크 그린 메인\n- 시안 블루와 골드 포인트\n- 카드형 UI와 세련된 인포그래픽\n- 한국어 글자를 크고 선명하게\n- 한 카드에 문장이 너무 많지 않게\n- 핵심 단어를 시각적으로 강조\n- 전체 7장의 디자인이 동일한 시리즈처럼 보이게\n- 교육기관, 기업, 성인교육 홍보물로 사용해도 어색하지 않은 품질\n- 로고나 워터마크를 임의로 만들지 않는다.\n\n[최종 출력]\n먼저 7장 전체 기획안을 표로 정리한 뒤,\n1장부터 7장까지 각각 ‘이미지 생성 AI에 그대로 넣을 수 있는 최종 프롬프트’를 자세하게 작성해줘.", "id": "p074"}, {"title": "강의 홍보 포스터 기획과 제작", "prompt": "첨부한 파일은 내가 진행할 「AI리터러시 교육 강의계획서」야.\n\n너는 ‘교육 홍보 전문 카피라이터 + 포스터 아트디렉터 + AI 이미지 프롬프트 전문가’ 역할을 해줘.\n\n[목표]\n강의계획서의 핵심 내용을 한눈에 전달하고,\nAI리터러시 강사 김유성의 전문성을 함께 보여주는 고급스러운 교육 홍보 포스터를 만들려고 해.\n\n[강사정보]\n- 강사명 : 김유성 강사(친절한유성쌤)\n- 홈페이지 : www.yussamclass.com\n- 이메일 : [강사 이메일 입력]\n- 전화 : [강사 전화번호 입력]\n\n[먼저 해야 할 일]\n첨부한 강의계획서를 분석해서 아래 내용을 짧고 강하게 정리해줘.\n1. 교육을 한 문장으로 설명하는 메인 카피\n2. 교육대상\n3. 교육 핵심내용 4가지\n4. 대표 실습 3가지\n5. 교육의 기대효과 3가지\n6. 강사 전문성을 보여줄 소개문 1~2문장\n7. 신청 또는 문의를 유도하는 CTA 문구\n\n[포스터 디자인 조건]\n- 세로형 3:4 비율\n- 고급 교육기관 홍보 포스터 스타일\n- AI리터러시와 미래교육의 전문성을 느낄 수 있는 분위기\n- 화이트 또는 밝은 아이보리 배경\n- 딥 네이비와 다크 그린을 메인 컬러로 사용\n- 시안 블루와 골드를 포인트로 사용\n- AI 네트워크, 대화형 AI, 데이터, 교육을 상징하는 정제된 시각요소\n- 카드형 정보영역과 깔끔한 그리드\n- 가장 중요한 메인 카피를 가장 크게\n- 교육 핵심내용은 짧고 읽기 쉽게\n- 강사정보와 연락처는 하단에 정돈해서 배치\n- 한국어 가독성을 최우선으로 한다.\n- 작은 글씨를 과도하게 사용하지 않는다.\n- 불필요한 영어, 가짜 로고, 워터마크를 넣지 않는다.\n\n[최종 결과]\n① 포스터에 실제로 넣을 최종 문구\n② 정보의 배치 순서\n③ 추천 시각요소\n④ 이미지 생성 AI에 그대로 복사할 수 있는 ‘최종 포스터 이미지 생성 프롬프트’\n순서로 만들어줘.\n\n최종 이미지 생성 프롬프트에는 포스터 안에 들어갈 한국어 문구를 정확하게 따옴표로 표시해서 포함해줘.", "id": "p075"}, {"title": "맞춤형 챗봇 역할 설계", "prompt": "당신은 교육용 AI 챗봇 설계자입니다.\n다음 목적의 챗봇을 기획해주세요.\n\n챗봇 목적: [입력]\n사용자: [입력]\n주요 질문: [입력]\n금지하거나 주의할 내용: [입력]\n\n다음 순서로 작성해주세요.\n1. 챗봇의 역할과 말투\n2. 반드시 해야 할 일 5개\n3. 하지 말아야 할 일 5개\n4. 첫 인사말\n5. 사용자에게 먼저 물어볼 질문 3개\n6. 답변 형식\n7. 안전·사실검증 원칙\n마지막에 시스템 지침으로 바로 붙여넣을 수 있는 완성본을 작성해주세요."}, {"title": "슬라이드 10장 구조 설계", "prompt": "당신은 성인 대상 교육 슬라이드 기획자입니다.\n주제: [입력]\n대상: [입력]\n강의시간: [입력]\n학습목표: [입력]\n\n10장 분량의 슬라이드 구조를 만들어주세요.\n조건:\n- 한 슬라이드 한 메시지\n- 제목은 짧고 크게\n- 본문은 최대 3~5개 핵심 포인트\n- 중간에 참여 질문 또는 실습 2개 포함\n- 마지막에 요약과 다음 행동 포함\n\n출력:\n| 장 | 슬라이드 제목 | 핵심 메시지 | 시각자료 아이디어 | 강사 멘트 |"}, {"title": "카드뉴스 스토리보드", "prompt": "당신은 교육 홍보용 카드뉴스 기획자입니다.\n주제: [입력]\n대상: [입력]\n전달하고 싶은 핵심 메시지: [입력]\n총 카드 수: [6~10장]\n\n첫 장은 강한 제목, 중간은 문제→정보→해결, 마지막은 행동 제안으로 구성해주세요.\n각 카드마다\n- 제목\n- 본문 2~3문장\n- 이미지 또는 아이콘 아이디어\n- 강조 키워드\n를 표로 정리해주세요.\n확인되지 않은 수치나 성과를 만들지 마세요."}, {"title": "포스터 카피 3안 비교", "prompt": "당신은 교육 프로그램 홍보 카피라이터입니다.\n프로그램명: [입력]\n대상: [입력]\n핵심 혜택: [입력]\n일시·장소: [입력 또는 확인 필요]\n신청방법: [입력 또는 확인 필요]\n\n포스터용 카피를 3가지 스타일로 작성해주세요.\nA. 신뢰감 중심\nB. 친근한 참여형\nC. 성과·결과물 중심\n\n각 안에 메인 헤드라인, 서브카피, 핵심 포인트 3개, CTA를 포함해주세요.\n제공되지 않은 일정·가격·성과는 만들지 말고 [확인 필요]로 표시해주세요."}], "3": [{"title": "내 경험을 AI 영상 아이디어로 바꾸기", "prompt": "당신은 AI 영상 콘텐츠 기획자입니다.\n\n제가 가진 경험을 바탕으로 AI를 활용해 만들 수 있는 30~60초 영상 아이디어를 5개 제안해주세요.\n저의 경험: [나의 직업, 취미, 경험, 전문분야를 입력]\n영상 대상: [입력]\n\n각 아이디어마다 1. 영상 제목 2. 핵심 메시지 3. 첫 3초 후킹 4. 영상 장면 3개 5. AI가 만들 부분 6. 제가 직접 넣어야 할 경험·의견을 작성해주세요.\nAI가 모든 것을 대신 만드는 영상이 아니라 저의 경험과 관점이 드러나도록 구성해주세요.", "id": "p017"}, {"title": "YouTube 주제 3개 찾기", "prompt": "당신은 초보자를 위한 YouTube 채널 기획 코치입니다.\n\n저와 대화를 하면서 제가 꾸준히 운영할 수 있는 YouTube 주제를 찾아주세요.\n기준은 ① 내가 아는 것 ② 사람들이 필요로 하는 것 ③ 내가 꾸준히 만들 수 있는 것입니다.\n\n바로 주제를 추천하지 말고 다음 질문을 한 개씩 해주세요.\n1. 지금까지 가장 오래 해본 일은 무엇인가요?\n2. 주변 사람들이 자주 물어보는 것은 무엇인가요?\n3. 다른 사람보다 조금 더 잘 알고 있는 것은 무엇인가요?\n4. 돈을 받지 않아도 이야기하기 좋아하는 분야는 무엇인가요?\n5. 일주일에 한 번씩 1년 동안 이야기할 수 있는 분야는 무엇인가요?\n\n제 답변이 끝나면 추천 YouTube 주제 3개를 제안하고, 각 주제마다 추천 이유, 예상 시청자, 영상 아이디어 5개, 지속 가능성을 알려주세요.", "id": "p018"}, {"title": "내 경험에서 채널 후보 10개 만들기", "prompt": "당신은 40~60대 성인의 경험을 콘텐츠로 바꾸는 YouTube 기획 전문가입니다.\n\n저의 정보:\n나이: [입력]\n직업 또는 과거 직업: [입력]\n경력: [입력]\n잘하는 것: [입력]\n관심 있는 것: [입력]\n도움을 주고 싶은 사람: [입력]\n\n이 경험을 활용하여 제가 운영할 수 있는 YouTube 채널 주제 후보 10개를 제안해주세요.\n각 주제마다 1. 채널 주제 2. 주요 시청자 3. 사람들이 이 채널을 볼 이유 4. 첫 영상 제목 3개 5. 제작 난이도(쉬움/보통/어려움)를 표로 정리해주세요.\n유행만 따라가는 아이디어보다 제가 가진 경험과 전문성이 자산이 되는 주제를 우선해주세요.", "id": "p019"}, {"title": "안성 지역 콘텐츠 아이디어", "prompt": "당신은 지역 기반 YouTube 콘텐츠 기획 전문가입니다.\n\n안성시 시민 또는 소상공인이 스마트폰과 AI를 활용해서 쉽게 만들 수 있는 영상 콘텐츠 아이디어를 제안해주세요.\n관심 분야: [안성 맛집 / 안성 여행 / 전통시장 / 농산물 / 공방 / 지역행사 / 평생학습 / 전문지식 / 상품 / 강의 중 선택]\n대상 시청자: [입력]\n제가 가진 경험: [입력]\n\n30~60초 Shorts 영상 아이디어 10개를 만들어주세요.\n| 영상 제목 | 첫 3초 후킹 | 핵심내용 | 촬영할 장면 | AI 활용 부분 |\n\n조건:\n- 실제 안성 지역의 가치가 드러날 것\n- 광고만 하는 영상보다 정보가 있는 영상\n- 스마트폰으로 촬영 가능한 수준\n- 초보자가 제작할 수 있을 것", "id": "p020"}, {"title": "초보자의 첫 YouTube 주제 정하기 — 교집합 3개", "prompt": "너는 유튜브 채널 기획 컨설턴트야. 아래 세 가지를 참고해서 내가\n시작할 수 있는 유튜브 주제 3개를 추천해줘.\n- 내가 아는 것: [ ]\n- 누군가 필요로 하는 것: [ ]\n- 꾸준히 만들 수 있는 것: [ ]\n주제마다 채널명 아이디어와 첫 영상 소재도 함께 제안해줘.", "id": "p033"}, {"title": "무슨 영상을 만들지 모르겠습니다 — 주제 후보 10개", "prompt": "나는 [나이]세이고 [분야]에서 [경력]년간 일했다. [대상]에게 도움을\n줄 유튜브 주제 10개를 제안해줘. 각 주제는 제목 예시와 함께\n알려줘.", "id": "p034"}, {"title": "인기 영상 벤치마킹 분석", "prompt": "당신은 숏폼 콘텐츠 분석 코치입니다.\n분석할 영상의 제목·대본·장면 설명: [직접 확인한 내용 붙여넣기]\n링크만으로 영상을 확인할 수 없다면 분석을 추측하지 말고 필요한 자료를 요청해주세요.\n다음 표로 분석해주세요.\n| 구간 | 후킹·전개·행동요청의 역할 | 화면 구성 | 자막·소리 | 내가 배울 원리 |\n원본의 표현과 장면을 그대로 복제하지 말고 구조와 전달 원리만 분석해주세요.\n나의 주제 [입력]에 적용할 독창적인 기획 3개를 제안해주세요.\n조회 수만으로 효과를 단정하지 말고 확인된 정보와 해석을 구분해주세요.", "id": "p040"}, {"title": "30~60초 숏폼 시나리오", "prompt": "당신은 교육·정보형 숏폼 영상 기획자입니다.\n주제: [입력]\n대상 시청자: [입력]\n내 경험·관점: [입력]\n영상 길이: [30~60초 중 선택]\n영상 비율: 세로 9:16\n첫 3초 후킹 → 핵심 정보 → 적용 사례 → 행동요청 구조로 시나리오를 작성해주세요.\n| 시간 | 장면 | 내레이션 | 화면 자막 | 직접 촬영·AI 생성 구분 |\n시간 합계가 설정한 길이를 넘지 않게 해주세요. 자막은 한 화면에 짧게, 한 영상에 한 주제로 구성해주세요.\n확인되지 않은 실적, 후기, 숫자를 만들지 마세요.", "id": "p041"}, {"title": "AI 영상용 장면 프롬프트", "prompt": "당신은 AI 영상 생성용 장면 프롬프트 작성자입니다.\n확정한 시나리오: [붙여넣기]\n각 장면마다 주체, 행동, 장소, 시간대, 조명, 카메라 구도와 움직임, 분위기, 화면 비율을 작성해주세요.\n영상 생성 도구에 입력할 한국어 프롬프트와 영어 프롬프트를 각각 제시해주세요.\n각 클립의 희망 길이는 [초]이고 실제 생성 가능 길이는 사용하는 도구에서 확인하겠습니다.\n인물·소품·색감이 이어지도록 공통 설정을 먼저 정해주세요.\n실존인물의 얼굴·목소리 모사, 타인의 로고, 불필요한 화면 속 글자는 제외해주세요.\n한 클립에는 하나의 주요 행동만 넣어주세요.", "id": "p042"}, {"title": "이미지를 영상으로 만들기", "prompt": "첨부한 이미지를 첫 장면의 기준으로 사용합니다.\n이미지의 주요 인물·소품·색감을 유지하면서 [주체]가 [동작]을 하는 짧은 영상으로 만들어주세요.\n장소: [입력]\n움직임: [작고 구체적인 움직임]\n카메라: [고정·천천히 이동 중 선택]\n분위기와 조명: [입력]\n화면 비율: 9:16\n새로운 인물·로고·문자를 추가하지 말고, 얼굴과 손이 왜곡되지 않도록 자연스럽게 표현해주세요.\n입력 이미지는 제가 사용 권한을 확인한 자료입니다.", "id": "p043"}, {"title": "숏폼 30초 대본 생성", "prompt": "당신은 교육용 숏폼 영상 기획자입니다.\n주제: [입력]\n대상: [입력]\n핵심 메시지: [입력]\n영상 길이: 30초\n\n0~3초 훅, 4~20초 핵심 내용, 21~27초 예시 또는 전환, 28~30초 CTA 구조로 작성해주세요.\n각 구간마다 화면, 자막, 내레이션, 효과음 아이디어를 표로 정리해주세요.\n과장된 표현이나 확인되지 않은 사실은 넣지 마세요."}, {"title": "6장면 영상 스토리보드", "prompt": "당신은 AI 영상 스토리보드 디렉터입니다.\n영상 주제: [입력]\n스타일: [입력]\n주인공 또는 핵심 오브젝트: [입력]\n\n6장면으로 구성해주세요.\n각 장면에\n1. 장면 목적\n2. 화면 구성\n3. 카메라 구도/움직임\n4. 조명·분위기\n5. 이미지 생성 프롬프트\n6. 영상 변환 시 움직임 지시\n를 작성해주세요.\n장면마다 인물·의상·색감이 일관되도록 공통 설정도 먼저 정의해주세요."}, {"title": "영상 생성 프롬프트 개선", "prompt": "당신은 AI 영상 생성 프롬프트 코치입니다.\n아래 프롬프트를 영상 생성에 적합하게 개선해주세요.\n\n원문:\n[붙여넣기]\n\n주제/주체, 동작, 배경, 카메라, 조명, 분위기, 스타일, 길이의 요소를 점검하고\n빠진 내용을 질문 3개로 먼저 확인해주세요.\n그 다음\n- 간결 버전\n- 상세 버전\n- 부정 프롬프트 또는 피해야 할 요소\n를 작성해주세요."}, {"title": "숏폼 결과 평가 루브릭", "prompt": "당신은 미디어교육 평가 코치입니다.\n완성한 숏폼 영상을 아래 기준으로 평가할 수 있는 루브릭을 만들어주세요.\n\n목표: [입력]\n대상: [입력]\n\n평가기준은 메시지 명확성, 첫 3초 주목도, 장면 연결, 자막 가독성, 음성·음악 균형, 저작권·윤리, 행동 유도까지 포함해주세요.\n| 평가항목 | 매우 좋음 | 보완 필요 | 수정 행동 |\n마지막에 제작자가 스스로 묻는 체크 질문 7개를 작성해주세요."}], "4": [{"title": "브랜드 로고송 가사", "prompt": "당신은 짧은 브랜드 로고송 작사가입니다.\n브랜드명: [입력]\n대상: [입력]\n브랜드가 제공하는 가치: [입력]\n희망 길이: 약 20~30초\n분위기: [밝음·따뜻함·신뢰감 중 선택]\n따라 부르기 쉬운 짧은 가사 3안을 작성해주세요.\n브랜드명은 자연스럽게 반복하고, 확인되지 않은 성과나 최고·유일 같은 단정 표현은 쓰지 마세요.\n각 안에 핵심 메시지, 가사, 추천 템포·악기, 음악 생성용 스타일 문장을 제시해주세요.\n특정 가수·기존 곡을 모방하지 말고 독창적으로 구성해주세요.", "id": "p044"}, {"title": "지역·교육 캠페인송", "prompt": "당신은 교육 캠페인송 작사가입니다.\n캠페인 주제: [입력]\n대상: [입력]\n함께 실천할 행동: [입력]\n약 40초에 어울리는 1절과 짧은 후렴을 작성해주세요.\n쉬운 한국어, 긍정적인 표현, 따라 부르기 쉬운 반복을 사용해주세요.\n후렴에는 핵심 행동 한 가지를 분명하게 담아주세요.\n결과는 [제목 | 핵심 메시지 | 가사 | 추천 음악 분위기 | 음악 생성용 스타일 문장] 순으로 제시해주세요.\n기존 노래의 가사·선율이나 특정 가수의 목소리를 재현하지 마세요.", "id": "p045"}, {"title": "내레이션용 배경음악 스타일", "prompt": "Create an original instrumental background track for a [교육·정보] video.\nMood: [calm, warm, confident].\nTempo: approximately [90] BPM.\nInstruments: [soft piano, light acoustic guitar, subtle percussion].\nKeep the arrangement minimal and leave room for spoken narration.\nNo vocals, no lyrics, no imitation of existing songs or named artists.\nUse a gentle opening and a clean ending. Target length: [60] seconds if supported.\nAvoid sudden volume changes or distracting sound effects.", "id": "p046"}, {"title": "CapCut 편집 구성표", "prompt": "당신은 초보자를 위한 영상 편집 코치입니다.\n완성 목표: [30~60초] 세로 영상 1편\n대본: [붙여넣기]\n보유 파일: [영상·이미지·내레이션·음악 파일명과 길이]\n다음 표로 편집 계획을 만들어주세요.\n| 순서 | 시작·끝 시간 | 사용할 파일 | 자를 부분 | 자막 문구 | 내레이션·음악 | 전환 |\n과도한 효과를 줄이고, 핵심 문장이 읽힐 만큼 화면을 유지해주세요.\n음악은 말소리를 가리지 않도록 조정할 원칙을 알려주세요.\n마지막에 CapCut에서 사람이 직접 수행할 순서를 가져오기 → 컷편집 → 자막 → 음악 → 검토 → 내보내기로 정리해주세요.\nAI가 이 대화만으로 CapCut 파일을 직접 편집했다고 말하지 마세요.", "id": "p047"}, {"title": "자동 자막 교정", "prompt": "당신은 영상 자막 편집자입니다.\n자동 생성한 자막: [가상정보 또는 공개 가능한 자막 붙여넣기]\n원래 의도한 대본: [붙여넣기]\n오인식, 맞춤법, 띄어쓰기, 전문용어를 교정해주세요.\n원래 말의 뜻을 바꾸지 말고 확인이 필요한 단어는 [확인 필요]로 표시해주세요.\n한 화면에 읽기 쉬운 짧은 문장으로 나누되, 시간정보가 없다면 임의의 타임코드를 만들지 마세요.\n결과는 [원문 | 교정문 | 수정 이유] 표와 최종 자막 문구로 작성해주세요.", "id": "p048"}, {"title": "영상 최종 검수", "prompt": "당신은 교육 영상 검수 코치입니다.\n영상의 대본·장면 설명·사용 자료: [붙여넣기]\n목적과 대상: [입력]\n메시지 정확성, 초보자 이해도, 자막 가독성, 음량, 길이, 자료 사용 권한, 개인정보, 행동요청을 점검해주세요.\n실제 영상이나 소리를 확인하지 못한 항목은 '직접 재생 확인 필요'로 표시해주세요.\n| 점검 항목 | 확인된 문제 | 수정 방법 | 사람이 직접 확인할 사항 |\n우선 고칠 3가지와 내보내기 전 체크리스트를 제시해주세요.", "id": "p049"}, {"title": "AI 음악 콘셉트 설계", "prompt": "당신은 영상용 음악 기획자입니다.\n영상 주제: [입력]\n대상: [입력]\n원하는 감정: [입력]\n영상 길이: [입력]\n\n장르, 템포, 악기, 분위기, 전개, 피해야 할 요소를 정리하고\nAI 음악 생성 도구에 사용할 수 있는 설명형 프롬프트 3안을 작성해주세요.\n보컬이 필요하다면 가사 주제만 제안하고 기존 곡의 가사나 멜로디를 모방하지 마세요."}, {"title": "배경음악과 장면 매칭", "prompt": "당신은 영상 편집 음악감독입니다.\n장면 목록:\n[장면별 설명 붙여넣기]\n\n전체 영상 길이: [입력]\n각 장면의 감정 흐름을 분석하고, 음악의 강약·전환·쉼을 어디에 둘지 제안해주세요.\n| 시간대 | 장면 | 감정 | 음악 변화 | 편집 포인트 |\n내레이션이 있는 구간에서는 음악이 음성을 방해하지 않도록 제안해주세요."}, {"title": "영상 편집 체크리스트", "prompt": "당신은 초보 영상편집 코치입니다.\n완성본을 내보내기 전에 확인할 체크리스트를 만들어주세요.\n\n영상 목적: [입력]\n게시 채널: [입력]\n화면 비율: [입력]\n\n영상 길이, 화면 비율, 자막 오탈자, 자막 안전영역, 음량, 음악 저작권, 전환효과, 썸네일, 파일명, 내보내기 화질을 포함해\n'필수 확인 / 있으면 좋은 확인'으로 나눠주세요."}, {"title": "영상 수정 우선순위 코치", "prompt": "당신은 영상 피드백 코치입니다.\n받은 피드백:\n[붙여넣기]\n\n영상의 목적:\n[입력]\n\n피드백을 메시지, 구성, 화면, 자막, 오디오, 기술 문제로 분류하고\n영향도와 수정 난이도를 기준으로 우선순위를 정해주세요.\n| 피드백 | 분류 | 영향도 | 수정 난이도 | 먼저 할 수정 | 확인 방법 |\n마지막에 30분 안에 할 수정 3개와 시간이 더 있을 때 할 수정 3개를 나눠주세요."}], "5": [{"title": "GEO 소개 콘텐츠와 FAQ", "prompt": "당신은 근거 중심의 온라인 소개 콘텐츠 편집자입니다.\n소개할 사람·브랜드·기관: [입력]\n확인된 정보: [공식 명칭, 전문분야, 대상, 서비스, 연락처, 홈페이지]\n참고할 공식 자료: [본문 또는 링크와 확인한 내용]\nAI 검색 사용자가 쉽게 이해하고 확인할 수 있는 소개 콘텐츠를 작성해주세요.\n구성: 2~3문장 소개 → 주요 분야 → 대상별 활용 → 자주 묻는 질문 5개 → 공식 문의 경로.\n이름·연락처·전문분야를 일관되게 표기하고, 사실과 의견을 구분해주세요.\n자료에 없는 경력·실적·후기·가격을 만들지 마세요.\n검색 상위 노출이나 AI 답변에 인용되는 것을 보장하는 표현은 쓰지 마세요.", "id": "p050"}, {"title": "SEO와 GEO 콘텐츠 점검", "prompt": "당신은 웹 콘텐츠 품질 점검자입니다.\n점검할 소개 글: [붙여넣기]\n공식 정보: [붙여넣기]\n제목과 본문의 일치, 명확한 질문·답변, 고유명사 표기 일관성, 근거·출처, 정보 최신성, 접근 가능한 본문을 점검해주세요.\nSEO 관점과 AI 검색에서 이해하기 쉬운 GEO 관점을 나누어 [문제 | 이유 | 수정안 | 확인 방법]으로 정리해주세요.\n불필요한 키워드 반복을 줄이고 사람에게 유용한 내용을 우선해주세요.\n현재 검색 순위·AI 인용 여부를 직접 확인하지 않았다면 추정하지 마세요.\n최종 수정본과 사용자가 확인할 검색 질문 5개를 제시해주세요.", "id": "p051"}, {"title": "홍보용 원페이지 HTML 제작", "prompt": "당신은 반응형 웹페이지 개발자입니다.\n목적: [강사·브랜드·교육 프로그램 소개]\n대상: [입력]\n확인된 소개 정보: [입력]\n공식 문의 URL: [입력]\n이 정보만으로 index.html 한 파일을 만들어주세요.\n구성: 소개 / 주요 분야 / 대상 / 수업 또는 서비스 내용 / FAQ / 문의.\nCSS와 JavaScript는 파일 안에 포함하고 외부 빌드 과정 없이 열리게 해주세요.\n디자인: 깊은 네이비와 블루, 본문 18px 이상, 충분한 줄간격, 명확한 제목, 큰 버튼.\n모바일 360px, 태블릿 768px, PC 1440px에서 가로 스크롤 없이 표시해주세요.\n키보드 조작, 눈에 보이는 포커스, 시맨틱 HTML, 명확한 링크 이름을 적용해주세요.\n확인되지 않은 후기·성과·가격, 가짜 문의폼, 작동하지 않는 버튼은 넣지 마세요.\n완성 HTML 코드와 저장·미리보기 방법을 알려주세요.", "id": "p052"}, {"title": "웹페이지 수정 지시서", "prompt": "당신은 웹페이지 개선 담당 개발자입니다.\n현재 HTML: [붙여넣기]\n문제 화면과 기기: [설명 또는 스크린샷]\n원하는 수정: [입력]\n기존 내용과 링크를 보존하며 문제를 해결해주세요.\n특히 큰 글자, 줄바꿈, 버튼 터치 영역, 모바일 가로 넘침을 확인해주세요.\n수정 이유를 짧게 설명하고, 일부 조각이 아닌 전체 최종 HTML을 제시해주세요.\n확인하지 못한 화면은 확인했다고 말하지 마세요.\n마지막에 모바일·태블릿·PC에서 사용자가 직접 확인할 항목 5개를 알려주세요.", "id": "p053"}, {"title": "AI 검색 노출 확인 기록", "prompt": "당신은 검색 결과 기록을 정리하는 분석 보조자입니다.\n질문 목록: [입력]\n제가 직접 확인한 결과: [도구명, 확인 날짜, 질문, 답변, 인용 URL]\n확인한 데이터만 바탕으로 [질문 | 도구 | 날짜 | 이름·브랜드 언급 | 인용된 출처 | 틀린 정보 | 개선할 공식 콘텐츠] 표로 정리해주세요.\n검색 결과가 질문·도구·시점에 따라 달라질 수 있음을 고려하고, 원인을 확정하지 마세요.\n기록에 없는 결과나 순위를 만들지 마세요.\n수정할 홈페이지 정보와 다음 확인 질문 3개를 제안해주세요.", "id": "p054"}, {"title": "GEO 질문지도 만들기", "prompt": "당신은 생성형 검색 환경의 콘텐츠 전략가입니다.\n내 기관/서비스: [입력]\n주요 대상: [입력]\n핵심 주제: [입력]\n\n사용자가 AI 검색에서 실제로 물을 법한 질문을\n입문형, 비교형, 문제해결형, 지역형, 신뢰확인형으로 각각 5개씩 만들어주세요.\n질문별로 어떤 근거·사례·FAQ·구조화된 정보가 필요할지도 제안해주세요.\n확인할 수 없는 순위나 검색노출 효과를 보장하지 마세요."}, {"title": "FAQ 콘텐츠 설계", "prompt": "당신은 웹 콘텐츠 편집자입니다.\n주제: [입력]\n대상: [입력]\n\nFAQ 12개를 작성해주세요.\n각 답변은 먼저 1~2문장으로 직접 답하고, 그 다음 필요한 설명을 덧붙여주세요.\n답변마다 신뢰를 높이기 위해 확인해야 할 공식 근거 또는 내부 자료를 표시해주세요.\n모르는 정보는 [확인 필요]라고 표시하세요."}, {"title": "랜딩페이지 정보구조", "prompt": "당신은 교육기관 웹 UX 기획자입니다.\n페이지 목적: [입력]\n주요 방문자: [입력]\n핵심 행동: [신청/문의/자료다운로드 등]\n필수 정보: [입력]\n\n모바일 우선 랜딩페이지의 섹션 순서를 설계해주세요.\n히어로, 문제·필요성, 핵심 혜택, 교육내용, 결과물, 대상, 일정, 강사, FAQ, CTA 순서를 참고하되 목적에 맞게 조정해주세요.\n각 섹션에 제목, 핵심 문장, 필요한 UI 요소, CTA를 표로 정리해주세요."}, {"title": "웹페이지 접근성·가독성 점검", "prompt": "당신은 웹 접근성과 가독성 검토자입니다.\n아래 HTML 또는 화면 구성을 검토해주세요.\n\n[코드 또는 설명 붙여넣기]\n\n다음 기준으로 문제와 개선안을 제시해주세요.\n- 제목 계층\n- 글자 크기와 줄간격\n- 색상 대비\n- 버튼 크기와 명확한 라벨\n- 모바일 레이아웃\n- 키보드 포커스\n- 이미지 대체텍스트\n- 폼 라벨\n- 과도한 애니메이션\n\n가능하면 수정 전/수정 후 예시 코드를 함께 제시해주세요."}], "6": [{"title": "강의 주제와 학습목표 설계", "prompt": "당신은 성인 대상 AI 교육 설계자입니다.\n내 전문분야: [입력]\n대상과 사전 경험: [입력]\n현장에서 해결하고 싶은 문제: [입력]\n교육시간과 환경: [입력]\n실제 수업이 가능한 주제 3개를 제안해주세요.\n각 주제마다 대상의 필요, 시작 조건, 관찰 가능한 학습목표 3개, 실습 결과물, 필요한 도구, 예상 어려움을 작성해주세요.\n학습목표는 '이해한다'만 쓰지 말고 '작성한다·구분한다·검증한다·시연한다'처럼 결과를 확인할 수 있게 제시해주세요.\n마지막에 제가 주제를 선택하도록 질문해주세요.", "id": "p055"}, {"title": "2시간 강의계획서 작성", "prompt": "당신은 평생교육 강의 설계 전문가입니다.\n강의명: [입력]\n교육 대상·인원·사전 경험: [입력]\n교육환경과 도구: [입력]\n총 시간: 120분\n학습목표: [입력]\n이론 24분, 실습 96분을 기준으로 강의계획서를 작성해주세요.\n| 시간 | 분량 | 학습목표 | 교육내용 | 강사활동 | 학습자활동 | 결과물·확인방법 |\n시간 합계를 정확히 120분으로 맞추고, 설명·개별실습·공유·피드백 시간을 구분해주세요.\n로그인·파일 저장 시간이 필요한 경우 실습 시간에 포함해주세요.\n학습목표와 결과물·평가가 연결되게 작성하고, 도구 사용이 어려운 교육생의 대체 활동도 넣어주세요.", "id": "p056"}, {"title": "여러 차시 커리큘럼 구성", "prompt": "당신은 AI리터러시 교육과정 설계자입니다.\n과정명: [입력]\n대상: [입력]\n차시 수와 차시별 시간: [입력]\n최종 결과물: [입력]\n기초 → 연습 → 응용 → 시연 순서로 커리큘럼을 작성해주세요.\n| 차시 | 주제 | 관찰 가능한 학습목표 | 핵심 개념 | 실습 | 결과물 | 다음 차시 연결 |\n각 차시에 개인정보·사실 검증·자료 사용 권한 중 필요한 확인 요소를 넣어주세요.\n이전 차시의 결과물을 다음 차시에 활용하게 구성하고, 시간에 비해 과도한 과제를 줄여주세요.\n마지막에 준비물과 사전 안내사항을 정리해주세요.", "id": "p057"}, {"title": "강의자료와 실습 안내자료", "prompt": "당신은 수업자료 제작자입니다.\n확정한 강의계획서: [붙여넣기]\n아래 자료를 각각 구분해서 작성해주세요.\n1. 강의 슬라이드 구성: 제목, 한 장 한 메시지, 핵심 내용, 질문, 실습 시작 안내.\n2. 교육생 실습 안내서: 목표, 준비물, 단계별 행동, 복사용 프롬프트, 예시 결과, 막힐 때 대처.\n3. 수업 공지: 일시·장소·준비물·계정·제출 방법. 미확정 정보는 [확인 필요].\n디지털 초보자가 읽고 따라 할 수 있게 쉬운 말과 짧은 문장을 사용해주세요.\n제공하지 않은 일정·비용·연락처를 만들지 마세요.", "id": "p058"}, {"title": "학습 결과 평가 기준", "prompt": "당신은 교육 평가 설계자입니다.\n학습목표: [입력]\n평가할 결과물: [입력]\n초보자에게 공개할 평가 기준을 5개 이내로 만들어주세요.\n| 평가 기준 | 확인할 증거 | 충분함 | 보완 필요 | 피드백 질문 |\n도구를 빠르게 다루는 능력만 평가하지 말고, 목표 달성·근거 확인·안전한 사용·자기 수정 과정을 반영해주세요.\n이는 수업 연습용 기준이며 자격증 공식 심사표로 표시하지 마세요.\n학습자가 제출 전 스스로 점검할 질문 5개도 작성해주세요.", "id": "p059"}, {"title": "학습자 페르소나 설계", "prompt": "당신은 성인학습자 분석 전문가입니다.\n강의 주제: [입력]\n예상 대상: [입력]\n\n학습자의 디지털 경험, 기대, 불안, 자주 막히는 지점, 필요한 지원을 가정이 아니라 확인 질문 중심으로 정리해주세요.\n1. 사전 설문 질문 8개\n2. 초보/중간/경험자 3수준 지원전략\n3. 강의에서 피해야 할 설명 방식\n4. 실습 난이도 조절 방법\n을 작성해주세요."}, {"title": "2시간 강의 타임테이블", "prompt": "당신은 실습형 AI 강의 설계자입니다.\n주제: [입력]\n대상: [입력]\n학습목표: [입력]\n최종 결과물: [입력]\n총 시간: 120분\n\n도입, 핵심개념, 강사 시범, 따라하기, 개별실습, 공유·피드백, 정리 순서로 설계해주세요.\n이론 20%, 실습 80%에 가깝게 구성하고 각 활동별 분 단위를 합산해 정확히 120분이 되게 해주세요.\n| 시간 | 활동 | 강사 역할 | 학습자 활동 | 결과물/확인 |"}, {"title": "강사용 멘트 스크립트", "prompt": "당신은 초보 강사를 돕는 강의 코치입니다.\n강의계획서:\n[붙여넣기]\n\n각 구간에서 실제로 말할 수 있는 짧은 강사 멘트를 작성해주세요.\n- 시작 인사와 기대 조정\n- 핵심 개념 설명\n- 실습 시작 안내\n- 막힌 학습자 지원\n- 중간 확인 질문\n- 결과 공유\n- 마무리와 다음 행동\n\n전문용어는 쉬운 말로 바꾸고 한 문장은 짧게 작성해주세요."}, {"title": "실습 실패 대비 플랜B", "prompt": "당신은 디지털 교육 운영 코치입니다.\n실습 도구: [입력]\n수업 환경: [PC/모바일/와이파이 등]\n예상 학습자 수준: [입력]\n\n로그인 실패, 가입 제한, 인터넷 지연, 생성 오류, 파일 저장 실패, 유료기능 제한이 발생했을 때\n각 상황별 즉시 대응, 대체 활동, 강사가 미리 준비할 자료를 표로 작성해주세요.\n학습자가 당황하지 않도록 사용할 안내 문장도 함께 제시해주세요."}], "7": [{"title": "15분 수업시연 대본", "prompt": "당신은 AI리터러시 강사 시연 코치입니다.\n시연 주제: [입력]\n대상과 학습목표: [입력]\n도구와 결과물: [입력]\n연습 시간: 15분\n도입 2분 / 설명·시범 3분 / 학습자 실습 7분 / 공유·정리 3분으로 대본을 작성해주세요.\n| 시간 | 강사가 할 말 | 강사가 보여줄 것 | 학습자가 할 일 | 확인 질문 |\n실습 프롬프트 1개, 개인정보·사실 검증 안내, 종료 시 결과물 확인을 포함해주세요.\n설명을 줄이고 학습자가 직접 실행할 시간을 확보해주세요.\n실제 심사 시간은 운영진 안내에 따라 조정하겠습니다.", "id": "p060"}, {"title": "2인 조 역할 분담과 리허설", "prompt": "당신은 2인 조 수업시연 리허설 코치입니다.\n시연 대본: [붙여넣기]\n조원별 강점: [A의 강점 / B의 강점]\n발표·도구 시연·학습자 지원·시간 확인·결과물 확인 역할을 균형 있게 나누어주세요.\n| 구간 | 담당자 | 해야 할 일 | 넘겨줄 때 사용할 문장 |\n시간 초과, 로그인 실패, 생성 지연, 잘못된 답변, 복사 실패를 가정한 대응 문장과 대체 활동을 작성해주세요.\n마지막에 리허설 체크리스트를 제시해주세요.", "id": "p061"}, {"title": "피드백을 개선 행동으로 바꾸기", "prompt": "당신은 수업 피드백 코치입니다.\n시연 주제: [입력]\n실제로 받은 피드백: [붙여넣기]\n스스로 관찰한 문제: [입력]\n없는 평가를 만들거나 점수를 추측하지 마세요.\n피드백을 학습목표, 설명, 실습 지원, 시간 운영, 안전한 AI 활용 관점으로 분류해주세요.\n| 피드백 | 학습자에게 미친 영향 | 구체적 수정 행동 | 수정 후 확인 방법 | 우선순위 |\n다음 시연에서 바로 바꿀 행동 3개를 선택하고 수정된 대본 구간을 작성해주세요.", "id": "p062"}, {"title": "디지털 초보자 질문 대응", "prompt": "당신은 AI 교육 강사 코치입니다.\n교육 대상: [입력]\n실습 주제·도구: [입력]\n교육생이 할 법한 질문 10개를 만들어주세요.\n로그인, 복사·붙여넣기, 프롬프트 수정, AI 오답, 파일 저장, 도구 제한 관련 질문을 포함해주세요.\n각 질문에 2~3문장의 쉬운 답변, 강사가 보여줄 행동, 학습자가 다시 할 행동을 작성해주세요.\n현재 화면이나 계정 상태를 모르면 확인 질문을 먼저 하도록 안내해주세요.\n교육생의 실패를 탓하는 표현은 쓰지 마세요.", "id": "p063"}, {"title": "시연 시간 압축 훈련", "prompt": "당신은 강사 시연 코치입니다.\n현재 수업 대본:\n[붙여넣기]\n목표 시간: [예: 15분]\n\n학습목표와 핵심 실습은 유지하면서 설명을 줄여 목표 시간 안에 들어오게 재구성해주세요.\n삭제 가능한 내용, 꼭 남길 내용, 말로 설명하지 않고 화면으로 보여줄 내용을 구분해주세요.\n마지막에 분 단위 타임라인을 작성해주세요."}, {"title": "평가자 관점 예상 질문", "prompt": "당신은 AI리터러시 강사 시연 평가자 역할입니다.\n시연 주제: [입력]\n수업안:\n[붙여넣기]\n\n평가자가 물을 수 있는 질문 10개를 만들어주세요.\n학습목표, 대상 적합성, 윤리·개인정보, 사실검증, 도구 선택, 실습 지원, 시간 운영을 포함해주세요.\n각 질문마다 좋은 답변에 들어가야 할 핵심 포인트만 제시하고, 존재하지 않는 공식 평가기준을 만들지 마세요."}, {"title": "동료 피드백 질문지", "prompt": "당신은 수업 관찰 도구를 만드는 교육 코치입니다.\nAI리터러시 수업시연을 본 동료가 사용할 피드백 질문지를 만들어주세요.\n\n관찰영역:\n- 목표가 분명했는가\n- 설명이 이해되었는가\n- 학습자가 직접 해보는 시간이 충분했는가\n- 안전·윤리 안내가 있었는가\n- 막힌 학습자를 지원했는가\n- 마무리에서 목표를 확인했는가\n\n각 영역을 '관찰 사실 / 좋았던 점 / 한 가지 제안'으로 기록하게 해주세요."}, {"title": "재시연 개선 대본", "prompt": "당신은 수업 개선 코치입니다.\n기존 대본:\n[붙여넣기]\n받은 피드백:\n[붙여넣기]\n\n피드백 중 학습자 경험에 영향이 큰 3가지를 골라\n수정 전 문장/행동과 수정 후 문장/행동을 비교해주세요.\n그 다음 개선 내용을 반영한 재시연 대본을 작성하고,\n재시연 후 확인할 관찰 포인트 5개를 제시해주세요."}], "8": [{"title": "최종 시연 보완과 점검", "prompt": "당신은 최종 수업시연 점검 코치입니다.\n현재 대본·자료: [붙여넣기]\n지난 피드백과 수정한 내용: [입력]\n실제 안내받은 시연 시간: [분]\n학습목표·실습·결과물·확인 질문의 연결을 검토해주세요.\n시간 합계, 도구 준비, 큰 글자, 복사용 프롬프트, 개인정보·사실 검증 안내, 생성 실패 대체안, 제출 링크를 점검해주세요.\n| 항목 | 확인된 상태 | 남은 보완 | 직접 확인할 사항 |\n자료를 보지 못한 항목은 완료라고 하지 마세요. 마지막에 시연 직전 1분 체크리스트를 만들어주세요.", "id": "p064"}, {"title": "필기 대비 개념 연습문제", "prompt": "당신은 AI리터러시 학습을 돕는 튜터입니다.\n학습한 자료: [요약 또는 첨부]\n범위: AI 개념·윤리 / 프롬프트 / 챗봇·자료 기반 답변 / 콘텐츠 제작 / 강의 설계.\n제공 자료에 근거한 4지선다 연습문제 10개를 만들어주세요.\n이것은 학습용 예상문제이며 실제 자격증 시험 문제라고 표시하지 마세요.\n한 문제씩 제시하고 제가 답하면 정답·해설·관련 개념을 알려주세요.\n애매한 문항이나 자료에 없는 법률·가격·기능 정보는 피해주세요.\n틀린 개념은 마지막에 복습 목록으로 정리해주세요. 첫 문제부터 시작해주세요.", "id": "p065"}, {"title": "실습 포트폴리오 정리", "prompt": "당신은 AI 교육 포트폴리오 편집자입니다.\n제가 실제 만든 결과물 목록과 링크: [입력]\n프롬프트, 문서, 챗봇, 발표자료, 카드뉴스, 영상, 음악, 소개 웹페이지, 강의계획서, 시연자료를 확인해주세요.\n| 결과물 | 해결한 문제 | 사용 도구 | 내가 판단·수정한 부분 | 안전·검증 절차 | 파일·링크 |\n실제로 만들지 않은 결과물을 만들었다고 쓰지 마세요.\n공개 가능한 내용과 비공개로 보관할 내용을 구분하고, 다음 교육에서 재사용할 자료 3개를 제안해주세요.", "id": "p066"}, {"title": "수료 후 첫 강의 실행계획", "prompt": "당신은 AI리터러시 강사의 실행계획 코치입니다.\n나의 전문분야: [입력]\n교육하고 싶은 대상: [입력]\n현재 활용 가능한 자료·도구·시간: [입력]\n첫 교육 또는 소규모 실습을 준비하는 4주 계획을 작성해주세요.\n| 주차 | 준비할 일 | 직접 실행할 일 | 결과물 | 확인할 피드백 |\n배운 도구를 모두 쓰려고 하지 말고 대상에게 필요한 문제 하나에 집중해주세요.\n관찰 가능한 실행 목표와 개인정보·자료 사용 권한 점검을 포함해주세요.\n취업·수익·자격 취득 효과를 보장하는 표현은 쓰지 마세요.", "id": "p067"}, {"title": "최종 포트폴리오 목차 만들기", "prompt": "당신은 AI리터러시 강사 포트폴리오 코치입니다.\n제가 과정에서 만든 결과물:\n[목록 붙여넣기]\n\n강사 포트폴리오 목차를 설계해주세요.\n각 항목에 결과물명, 학습목표, 사용한 AI 도구, 내가 직접 판단·수정한 부분, 검증한 내용, 다음 개선점을 포함해주세요.\n개인정보나 수강생 정보가 있다면 공개 전에 제거하도록 표시해주세요."}, {"title": "핵심 개념 구술 복습", "prompt": "당신은 AI리터러시지도사 과정 복습 코치입니다.\n다음 주제를 중심으로 구술형 복습을 진행해주세요.\n- 생성형 AI의 한계\n- 개인정보와 민감정보\n- 프롬프트 5요소\n- 사실검증\n- 저작권·출처\n- 수업 설계\n- 실습 운영\n\n한 번에 질문 하나만 하고, 내가 답하면\n1. 잘한 점\n2. 빠진 핵심\n3. 더 정확한 답변 예시\n를 알려준 뒤 다음 질문으로 넘어가세요.\n공식 시험 범위나 출제기준이라고 단정하지 마세요."}, {"title": "첫 강의 30일 실행계획", "prompt": "당신은 신규 AI 강사의 실행 코치입니다.\n내가 가르치고 싶은 대상: [입력]\n강의 주제: [입력]\n현재 준비된 자료: [입력]\n가능한 시간: [입력]\n\n30일 동안 첫 수업을 실행하기 위한 주간 계획을 만들어주세요.\n1주차: 대상·문제 정의\n2주차: 강의안·실습자료 제작\n3주차: 리허설·수정\n4주차: 실제 실행·피드백\n각 주차에 해야 할 일, 완료 기준, 필요한 결과물을 표로 정리해주세요."}, {"title": "과정 전체 회고와 다음 성장목표", "prompt": "당신은 강사 성장 코치입니다.\n과정에서 내가 잘한 점: [입력]\n어려웠던 점: [입력]\n가장 유용했던 결과물: [입력]\n앞으로 하고 싶은 강의: [입력]\n\n다음 형식으로 회고를 도와주세요.\n- 유지할 강점 3개\n- 개선할 역량 3개\n- 다음 4주 동안 연습할 행동\n- 포트폴리오에 남길 증거\n- 다음 강의 후 받을 피드백 질문 5개\n\n과장된 평가 대신 내가 제공한 근거에 기반해 작성해주세요."}]}</script>
 <script>
 (()=>{
 'use strict';
@@ -1469,6 +2230,35 @@ document.addEventListener('click',e=>{
 let printState=[];
 addEventListener('beforeprint',()=>{printState=[...document.querySelectorAll('.prompt-card details')].map(d=>({d,open:d.open}));printState.forEach(({d})=>d.open=true);});
 addEventListener('afterprint',()=>printState.forEach(({d,open})=>d.open=open));
+
+function filterPrompts(){
+ const q=(document.getElementById('prompt-search')?.value||'').trim().toLowerCase();
+ const lesson=document.querySelector('.lesson:not([hidden])');
+ if(!lesson)return;
+ const cards=[...lesson.querySelectorAll('.prompt-card')];
+ let visible=0;
+ cards.forEach(card=>{
+   const hay=(card.innerText||'').toLowerCase();
+   const show=!q||hay.includes(q);
+   card.style.display=show?'':'none';
+   if(show)visible++;
+ });
+ let empty=lesson.querySelector('.prompt-empty');
+ if(!empty){
+   empty=document.createElement('div');empty.className='prompt-empty';empty.textContent='검색 결과가 없습니다. 다른 키워드로 찾아보세요.';
+   lesson.querySelector('.prompt-list')?.after(empty);
+ }
+ empty.classList.toggle('show',!!q&&visible===0);
+ const s=document.getElementById('prompt-search-status');
+ if(s)s.textContent=q?visible+'개 검색됨':'현재 차시 '+cards.length+'개';
+}
+document.getElementById('prompt-search')?.addEventListener('input',filterPrompts);
+document.addEventListener('click',e=>{
+ const a=e.target.closest('[data-lesson]');
+ if(a){const input=document.getElementById('prompt-search');if(input)input.value='';setTimeout(filterPrompts,0);}
+});
+setTimeout(filterPrompts,0);
+
 })();
 </script>
 </body></html>
