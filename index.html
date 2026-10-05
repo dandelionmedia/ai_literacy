@@ -355,17 +355,37 @@ main{padding:36px clamp(24px,3vw,48px) 64px}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
 @media print{.source-filter,.workbook-actions,.prompt-tools{display:none!important}.workbook-guide{background:#fff;box-shadow:none}.word-prompt{break-inside:avoid}.topbar{position:static}}
 
+
+/* Education journal is revealed only through the two navigation controls. */
+.course-journal[hidden]{display:none!important}
+.header-links .nav-chip-journal{
+ background:linear-gradient(135deg,#f7db92,#e9b955);color:#142e45;
+ border:2px solid #ffe9b5;font-weight:900;font-size:.95rem;
+ box-shadow:0 5px 18px #0003;min-height:50px;padding:11px 20px;
+}
+.header-links .nav-chip-journal::before,.sidebar-journal::before{content:"";display:block;width:17px;height:20px;flex-shrink:0;border:2px solid currentColor;border-radius:3px;background:linear-gradient(currentColor,currentColor) 3px 5px/7px 2px no-repeat,linear-gradient(currentColor,currentColor) 3px 10px/7px 2px no-repeat}
+.header-links .nav-chip-journal:hover,.header-links .nav-chip-journal[aria-expanded="true"]{background:#ffe3a0;color:#102b43;border-color:#fff0cd;box-shadow:0 7px 24px #0004}
+.sidebar-journal{display:flex;gap:10px;background:linear-gradient(135deg,#fae6b5,#efcc7c);border:2px solid #d8ad49;color:#153249;font-size:.9rem;font-weight:900;padding:14px 10px;min-height:54px;box-shadow:0 6px 18px #a17b231c}
+.sidebar-journal:hover,.sidebar-journal[aria-expanded="true"]{background:#ffe3a0;color:#102b43;border-color:#ba8a22;transform:none}
+.journal-panel-toolbar{display:flex;align-items:center;justify-content:space-between;gap:14px;padding-bottom:18px;margin-bottom:20px;border-bottom:1px solid #dbe5ee;color:#346451;font-size:.88rem;font-weight:800}
+#journal-close{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:44px;padding:8px 16px;background:#fff;border:1px solid #cbd8e3;border-radius:10px;color:#253f53;font-size:.88rem;font-weight:800}
+#journal-close:hover{background:#eef4f7}#journal-close span{font-size:1.4rem;line-height:1}
+@media(max-width:900px){.sidebar-journal{display:flex;margin:8px 0 0;padding:8px 12px;min-height:44px;border-radius:10px;font-size:.86rem}.course-journal{scroll-margin-top:154px}.lesson,.prompt-card{scroll-margin-top:154px}html{scroll-padding-top:154px}}
+@media(max-width:600px){.header-links .nav-chip-journal{font-size:.88rem;padding:10px 14px;min-height:48px}.journal-panel-toolbar{font-size:.85rem}.journal-panel-toolbar>span{flex:1}#journal-close{padding:8px 12px}}
+@media print{.journal-panel-toolbar{display:none!important}}
+
 </style>
 </head>
 <body>
 <a class="skip" href="#main">실습 가이드 본문으로 이동</a>
-<header class="topbar"><div class="topbar-inner"><a class="brand" href="#lesson-1" data-lesson="1"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5c-3-2-7-2-10-1v15c3-1 7-1 10 1 3-2 7-2 10-1V4c-3-1-7-1-10 1Z"/><path d="M12 5v15"/></svg></span><span><strong>YUSSAM CLASS</strong><small>AI콘텐츠마케팅연구소 유쌤클래스</small></span></a><nav class="header-links" aria-label="교육자료 및 외부 자료"><a class="nav-chip-journal" href="#course-journal">차시별 교육일지</a><a class="nav-chip-home" href="https://www.yussamclass.com/" target="_blank" rel="noopener noreferrer">유쌤클래스 홈페이지</a><a class="nav-chip-padlet" href="https://padlet.com/yu_ssam/99" target="_blank" rel="noopener noreferrer"><svg class="padlet-icon padlet-icon--lg" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="5" height="18" rx="2.5" fill="#FF6B6B"/><rect x="9.5" y="2.5" width="5" height="12" rx="2.5" fill="#FFB84D"/><rect x="17" y="6" width="5" height="15" rx="2.5" fill="#39D98A"/></svg><span>스터디 게시판</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7M21 3l-9 9"/><path d="M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg></a></nav></div></header>
-<div class="shell"><aside class="sidebar"><div class="nav-heading">COURSE WORKBOOK<span>8차시 실습 가이드</span></div><nav class="lesson-nav" aria-label="차시별 실습"><a href="#lesson-1" class="lesson-link" data-lesson="1"><span class="nav-no">01</span><span><b>1차시</b><small>윤리·프롬프트</small></span><span class="nav-count">51</span></a><a href="#lesson-2" class="lesson-link" data-lesson="2"><span class="nav-no">02</span><span><b>2차시</b><small>챗봇·콘텐츠 제작</small></span><span class="nav-count">24</span></a><a href="#lesson-3" class="lesson-link" data-lesson="3"><span class="nav-no">03</span><span><b>3차시</b><small>기획·AI 영상</small></span><span class="nav-count">14</span></a><a href="#lesson-4" class="lesson-link" data-lesson="4"><span class="nav-no">04</span><span><b>4차시</b><small>음악·영상 편집</small></span><span class="nav-count">10</span></a><a href="#lesson-5" class="lesson-link" data-lesson="5"><span class="nav-no">05</span><span><b>5차시</b><small>GEO·웹페이지</small></span><span class="nav-count">9</span></a><a href="#lesson-6" class="lesson-link" data-lesson="6"><span class="nav-no">06</span><span><b>6차시</b><small>강의기획·자료</small></span><span class="nav-count">9</span></a><a href="#lesson-7" class="lesson-link" data-lesson="7"><span class="nav-no">07</span><span><b>7차시</b><small>수업시연·피드백</small></span><span class="nav-count">8</span></a><a href="#lesson-8" class="lesson-link" data-lesson="8"><span class="nav-no">08</span><span><b>8차시</b><small>최종시연·정리</small></span><span class="nav-count">8</span></a></nav><a class="sidebar-journal" href="#course-journal">교육일지 · 3채널 보기</a><div class="sidebar-foot"><b>친절한유성쌤 김유성 강사</b>실행하고, 확인하고,<br>내 수업으로 연결합니다.</div></aside>
-<main id="main"><div class="page-intro"><div class="intro-top"><div><div class="eyebrow">AI LITERACY · INSTRUCTOR TRAINING</div><h1>AI리터러시지도사<span>강사양성과정 실습 가이드 · 김유성 강사</span></h1></div><div class="course-facts" aria-label="과정 구성"><div><strong>8</strong><small>차시</small></div><div><strong>16h</strong><small>총 교육시간</small></div><div><strong>133</strong><small>실습 프롬프트</small></div></div></div><p class="intro-note">실습 80% · 이론 20%. 차시별 실습 프롬프트와 2026년 9월 실제 교육일지를 함께 확인하며 복습할 수 있습니다.</p><div class="prompt-tools" aria-label="프롬프트 빠른 검색">
+<header class="topbar"><div class="topbar-inner"><a class="brand" href="#lesson-1" data-lesson="1"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5c-3-2-7-2-10-1v15c3-1 7-1 10 1 3-2 7-2 10-1V4c-3-1-7-1-10 1Z"/><path d="M12 5v15"/></svg></span><span><strong>YUSSAM CLASS</strong><small>AI콘텐츠마케팅연구소 유쌤클래스</small></span></a><nav class="header-links" aria-label="교육자료 및 외부 자료"><a class="nav-chip-journal" href="#course-journal" data-journal-toggle aria-controls="course-journal" aria-expanded="false">차시별 교육일지</a><a class="nav-chip-home" href="https://www.yussamclass.com/" target="_blank" rel="noopener noreferrer">유쌤클래스 홈페이지</a><a class="nav-chip-padlet" href="https://padlet.com/yu_ssam/99" target="_blank" rel="noopener noreferrer"><svg class="padlet-icon padlet-icon--lg" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="5" height="18" rx="2.5" fill="#FF6B6B"/><rect x="9.5" y="2.5" width="5" height="12" rx="2.5" fill="#FFB84D"/><rect x="17" y="6" width="5" height="15" rx="2.5" fill="#39D98A"/></svg><span>스터디 게시판</span><svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7M21 3l-9 9"/><path d="M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg></a></nav></div></header>
+<div class="shell"><aside class="sidebar"><div class="nav-heading">COURSE WORKBOOK<span>8차시 실습 가이드</span></div><nav class="lesson-nav" aria-label="차시별 실습"><a href="#lesson-1" class="lesson-link" data-lesson="1"><span class="nav-no">01</span><span><b>1차시</b><small>윤리·프롬프트</small></span><span class="nav-count">51</span></a><a href="#lesson-2" class="lesson-link" data-lesson="2"><span class="nav-no">02</span><span><b>2차시</b><small>챗봇·콘텐츠 제작</small></span><span class="nav-count">24</span></a><a href="#lesson-3" class="lesson-link" data-lesson="3"><span class="nav-no">03</span><span><b>3차시</b><small>기획·AI 영상</small></span><span class="nav-count">14</span></a><a href="#lesson-4" class="lesson-link" data-lesson="4"><span class="nav-no">04</span><span><b>4차시</b><small>음악·영상 편집</small></span><span class="nav-count">10</span></a><a href="#lesson-5" class="lesson-link" data-lesson="5"><span class="nav-no">05</span><span><b>5차시</b><small>GEO·웹페이지</small></span><span class="nav-count">9</span></a><a href="#lesson-6" class="lesson-link" data-lesson="6"><span class="nav-no">06</span><span><b>6차시</b><small>강의기획·자료</small></span><span class="nav-count">9</span></a><a href="#lesson-7" class="lesson-link" data-lesson="7"><span class="nav-no">07</span><span><b>7차시</b><small>수업시연·피드백</small></span><span class="nav-count">8</span></a><a href="#lesson-8" class="lesson-link" data-lesson="8"><span class="nav-no">08</span><span><b>8차시</b><small>최종시연·정리</small></span><span class="nav-count">8</span></a></nav><a class="sidebar-journal" href="#course-journal" data-journal-toggle aria-controls="course-journal" aria-expanded="false">교육일지 · 3채널 보기</a><div class="sidebar-foot"><b>친절한유성쌤 김유성 강사</b>실행하고, 확인하고,<br>내 수업으로 연결합니다.</div></aside>
+<main id="main"><div class="page-intro"><div class="intro-top"><div><div class="eyebrow">AI LITERACY · INSTRUCTOR TRAINING</div><h1>AI리터러시지도사<span>강사양성과정 실습 가이드 · 김유성 강사</span></h1></div><div class="course-facts" aria-label="과정 구성"><div><strong>8</strong><small>차시</small></div><div><strong>16h</strong><small>총 교육시간</small></div><div><strong>133</strong><small>실습 프롬프트</small></div></div></div><p class="intro-note">실습 80% · 이론 20%. 차시별 실습 프롬프트와 2026년 10월 실제 교육일지를 함께 확인하며 복습할 수 있습니다.</p><div class="prompt-tools" aria-label="프롬프트 빠른 검색">
 <div class="prompt-search-wrap"><span class="prompt-search-icon" aria-hidden="true">⌕</span><input id="prompt-search" class="prompt-search" type="search" placeholder="현재 차시의 프롬프트 제목·내용 검색" autocomplete="off" aria-label="현재 차시 프롬프트 검색"></div>
 <div id="prompt-search-status" class="prompt-search-status" aria-live="polite">현재 차시 전체 보기</div>
 </div></div>
-<section class="course-journal" id="course-journal" aria-labelledby="journal-title">
+<section class="course-journal" id="course-journal" aria-labelledby="journal-title" hidden>
+<div class="journal-panel-toolbar"><span>교육일지 · 3채널 모아보기</span><button type="button" id="journal-close" aria-label="교육일지 접기">접기 <span aria-hidden="true">×</span></button></div>
 <div class="journal-head"><div><span class="mini-label">COURSE JOURNAL · SEPTEMBER 2026</span><h2 id="journal-title">2026년 9월 안성시평생학습관 차시별 교육일지</h2><p>AI리터러시지도사 강사양성과정 1차시부터 8차시까지의 교육 내용을 티스토리, 네이버 블로그, 유쌤클래스 홈페이지에서 다시 확인할 수 있도록 한곳에 정리했습니다.</p></div><span class="journal-badge">8차시 · 3개 채널 · 24개 바로가기</span></div>
 <div class="journal-grid"><article class="journal-card">
 <div class="journal-meta"><span class="journal-no">01차시</span><span class="journal-date">2026년 9월 2일</span></div>
@@ -2542,5 +2562,29 @@ setTimeout(filterPrompts,0);
 </script>
 
 
+
+
+<script>
+(()=>{
+ 'use strict';
+ const panel=document.getElementById('course-journal');
+ const triggers=[...document.querySelectorAll('[data-journal-toggle]')];
+ let lastTrigger=null;
+ function setJournal(open,scroll=false){
+   panel.hidden=!open;
+   triggers.forEach(t=>t.setAttribute('aria-expanded',String(open)));
+   if(open&&scroll)requestAnimationFrame(()=>panel.scrollIntoView({block:'start',behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'}));
+ }
+ triggers.forEach(t=>t.addEventListener('click',e=>{
+   e.preventDefault();lastTrigger=t;setJournal(panel.hidden,true);
+ }));
+ document.getElementById('journal-close').addEventListener('click',()=>{
+   setJournal(false);lastTrigger?.focus({preventScroll:true});
+ });
+ document.addEventListener('click',e=>{if(e.target.closest('[data-lesson]'))setJournal(false);});
+ window.addEventListener('hashchange',()=>{if(location.hash!=='#course-journal')setJournal(false);});
+ setJournal(false);
+})();
+</script>
 
 </body></html>
