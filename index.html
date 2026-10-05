@@ -2325,4 +2325,29 @@ setTimeout(filterPrompts,0);
 })();
 </script>
 
+<script>
+(function(){
+  // 일반 방문자가 마우스 오른쪽 버튼으로 브라우저 컨텍스트 메뉴를 여는 것을 방지합니다.
+  // 단, 웹 브라우저 자체 기능(개발자도구, 주소창의 view-source:, 브라우저 메뉴 등)을
+  // HTML/JavaScript만으로 완전히 차단하는 것은 불가능합니다.
+  document.addEventListener('contextmenu', function(e){
+    e.preventDefault();
+  }, {capture:true});
+
+  // 대표적인 소스/개발자도구 단축키의 기본 동작을 억제합니다.
+  document.addEventListener('keydown', function(e){
+    const key=(e.key||'').toLowerCase();
+    const blocked =
+      (e.ctrlKey && key==='u') ||
+      (e.ctrlKey && e.shiftKey && ['i','j','c'].includes(key)) ||
+      key==='f12';
+    if(blocked){
+      e.preventDefault();
+      e.stopPropagation();
+      return false;
+    }
+  }, {capture:true});
+})();
+</script>
+
 </body></html>
