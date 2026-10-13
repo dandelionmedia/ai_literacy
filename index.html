@@ -375,6 +375,51 @@ main{padding:36px clamp(24px,3vw,48px) 64px}
 @media(max-width:600px){.header-links .nav-chip-journal{font-size:.88rem;padding:10px 14px;min-height:48px}.journal-panel-toolbar{font-size:.85rem}.journal-panel-toolbar>span{flex:1}#journal-close{padding:8px 12px}}
 @media print{.journal-panel-toolbar{display:none!important}}
 
+
+/* Premium editorial refinement — clear hierarchy, calm whitespace, accessible interactions */
+:root{--navy:#102b43;--ink:#172f45;--muted:#506579;--blue:#176359;--cyan:#69c9b4;--gold:#cfad62;--line:#dce6eb;--wash:#f6f8fa}
+body{color:var(--ink);background:linear-gradient(180deg,#f3f7f9 0%,#f8fafb 60%,#f5f8fa 100%);font-size:1rem;line-height:1.85}
+.topbar{background:linear-gradient(105deg,#0b253c,#123a54);box-shadow:0 10px 30px rgba(16,43,67,.11)}
+.topbar-inner{max-width:1600px}.brand strong{font-weight:850;letter-spacing:-.015em}.brand small{letter-spacing:0;line-height:1.55}
+.header-links a{border:1px solid rgba(219,238,245,.20);background:rgba(255,255,255,.055);box-shadow:none;font-weight:750}
+.header-links .nav-chip-journal{box-shadow:0 3px 14px rgba(0,0,0,.14)}
+.shell{max-width:1600px;grid-template-columns:248px minmax(0,1fr)}.sidebar{border-right:1px solid #dee7eb}
+.nav-heading{letter-spacing:.04em}.lesson-link{border:1px solid transparent;padding:14px 12px;min-height:79px}.lesson-link b{font-size:.92rem}.lesson-link small{font-size:.78rem}
+.lesson-link[aria-current="page"]{background:#103c52;box-shadow:0 8px 21px rgba(16,60,82,.16)}
+main{padding:38px clamp(24px,3.5vw,58px) 70px}
+.page-intro,.course-journal{border-radius:22px;box-shadow:0 8px 30px rgba(16,43,67,.045);border-color:#e0e9ee}
+.page-intro{padding:38px 40px;background:linear-gradient(115deg,#fff 0%,#fff 58%,#f0f7f6 100%);border-top:4px solid #c5a25e}
+.page-intro h1{font-size:clamp(1.85rem,2.7vw,2.7rem);line-height:1.37;letter-spacing:-.043em}.page-intro h1 span{line-height:1.7}
+.eyebrow{color:#176359;letter-spacing:.06em}.course-facts strong{color:#123b52}
+.lesson-heading{margin-top:8px;padding-bottom:23px}.lesson-heading h2{font-size:clamp(1.6rem,2.6vw,2.2rem);letter-spacing:-.045em}.lesson-heading p{line-height:1.85}
+.lesson-index{color:#d5e1e5}.tool-row{background:#fff;border-radius:14px;padding:15px}.tool-row a{background:#f9fbfc}
+.section-title{font-size:1.22rem;letter-spacing:-.025em;margin-bottom:18px}
+.knowledge-grid{gap:16px}.knowledge-card{padding:25px 24px;border:1px solid #e0e8ec;background:#fff;box-shadow:0 5px 20px rgba(16,43,67,.035)}.knowledge-card h3{font-size:1.08rem}.knowledge-card p{line-height:1.88}
+.practice-layout{gap:30px;margin:36px 0 42px}.practice-steps li{padding:15px 0}.practice-steps li>span{background:#e6f2ee;color:#176359}.practice-steps p{line-height:1.85}
+.deliverable{background:linear-gradient(145deg,#112e45,#174c5d);box-shadow:0 14px 32px #102b4320}
+.prompt-heading{margin:34px 0 0;padding:0}.prompt-heading h3{color:#112e45;font-size:1.62rem;line-height:1.44}.prompt-heading h3 span{color:#176359}
+.prompt-help{padding:16px 19px;border-color:#d7e5e4;background:#edf6f4;color:#3d5b5d;line-height:1.8}
+.prompt-tools{margin:24px 0 14px}.prompt-search{border:1px solid #cddde0;min-height:54px;background:#fff;box-shadow:0 4px 14px #102b4306}
+.prompt-search:focus{border-color:#176359;outline:3px solid #17635926}.source-filter{gap:9px;margin:15px 0 24px}.source-filter button{border-radius:11px;background:#fff;transition:background .15s,border-color .15s}.source-filter button[aria-pressed="true"]{background:#154b55;border-color:#154b55}
+.prompt-list{gap:20px}.prompt-card{border:1px solid #dbe5e9;border-radius:17px;box-shadow:0 7px 24px #102b4309;background:#fff;overflow:hidden}
+.prompt-card:hover{box-shadow:0 10px 28px #102b4310;border-color:#c8dadc}
+.prompt-top{padding:23px 25px;gap:20px;align-items:center}.prompt-num{width:46px;height:46px;border-radius:12px;background:#ecf3f5;color:#174c5d;font-size:.91rem;letter-spacing:-.02em}
+.prompt-top h4{font-size:1.11rem;line-height:1.6;color:#172f45;font-weight:800;letter-spacing:-.028em}.source{font-size:.77rem;color:#607489;line-height:1.6;margin-bottom:6px}
+.copy-btn{min-height:46px;min-width:90px;border-radius:11px;background:#166255;font-size:.87rem;box-shadow:none;font-weight:800}.copy-btn:hover{background:#0e4d43;transform:none}
+.batch-copy{border-radius:11px;background:#fff;border:1px solid #b5d1cb;color:#176359}
+.prompt-card summary{padding:15px 25px;background:#f8fafb;color:#38536a;border-top:1px solid #e1e9ed;font-size:.9rem;font-weight:750;line-height:1.65}
+.prompt-card details[open] summary{background:#edf6f3;color:#135c51}
+.prompt-body{background:#f8fafb;padding:27px 30px;border-top:1px solid #e2eaed}.prompt-body pre{font-size:1rem;line-height:2.0;color:#213c51;letter-spacing:-.012em;tab-size:4}
+.word-prompt{border-left:4px solid #16836a}.word-prompt .prompt-num{background:#e2f2eb;color:#145e4c}
+.word-prompt .source{color:#236759}.prompt-added .source.extra:before{content:"추가 자료  ·  ";color:#13745d;font-weight:850}
+.teacher-tip{padding:17px 25px;background:#fffdfa;line-height:1.9}.review{box-shadow:0 6px 25px #102b4308}
+.workbook-guide{border:1px solid #d1e4df;background:linear-gradient(110deg,#ecf6f2,#fff 68%);padding:28px 30px}.workbook-guide h3{color:#123e45}.workbook-guide p{line-height:1.85}
+.supp-guide,.supp-topic,.supp-detail{box-shadow:0 5px 18px rgba(16,43,67,.035)}.supp-guide{border-top-color:#176359}.supp-detail>summary{line-height:1.8}
+.submit-strip{background:#eff5f6;border:1px solid #d9e6e7}.padlet-btn{background:#123e53}
+.footer{border-top:1px solid #dbe5e8}
+@media(max-width:900px){.shell{display:block}.sidebar{background:rgba(247,250,251,.97)}.lesson-link{min-height:68px}.page-intro{padding:27px 25px}.prompt-top{padding:20px}.prompt-body{padding:22px}}
+@media(max-width:600px){body{line-height:1.8}.topbar-inner{padding:17px 15px}.header-links a{min-height:45px}.page-intro{padding:23px 19px}.page-intro h1{font-size:1.7rem}.lesson-heading h2{font-size:1.55rem}.knowledge-card{padding:20px}.prompt-heading h3{font-size:1.38rem}.prompt-top{padding:17px 15px;gap:10px;align-items:flex-start}.prompt-top h4{font-size:1.04rem}.prompt-num{width:36px;height:36px;font-size:.78rem}.copy-btn{min-height:44px;min-width:72px;padding:10px 12px}.prompt-card summary{padding:15px 17px}.prompt-body{padding:19px 16px}.prompt-body pre{font-size:.96rem;line-height:1.92}.workbook-guide{padding:20px 17px}.teacher-tip{padding:15px 16px}.source-filter button{min-height:44px}.course-facts strong{font-size:1.35rem}}
+@media print{.page-intro,.prompt-card,.knowledge-card{box-shadow:none!important}.prompt-body{background:#fff}.prompt-body pre{line-height:1.6}}
 </style>
 </head>
 <body>
